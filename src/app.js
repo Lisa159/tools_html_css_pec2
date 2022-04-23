@@ -44,4 +44,105 @@ function _setChaptersList(chaptersList, list) {
   });
 }
 
+let counterCarousel = 0;
+
+function nextBook() {
+  if (window.location.href.includes("category")) {
+    let el = document.getElementsByClassName("btnList")[1];
+    el.addEventListener(
+      "click",
+      function () {
+        let arr = document.querySelectorAll(".elementCat");
+        for (let i = 0; i < arr.length; i++) {
+          if (arr[i].classList.contains("selected")) {
+            arr[i].classList.remove("selected");
+            if (i + 1 <= arr.length - 1) {
+              arr[i + 1].classList.add("selected");
+            }
+            break;
+          }
+        }
+        counterCarousel += -230;
+        arr.forEach((el) => {
+          el.style.transform = "translateX(" + counterCarousel + "px)";
+        });
+        _setDisabledBtnCarousel();
+      },
+      false
+    );
+  }
+}
+
+function prevBook() {
+  if (window.location.href.includes("category")) {
+    let el = document.getElementsByClassName("btnList")[0];
+    el.addEventListener(
+      "click",
+      function () {
+        let arr = document.querySelectorAll(".elementCat");
+        for (let i = arr.length - 1; i >= 0; i--) {
+          if (arr[i].classList.contains("selected")) {
+            arr[i].classList.remove("selected");
+            if (i - 1 >= 0) {
+              arr[i - 1].classList.add("selected");
+            }
+            break;
+          }
+        }
+        counterCarousel += 230;
+        arr.forEach((el) => {
+          el.style.transform = "translateX(" + counterCarousel + "px)";
+        });
+        _setDisabledBtnCarousel();
+      },
+      false
+    );
+  }
+}
+
+function _resetAnimationCarousel(resetType) {
+  let arr = document.querySelectorAll(".elementCat");
+  arr.forEach((el) => {
+    if (resetType === "next") {
+      if (el.classList.contains("animationNext")) {
+        el.classList.remove("animationNext");
+      }
+    } else {
+      if (el.classList.contains("animationPrev")) {
+        el.classList.remove("animationPrev");
+      }
+    }
+  });
+}
+
+function _setDisabledBtnCarousel() {
+  let prev = document.getElementsByClassName("btnList")[0];
+  let next = document.getElementsByClassName("btnList")[1];
+  const arr = document.querySelectorAll(".elementCat");
+  if (arr[0].classList.contains("selected")) {
+    prev.classList.add("disabled");
+  } else if (arr[arr.length - 1].classList.contains("selected")) {
+    next.classList.add("disabled");
+  } else {
+    prev.classList.remove("disabled");
+    next.classList.remove("disabled");
+  }
+}
+
+function setCarousel() {
+  if (window.location.href.includes("category")) {
+    document.querySelectorAll(".elementCat").forEach((el) => {
+      if (el.classList.contains("selected")) {
+        el.style.marginLeft = "20%";
+      }
+    });
+    _setDisabledBtnCarousel();
+  }
+}
+
+setCarousel();
+
+nextBook();
+prevBook();
+
 setChapters();

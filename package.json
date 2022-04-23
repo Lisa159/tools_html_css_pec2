@@ -1,5 +1,5 @@
 {
-  "name": "PEC1",
+  "name": "PEC2",
   "source": "src/index.html",
   "scripts": {
     "start": "npm-run-all clean parcel:dev",
