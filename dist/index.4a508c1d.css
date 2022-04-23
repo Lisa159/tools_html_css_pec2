@@ -292,6 +292,47 @@ em {
   left: -0.75rem;
   content: "▪";
 }
+@-webkit-keyframes skeleton {
+  0% {
+    opacity: 0.3;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  20% {
+    opacity: 1;
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  28% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  51% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  58% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  82% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  83% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  96% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  100% {
+    opacity: 0.3;
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}
 @keyframes skeleton {
   0% {
     opacity: 0.3;
@@ -739,14 +780,16 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   left: 0;
   width: 100%;
   height: 100%;
-  animation: 3000ms ease-in-out skeleton infinite;
+  -webkit-animation: 3000ms ease-in-out skeleton infinite;
+          animation: 3000ms ease-in-out skeleton infinite;
   background: #c6c6c6;
   content: "";
   will-change: transform-origin, transform, opacity;
 }
 @media (prefers-reduced-motion: reduce) {
   .bx--tabs.bx--skeleton .bx--tabs__nav-link span::before {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 .bx--tabs.bx--skeleton .bx--tabs-trigger {
@@ -769,14 +812,16 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   left: 0;
   width: 100%;
   height: 100%;
-  animation: 3000ms ease-in-out skeleton infinite;
+  -webkit-animation: 3000ms ease-in-out skeleton infinite;
+          animation: 3000ms ease-in-out skeleton infinite;
   background: #c6c6c6;
   content: "";
   will-change: transform-origin, transform, opacity;
 }
 @media (prefers-reduced-motion: reduce) {
   .bx--tabs.bx--skeleton .bx--tabs-trigger::before {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 .bx--tabs.bx--skeleton .bx--tabs-trigger svg {
@@ -859,7 +904,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 .bx--tabs--scrollable.bx--tabs--scrollable--container .bx--tabs__overflow-indicator--right {
   background-image: linear-gradient(to right, transparent, #e0e0e0);
 }
-@media not all and (min-resolution: 0.001dpcm) {
+@media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
   @supports (-webkit-appearance: none) and (stroke-color: transparent) {
     .bx--tabs--scrollable .bx--tabs__overflow-indicator--left {
       background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #ffffff);
@@ -886,7 +931,9 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   display: inline-block;
   padding: 0;
   border: 0;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: none;
   cursor: pointer;
   width: 100%;
@@ -1009,7 +1056,9 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   display: inline-block;
   padding: 0;
   border: 0;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background: none;
   cursor: pointer;
   outline: 2px solid transparent;
@@ -1115,14 +1164,16 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   left: 0;
   width: 100%;
   height: 100%;
-  animation: 3000ms ease-in-out skeleton infinite;
+  -webkit-animation: 3000ms ease-in-out skeleton infinite;
+          animation: 3000ms ease-in-out skeleton infinite;
   background: #c6c6c6;
   content: "";
   will-change: transform-origin, transform, opacity;
 }
 @media (prefers-reduced-motion: reduce) {
   .bx--tabs--scrollable .bx--tabs.bx--skeleton .bx--tabs--scrollable__nav-link::before {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 .bx--tabs--scrollable .bx--tabs.bx--skeleton .bx--tabs-trigger {
@@ -1146,14 +1197,16 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   left: 0;
   width: 100%;
   height: 100%;
-  animation: 3000ms ease-in-out skeleton infinite;
+  -webkit-animation: 3000ms ease-in-out skeleton infinite;
+          animation: 3000ms ease-in-out skeleton infinite;
   background: #c6c6c6;
   content: "";
   will-change: transform-origin, transform, opacity;
 }
 @media (prefers-reduced-motion: reduce) {
   .bx--tabs--scrollable .bx--tabs.bx--skeleton .bx--tabs-trigger::before {
-    animation: none;
+    -webkit-animation: none;
+            animation: none;
   }
 }
 .bx--tabs--scrollable .bx--tabs.bx--skeleton .bx--tabs-trigger svg {
@@ -1191,8 +1244,6 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
 *,
 *:after,
 *:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   font-family: var(--font-family);
 }
@@ -1220,6 +1271,7 @@ body {
   text-align: center;
   align-items: center;
   box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.05);
+  position: -webkit-sticky;
   position: sticky;
   top: 0px;
   height: 100%;
@@ -1310,7 +1362,8 @@ body {
   gap: 30px;
 }
 .header #responsive .sidenav ul li {
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   display: flex;
   width: 100%;
 }
@@ -1466,7 +1519,8 @@ a:active {
   margin-bottom: 0;
 }
 #details article h2 {
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   text-align: center;
 }
 #details article h2,
@@ -1536,7 +1590,8 @@ figure figcaption cite {
   margin-bottom: 15px;
 }
 #presentacion iframe {
-  align-self: center;
+  -ms-grid-row-align: center;
+      align-self: center;
   width: 100%;
   height: 100%;
   min-height: 300px;
@@ -1574,6 +1629,8 @@ footer div {
   }
   .detailsContainer #about {
     width: 25%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
   }
 
@@ -1600,7 +1657,8 @@ footer div {
     gap: 40px;
   }
   .header #non-responsive ul li {
-    align-self: center;
+    -ms-grid-row-align: center;
+        align-self: center;
     display: flex;
   }
   .header #non-responsive ul li a {
