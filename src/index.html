@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Daenerys Targaryen</title>
+    <link rel="stylesheet" href="styles.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-bg="../assets/img/map.jpg">
+    <nav class="header">
+      <div id="logoContainer">
+        <a href="index.html" tabindex="-1"></a>
+      </div>
+      <div id="responsive">
+        <button class="hamburguer" onclick="openSidenav()"></button>
+        <div class="sidenav">
+          <div class="closeContainer">
+            <button class="close" onclick="openSidenav()"></button>
+          </div>
+          <ul>
+            <li><a href="./presentation.html">Presentación</a></li>
+            <li><a href="./category.html">Libros</a></li>
+            <li><a href="./links.html">Enlaces</a></li>
+          </ul>
+        </div>
+        <div class="overlay"></div>
+      </div>
+      <div id="non-responsive">
+        <ul>
+          <li><a href="./presentation.html">Presentación</a></li>
+          <li><a href="./category.html">Libros</a></li>
+          <li><a href="./links.html">Enlaces</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main id="portada">
+      <div class="imgContainer">
+        <img
+          src="./assets/img/targaryen_shield.png"
+          class="lazy"
+          data-src="./assets/img/targaryen_shield.png"
+          alt="Escudo Targaryen"
+          title="Escudo Targaryen"
+        />
+      </div>
+      <div class="titleContainer">
+        <h1>La vida de <span>Daenerys Targaryen</span></h1>
+        <h2>Madre de dragones</h2>
+        <h3>
+          Un viaje a lo largo de su historia en los libros de George R. R.
+          Martin.
+        </h3>
+        <div class="containerQuote">
+          <blockquote>
+            La voluntad es la fuerza que nos hace caer débiles y levantarnos
+            invencibles.
+          </blockquote>
+          <span><cite>Juego de Tronos</cite> - George R. R. Martin</span>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div>
+        <p>Asignatura de Herramientas de HTML y CSS.</p>
+        <p>Aida María González Fernández</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>
+  </body>
+</html>

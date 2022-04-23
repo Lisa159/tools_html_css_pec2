@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Daenerys Targaryen</title>
+    <link rel="stylesheet" href="styles.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-bg="./assets/img/map.jpg">
+    <nav class="header">
+      <div id="logoContainer">
+        <a href="index.html" tabindex="-1"></a>
+      </div>
+      <div id="responsive">
+        <button class="hamburguer" onclick="openSidenav()"></button>
+        <div class="sidenav">
+          <div class="closeContainer">
+            <button class="close" onclick="openSidenav()"></button>
+          </div>
+          <ul>
+            <li><a href="./presentation.html">Presentación</a></li>
+            <li><a href="./category.html" class="navSelected">Libros</a></li>
+            <li><a href="./links.html">Enlaces</a></li>
+          </ul>
+        </div>
+        <div class="overlay"></div>
+      </div>
+      <div id="non-responsive">
+        <ul>
+          <li><a href="./presentation.html">Presentación</a></li>
+          <li><a href="./category.html" class="navSelected">Libros</a></li>
+          <li><a href="./links.html">Enlaces</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main id="categoria">
+      <div class="categoryContainer">
+        <h2>Su historia a lo largo de los libros</h2>
+        <figure>
+          <img
+            alt="Foto de libros"
+            class="lazy"
+            src="./assets/img/books.jpg"
+            data-src="./assets/img/books.jpg"
+            title="Foto de libros"
+          />
+          <figcaption>
+            <cite>A Song of Ice and Fire Hardcover</cite> por Robert.
+          </figcaption>
+        </figure>
+        <p>
+          Las páginas siguientes contienen **Spoilers** de los libros
+          publicados.
+        </p>
+      </div>
+      <article>
+        <h2>Libros de la saga <cite>Canción de Hielo y Fuego</cite></h2>
+        <ol>
+          <li>
+            Libro 1: <a href="./details/details-libro1.html">Juego de Tronos</a>
+          </li>
+          <li>
+            Libro 2: <a href="./details/details-libro2.html">Choque de Reyes</a>
+          </li>
+          <li>
+            Libro 3:
+            <a href="./details/details-libro3.html">Tormenta de Espadas</a>
+          </li>
+          <li>
+            Libro 4: Festín de Cuervos. Llegan noticias a Poniente sobre
+            dragones y una hermosa y joven reina.
+          </li>
+          <li>
+            Libro 5:
+            <a href="./details/details-libro5.html">Danza de Dragones</a>
+          </li>
+        </ol>
+      </article>
+    </main>
+    <footer>
+      <div>
+        <p>Asignatura de Herramientas de HTML y CSS.</p>
+        <p>Aida María González Fernández</p>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>
+  </body>
+</html>

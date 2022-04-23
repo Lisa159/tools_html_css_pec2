@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Daenerys Targaryen</title>
+    <link rel="stylesheet" href="styles.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-bg="../assets/img/map.jpg">
+    <nav class="header">
+      <div id="logoContainer">
+        <a href="index.html" tabindex="-1"></a>
+      </div>
+      <div id="responsive">
+        <button class="hamburguer" onclick="openSidenav()"></button>
+        <div class="sidenav">
+          <div class="closeContainer">
+            <button class="close" onclick="openSidenav()"></button>
+          </div>
+          <ul>
+            <li><a href="./presentation.html">Presentación</a></li>
+            <li><a href="./category.html">Libros</a></li>
+            <li><a href="./links.html" class="navSelected">Enlaces</a></li>
+          </ul>
+        </div>
+        <div class="overlay"></div>
+      </div>
+      <div id="non-responsive">
+        <ul>
+          <li><a href="./presentation.html">Presentación</a></li>
+          <li><a href="./category.html">Libros</a></li>
+          <li><a href="./links.html" class="navSelected">Enlaces</a></li>
+        </ul>
+      </div>
+    </nav>
+    <main id="enlaces">
+      <article class="linkContainer">
+        <h2>Fuentes</h2>
+        <ul>
+          <li>
+            <h3>Texto</h3>
+            <ul>
+              <li>
+                Daenerys Targaryen. (2022, 7 de marzo). Wikipedia, La
+                enciclopedia libre. Fecha de consulta: 18:02, march 20, 2022
+                desde
+                <a
+                  href="https://es.wikipedia.org/wiki/Daenerys_Targaryen"
+                  target="_blank"
+                  >https://es.wikipedia.org/wiki/Daenerys_Targaryen</a
+                >.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <h3>Imágenes</h3>
+            <ul>
+              <li>
+                Robert. (2012). A Song of Ice and Fire Hardcover [Fotografía].
+                Flickr.
+                <a
+                  href="https://www.flickr.com/photos/12967790@N00/6855179480"
+                  target="_blank"
+                  >https://www.flickr.com/photos/12967790@N00/6855179480</a
+                >
+              </li>
+              <li>
+                Mattia332. (2018). Targaryen shield whit the dragon
+                [Fotografía]. Wikipedia.
+                <a
+                  href="https://commons.wikimedia.org/wiki/File:Targaryen_Shield.png"
+                  target="_blank"
+                  >https://commons.wikimedia.org/wiki/File:Targaryen_Shield.png</a
+                >
+              </li>
+              <li>
+                Santos, Mauricio. (2018). On the map [Fotografía]. Unplash.
+                <a
+                  href="https://unsplash.com/photos/N1gFsYf9AI0"
+                  target="_blank"
+                  >https://unsplash.com/photos/N1gFsYf9AI0</a
+                >
+              </li>
+              <li>
+                González Fernández, Aida María. (2022). Daenerys Targaryen
+                [Fanart].
+              </li>
+              <li>
+                González Fernández, Aida María. (2022). Portada de Juego de
+                Tronos [Fotografía].
+              </li>
+              <li>
+                González Fernández, Aida María. (2022). Portada de Choque de
+                Reyes [Fotografía].
+              </li>
+              <li>
+                González Fernández, Aida María. (2022). Portada de Tormenta de
+                Espadas [Fotografía].
+              </li>
+              <li>
+                González Fernández, Aida María. (2022). Portada de Danza de
+                Dragones [Fotografía].
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      <div>
+        <p>Asignatura de Herramientas de HTML y CSS.</p>
+        <p>Aida María González Fernández</p>
+      </div>
+    </footer>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>
+  </body>
+</html>

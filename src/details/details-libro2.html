@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Daenerys Targaryen</title>
+    <link rel="stylesheet" href="../styles.scss" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;0,800;1,400&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body data-bg="../assets/img/map.jpg">
+    <nav class="header">
+      <div id="logoContainer">
+        <a href="../index.html" tabindex="-1"></a>
+      </div>
+      <div id="responsive">
+        <button class="hamburguer" onclick="openSidenav()"></button>
+        <div class="sidenav">
+          <div class="closeContainer">
+            <button class="close" onclick="openSidenav()"></button>
+          </div>
+          <ul>
+            <li><a href="../presentation.html">Presentación</a></li>
+            <li>
+              <a href="../category.html" class="navSelected">Libros</a>
+            </li>
+            <li><a href="../links.html">Enlaces</a></li>
+          </ul>
+        </div>
+        <div class="overlay"></div>
+      </div>
+      <div id="non-responsive">
+        <ul>
+          <li><a href="../presentation.html">Presentación</a></li>
+          <li><a href="../category.html" class="navSelected">Libros</a></li>
+          <li><a href="../links.html">Enlaces</a></li>
+        </ul>
+      </div>
+    </nav>
+    <div class="detailsContainer">
+      <main id="details">
+        <article>
+          <div class="routingBooks">
+            <div class="prevBook">
+              <a href="./details-libro1.html"
+                ><span>&#8592;</span>Anterior: Juego de Tronos</a
+              >
+            </div>
+            <div class="nextBook">
+              <a href="./details-libro3.html"
+                >Siguiente: Tormenta de Espadas<span>&#8594;</span></a
+              >
+            </div>
+          </div>
+          <h2>Choque de Reyes</h2>
+          <p>
+            El reducido khalasar de Daenerys vaga por el Desierto Rojo,
+            hallándose casi todos al borde de la extenuación. Daenerys envía
+            emisarios en todas direcciones y consigue recibir a tres emisarios
+            enviados por la ciudad de Qarth. Daenerys pide que la dejen entrar
+            en la ciudad, pero los embajadores enviados por Qarth se niegan.
+            Daenerys finalmente logra entrar bajo la protección del rico
+            mercader Xaro Xhoan Daxos y pide ayuda a los ricos mercaderes para
+            que la ayuden a conquistar Poniente, pero todos le realizan promesas
+            vanas, igual que le habían hecho a su difunto hermano mayor años
+            atrás, y solo están interesados en sus dragones. Daenerys tiene
+            también que lidiar con las insinuaciones de Xaro Xhoan Daxos que le
+            sugiere en reiteradas ocasiones que se case con él para que así
+            dispusiera de su fortuna con la que invadir Poniente, pero ella le
+            rechaza.
+          </p>
+          <p>
+            En contra del consejo de sus consejeros, Daenerys se entrevista con
+            los misteriosos brujos de Qarth en la llamada Casa de los Eternos.
+            Allí, Daenerys tiene extrañas visiones en las que están el salón del
+            Trono de Hierro de la Fortaleza Roja, o su difunto hermano Rhaegar
+            hablando con su esposa Elia Martell. Pronto Daenerys se da cuenta de
+            que los brujos, liderados por Pyat Pree, conspiraban para encerrarla
+            en la Casa de los Eternos y apoderarse de sus dragones, pero ella
+            logra escapar gracias a la ayuda de sus pequeños dragones,
+            destruyendo el templo. Daenerys, tomando el consejo de una extraña
+            mujer llamada Quaithe, decide marcharse de Qarth rumbo al este.
+          </p>
+          <p>
+            En los puertos de la ciudad, Daenerys está a punto de ser asesinada
+            por una mantícora, siendo salvada en última instancia por dos
+            sujetos, uno se hace llamar Belwas el Fuerte, mientras que el otro
+            afirma ser su escudero, un anciano llamado Arstan Barbablanca. Ambos
+            se presentan como hombres del magíster Illyrio, el cual los ha
+            enviado junto a tres barcos con los que llevarla de vuelta a Pentos,
+            pero ella toma los barcos y decide marcharse a Astapor, hacia la
+            Bahía de los Esclavos.
+          </p>
+        </article>
+      </main>
+      <aside id="about">
+        <figure>
+          <img
+            src="../assets/img/2_choque_de_reyes.jpeg"
+            alt="Portada de Choque de Reyes"
+            title="Portada de Choque de Reyes"
+            class="lazy"
+            data-src="../assets/img/2_choque_de_reyes.jpeg"
+          />
+          <figcaption>
+            <cite>Foto de la portada de Choque de Reyes</cite> por Aida María
+            González Fernández.
+          </figcaption>
+        </figure>
+        <h3>Capítulos del libro desde el punto de vista de Daenerys</h3>
+        <ul class="chapters"></ul>
+      </aside>
+    </div>
+    <footer>
+      <div>
+        <p>Asignatura de Herramientas de HTML y CSS.</p>
+        <p>Aida María González Fernández</p>
+      </div>
+    </footer>
+    <script src="../app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.6.1/dist/lazyload.min.js"></script>
+  </body>
+</html>
