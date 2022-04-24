@@ -1514,7 +1514,6 @@ aside {
   height: fit-content;
   -ms-grid-row-align: center;
       align-self: center;
-  padding: 5px;
   position: absolute;
   box-shadow: 0 0 0 1px #d3d3d3;
   opacity: 1;
@@ -1546,17 +1545,23 @@ aside {
   box-shadow: 0px 0px 10px 6px rgba(0, 0, 0, 0.12);
   text-align: center;
   border-radius: 10px;
-  -webkit-animation: 1s forwards;
-          animation: 1s forwards;
-}
-#categoria article .listCat .elementCat:hover {
-  -webkit-animation: cardHover 1.5s forwards;
-          animation: cardHover 1.5s forwards;
 }
 #categoria article .listCat .elementCat.selected {
   opacity: 1;
 }
+#categoria article .listCat .elementCat.selected a {
+  pointer-events: all;
+}
+#categoria article .listCat .elementCat a {
+  pointer-events: none;
+  background-color: var(--secondary-color);
+  border-radius: 4px;
+  padding: 10px;
+  text-decoration: none;
+}
 #categoria article .listCat .elementCat img {
+  margin-top: 10px;
+  margin-bottom: 10px;
   width: 100px;
 }
 a {
@@ -1787,22 +1792,6 @@ footer .subjectContainer p:first-of-type {
   footer .subjectContainer {
     align-items: center;
     flex-direction: column;
-  }
-}
-@-webkit-keyframes cardHover {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.2);
-  }
-}
-@keyframes cardHover {
-  0% {
-    transform: scale(1);
-  }
-  100% {
-    transform: scale(1.2);
   }
 }
 /*# sourceMappingURL=index.4a508c1d.css.map */
