@@ -1,6 +1,5 @@
 var CarbonComponents = function(e1) {
-    var t1 = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {
-    }, n1 = {
+    var t1 = "undefined" != typeof globalThis ? globalThis : "undefined" != typeof window ? window : "undefined" != typeof global ? global : "undefined" != typeof self ? self : {}, n1 = {
         prefix: "bx",
         selectorTabbable: "\n    a[href], area[href], input:not([disabled]):not([tabindex='-1']),\n    button:not([disabled]):not([tabindex='-1']),select:not([disabled]):not([tabindex='-1']),\n    textarea:not([disabled]):not([tabindex='-1']),\n    iframe, object, embed, *[tabindex]:not([tabindex='-1']), *[contenteditable=true]\n  ",
         selectorFocusable: "\n    a[href], area[href], input:not([disabled]),\n    button:not([disabled]),select:not([disabled]),\n    textarea:not([disabled]),\n    iframe, object, embed, *[tabindex], *[contenteditable=true]\n  "
@@ -17,8 +16,7 @@ var CarbonComponents = function(e1) {
     }
     function a1(e) {
         for(var t3 = 1; t3 < arguments.length; t3++){
-            var n = null != arguments[t3] ? arguments[t3] : {
-            };
+            var n = null != arguments[t3] ? arguments[t3] : {};
             t3 % 2 ? o1(Object(n), !0).forEach(function(t) {
                 c1(e, t, n[t]);
             }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(e, Object.getOwnPropertyDescriptors(n)) : o1(Object(n)).forEach(function(t) {
@@ -86,8 +84,7 @@ var CarbonComponents = function(e1) {
             if (Reflect.construct.sham) return !1;
             if ("function" == typeof Proxy) return !0;
             try {
-                return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {
-                })), !0;
+                return Boolean.prototype.valueOf.call(Reflect.construct(Boolean, [], function() {})), !0;
             } catch (e) {
                 return !1;
             }
@@ -115,9 +112,9 @@ var CarbonComponents = function(e1) {
         }).apply(this, arguments);
     }
     function v1(e4, t5) {
-        return (function(e) {
+        return function(e) {
             if (Array.isArray(e)) return e;
-        })(e4) || (function(e, t) {
+        }(e4) || function(e, t) {
             var n = null == e ? null : "undefined" != typeof Symbol && e[Symbol.iterator] || e["@@iterator"];
             if (null == n) return;
             var o, a, i = [], r = !0, s = !1;
@@ -133,18 +130,18 @@ var CarbonComponents = function(e1) {
                 }
             }
             return i;
-        })(e4, t5) || y1(e4, t5) || (function() {
+        }(e4, t5) || y1(e4, t5) || function() {
             throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-        })();
+        }();
     }
     function b1(e6) {
-        return (function(e) {
+        return function(e) {
             if (Array.isArray(e)) return w1(e);
-        })(e6) || (function(e) {
+        }(e6) || function(e) {
             if ("undefined" != typeof Symbol && null != e[Symbol.iterator] || null != e["@@iterator"]) return Array.from(e);
-        })(e6) || y1(e6) || (function() {
+        }(e6) || y1(e6) || function() {
             throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method.");
-        })();
+        }();
     }
     function y1(e, t) {
         if (e) {
@@ -174,12 +171,11 @@ var CarbonComponents = function(e1) {
         }());
     }
     function k1(e9) {
-        return (function(e10) {
+        return function(e10) {
             l1(n, e10);
             var t7 = f1(n);
             function n(e) {
-                var o, a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
-                };
+                var o, a = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 if (i1(this, n), c1(p1(o = t7.call(this, e, a)), "children", []), !e || e.nodeType !== Node.ELEMENT_NODE) throw new TypeError("DOM element should be given to initialize this widget.");
                 return o.element = e, o.options = Object.assign(Object.create(o.constructor.options), a), o.constructor.components.set(o.element, p1(o)), o;
             }
@@ -199,10 +195,10 @@ var CarbonComponents = function(e1) {
                     }
                 }
             ]), n;
-        })(e9);
+        }(e9);
     }
     function _1(e11) {
-        return (function(e12) {
+        return function(e12) {
             l1(n2, e12);
             var t8 = f1(n2);
             function n2() {
@@ -212,8 +208,7 @@ var CarbonComponents = function(e1) {
                 {
                     key: "init",
                     value: function() {
-                        var e = this, t9 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : document, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
-                        }, o = Object.assign(Object.create(this.options), n);
+                        var e = this, t9 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : document, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, o = Object.assign(Object.create(this.options), n);
                         if (!t9 || t9.nodeType !== Node.ELEMENT_NODE && t9.nodeType !== Node.DOCUMENT_NODE) throw new TypeError("DOM document or DOM element should be given to search for and initialize this widget.");
                         t9.nodeType === Node.ELEMENT_NODE && t9.matches(o.selectorInit) ? this.create(t9, n) : Array.prototype.forEach.call(t9.querySelectorAll(o.selectorInit), function(t) {
                             return e.create(t, n);
@@ -221,10 +216,10 @@ var CarbonComponents = function(e1) {
                     }
                 }
             ]), n2;
-        })(e11);
+        }(e11);
     }
     function E1(e13) {
-        return (function(e14) {
+        return function(e14) {
             l1(n, e14);
             var t10 = f1(n);
             function n() {
@@ -258,7 +253,7 @@ var CarbonComponents = function(e1) {
                     }
                 }
             ]), n;
-        })(e13);
+        }(e13);
     }
     function D1(e) {
         for(var t = arguments.length, n = new Array(t > 1 ? t - 1 : 0), o = 1; o < t; o++)n[o - 1] = arguments[o];
@@ -355,7 +350,7 @@ var CarbonComponents = function(e1) {
     c1(x1, "components", new WeakMap), c1(x1, "stateChangeTypes", T1);
     var A1 = x1;
     function M1(e17) {
-        return (function(e18) {
+        return function(e18) {
             l1(n3, e18);
             var t12 = f1(n3);
             function n3() {
@@ -411,7 +406,7 @@ var CarbonComponents = function(e1) {
                     }
                 }
             ]), n3;
-        })(e17);
+        }(e17);
     }
     function N1(e, t) {
         var n = e.target, o = e.currentTarget;
@@ -429,8 +424,7 @@ var CarbonComponents = function(e1) {
         l1(o2, e20);
         var t13 = f1(o2);
         function o2(e21) {
-            var n, a2 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
-            };
+            var n, a2 = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
             if (i1(this, o2), c1(p1(n = t13.call(this, e21, a2)), "_changeState", function(e, t, o) {
                 "delete-filename-fileuploader" === e && n.container.removeChild(t.filenameElement), "function" == typeof o && o();
             }), c1(p1(n), "_handleDeleteButton", function(e) {
@@ -746,7 +740,7 @@ var CarbonComponents = function(e1) {
     var R1 = [
         M1,
         function(e29) {
-            return (function(e30) {
+            return function(e30) {
                 l1(n, e30);
                 var t17 = f1(n);
                 function n() {
@@ -766,13 +760,13 @@ var CarbonComponents = function(e1) {
                         }
                     }
                 ]), n;
-            })(e29);
+            }(e29);
         }
     ];
     var V1 = [
         E1,
         function(e31) {
-            return (function(e32) {
+            return function(e32) {
                 l1(n, e32);
                 var t = f1(n);
                 function n(e33, o) {
@@ -793,7 +787,7 @@ var CarbonComponents = function(e1) {
                         }
                     }
                 ]), n;
-            })(e31);
+            }(e31);
         }
     ], Y1 = function() {
         var e34 = [], t18 = !1;
@@ -807,9 +801,9 @@ var CarbonComponents = function(e1) {
         }
         return {
             add: function(t19) {
-                return e34.length || window.addEventListener("resize", o), (function(t) {
+                return e34.length || window.addEventListener("resize", o), function(t) {
                     t && e34.indexOf(t) < 0 && e34.push(t);
-                })(t19), {
+                }(t19), {
                     release: function() {
                         var n = e34.indexOf(t19);
                         n >= 0 && e34.splice(n, 1);
@@ -862,11 +856,9 @@ var CarbonComponents = function(e1) {
                 value: function() {
                     var e37 = this.element, t21 = this.options, n7 = t21.refNode, o8 = t21.offset, a3 = t21.direction;
                     if (!n7) throw new Error("Cannot find the reference node for positioning floating menu.");
-                    return (function(e) {
-                        var t, n = e.menuSize, o = e.refPosition, a = e.offset, i = void 0 === a ? {
-                        } : a, r = e.direction, s = void 0 === r ? "bottom" : r, l = e.scrollX, u = void 0 === l ? 0 : l, d = e.scrollY, p = void 0 === d ? 0 : d, h = o.left, f = void 0 === h ? 0 : h, m = o.top, g = void 0 === m ? 0 : m, v = o.right, b = void 0 === v ? 0 : v, y = o.bottom, w = void 0 === y ? 0 : y, S = n.width, C = n.height, k = i.top, _ = void 0 === k ? 0 : k, E = i.left, D = void 0 === E ? 0 : E, T = (f + b) / 2, x = (g + w) / 2;
-                        return (t = {
-                        }, c1(t, "left", {
+                    return function(e) {
+                        var t, n = e.menuSize, o = e.refPosition, a = e.offset, i = void 0 === a ? {} : a, r = e.direction, s = void 0 === r ? "bottom" : r, l = e.scrollX, u = void 0 === l ? 0 : l, d = e.scrollY, p = void 0 === d ? 0 : d, h = o.left, f = void 0 === h ? 0 : h, m = o.top, g = void 0 === m ? 0 : m, v = o.right, b = void 0 === v ? 0 : v, y = o.bottom, w = void 0 === y ? 0 : y, S = n.width, C = n.height, k = i.top, _ = void 0 === k ? 0 : k, E = i.left, D = void 0 === E ? 0 : E, T = (f + b) / 2, x = (g + w) / 2;
+                        return (t = {}, c1(t, "left", {
                             left: f - S + u - D,
                             top: x - C / 2 + p + _
                         }), c1(t, "top", {
@@ -879,7 +871,7 @@ var CarbonComponents = function(e1) {
                             left: T - S / 2 + u + D,
                             top: w + p + _
                         }), t)[s];
-                    })({
+                    }({
                         menuSize: e37.getBoundingClientRect(),
                         refPosition: n7.getBoundingClientRect(),
                         offset: "function" != typeof o8 ? o8 : o8(e37, a3, n7),
@@ -958,12 +950,10 @@ var CarbonComponents = function(e1) {
     }), c1(W1, "components", new WeakMap);
     var U1 = W1, K1 = function() {
         var e;
-        return c1(e = {
-        }, "top", "bottom"), c1(e, "bottom", "top"), c1(e, "left", "left"), c1(e, "right", "right"), e;
+        return c1(e = {}, "top", "bottom"), c1(e, "bottom", "top"), c1(e, "left", "left"), c1(e, "right", "right"), e;
     }(), G1 = function() {
         var e;
-        return c1(e = {
-        }, "top", -2), c1(e, "bottom", -1), c1(e, "left", -2), c1(e, "right", -1), e;
+        return c1(e = {}, "top", -2), c1(e, "bottom", -1), c1(e, "left", -2), c1(e, "right", -1), e;
     }(), z1 = function(e, t, n) {
         var o = K1[t], a = G1[t];
         o && a || console.warn("Wrong floating menu direction:", t);
@@ -985,15 +975,15 @@ var CarbonComponents = function(e1) {
             return i1(this, o9), c1(p1(a = t22.call(this, e41, n8)), "getCurrentNavigation", function() {
                 var e = a.element.ownerDocument.activeElement;
                 return e.nodeType === Node.ELEMENT_NODE && e.matches(a.options.selectorItem) ? e : null;
-            }), c1(p1(a), "navigate", function(e) {
-                for(var t = b1(a.element.ownerDocument.querySelectorAll(a.options.selectorItem)), n9 = a.getCurrentNavigation() || a.element.querySelector(a.options.selectorItemSelected), o = function(n) {
-                    var o = Math.max(t.indexOf(n) + e, -1);
-                    return t[(function(e, t) {
+            }), c1(p1(a), "navigate", function(e42) {
+                for(var t23 = b1(a.element.ownerDocument.querySelectorAll(a.options.selectorItem)), n9 = a.getCurrentNavigation() || a.element.querySelector(a.options.selectorItemSelected), o10 = function(n) {
+                    var o = Math.max(t23.indexOf(n) + e42, -1);
+                    return t23[function(e, t) {
                         return e + (e >= 0 ? 0 : t);
-                    })(function(e, t) {
+                    }(function(e, t) {
                         return e - (e < t ? 0 : t);
-                    }(o, t.length), t.length)];
-                }, i = o(n9); i && i !== n9; i = o(i))if (!i.matches(a.options.selectorItemHidden) && !i.parentNode.matches(a.options.selectorItemHidden) && !i.matches(a.options.selectorItemSelected)) {
+                    }(o, t23.length), t23.length)];
+                }, i = o10(n9); i && i !== n9; i = o10(i))if (!i.matches(a.options.selectorItemHidden) && !i.parentNode.matches(a.options.selectorItemHidden) && !i.matches(a.options.selectorItemSelected)) {
                     i.focus();
                     break;
                 }
@@ -1083,23 +1073,22 @@ var CarbonComponents = function(e1) {
     }(C1(k1, _1, R1, E1));
     c1(J1, "components", new WeakMap);
     var $1 = J1;
-    function X1(e42) {
-        var t23 = function(e43) {
-            l1(n10, e43);
-            var t24 = f1(n10);
+    function X1(e43) {
+        var t24 = function(e44) {
+            l1(n10, e44);
+            var t25 = f1(n10);
             function n10() {
-                return i1(this, n10), t24.apply(this, arguments);
+                return i1(this, n10), t25.apply(this, arguments);
             }
             return s1(n10, null, [
                 {
                     key: "init",
                     value: function() {
-                        var e44 = this, t25 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : document, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
-                        }, o = Object.assign(Object.create(this.options), n);
-                        if (!t25 || t25.nodeType !== Node.ELEMENT_NODE && t25.nodeType !== Node.DOCUMENT_NODE) throw new TypeError("DOM document or DOM element should be given to search for and initialize this widget.");
-                        if (t25.nodeType !== Node.ELEMENT_NODE || !t25.matches(o.selectorInit)) {
+                        var e45 = this, t26 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : document, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, o = Object.assign(Object.create(this.options), n);
+                        if (!t26 || t26.nodeType !== Node.ELEMENT_NODE && t26.nodeType !== Node.DOCUMENT_NODE) throw new TypeError("DOM document or DOM element should be given to search for and initialize this widget.");
+                        if (t26.nodeType !== Node.ELEMENT_NODE || !t26.matches(o.selectorInit)) {
                             var a4 = o.initEventNames.map(function(a6) {
-                                return D1(t25, a6, function(t) {
+                                return D1(t26, a6, function(t) {
                                     var a = N1(t, "[".concat(o.attribInitTarget, "]"));
                                     if (a) {
                                         t.delegateTarget = a;
@@ -1107,7 +1096,7 @@ var CarbonComponents = function(e1) {
                                         if (i.length > 1) throw new Error("Target widget must be unique.");
                                         if (1 === i.length) {
                                             "A" === a.tagName && t.preventDefault();
-                                            var r = e44.create(i[0], n);
+                                            var r = e45.create(i[0], n);
                                             "function" == typeof r.createdByLauncher && r.createdByLauncher(t);
                                         }
                                     }
@@ -1119,26 +1108,26 @@ var CarbonComponents = function(e1) {
                                 }
                             };
                         }
-                        return this.create(t25, n), "";
+                        return this.create(t26, n), "";
                     }
                 }
             ]), n10;
-        }(e42);
-        return c1(t23, "forLazyInit", !0), t23;
+        }(e43);
+        return c1(t24, "forLazyInit", !0), t24;
     }
-    var Z1 = function(e45) {
-        l1(o10, e45);
-        var t26 = f1(o10);
-        function o10(e46, a) {
+    var Z1 = function(e46) {
+        l1(o11, e46);
+        var t27 = f1(o11);
+        function o11(e47, a) {
             var r;
-            return i1(this, o10), c1(p1(r = t26.call(this, e46, a)), "_handleFocusinListener", void 0), c1(p1(r), "_handleKeydownListener", void 0), c1(p1(r), "_handleFocusin", function(e) {
-                var t27 = r.element.querySelector(r.options.selectorModalContainer) || r.element;
-                r.element.classList.contains(r.options.classVisible) && !t27.contains(e.target) && r.options.selectorsFloatingMenus.every(function(t) {
+            return i1(this, o11), c1(p1(r = t27.call(this, e47, a)), "_handleFocusinListener", void 0), c1(p1(r), "_handleKeydownListener", void 0), c1(p1(r), "_handleFocusin", function(e) {
+                var t28 = r.element.querySelector(r.options.selectorModalContainer) || r.element;
+                r.element.classList.contains(r.options.classVisible) && !t28.contains(e.target) && r.options.selectorsFloatingMenus.every(function(t) {
                     return !N1(e, t);
                 }) && r.element.querySelector(n1.selectorTabbable).focus();
             }), r._hookCloseActions(), r;
         }
-        return s1(o10, [
+        return s1(o11, [
             {
                 key: "createdByLauncher",
                 value: function(e) {
@@ -1205,15 +1194,15 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o10;
+        ]), o11;
     }(C1(k1, X1, R1, E1));
     c1(Z1, "components", new WeakMap);
-    var Q1 = Z1, ee1 = function(e47) {
-        l1(o, e47);
-        var t28 = f1(o);
+    var Q1 = Z1, ee1 = function(e48) {
+        l1(o, e48);
+        var t29 = f1(o);
         function o(e, n) {
             var a;
-            return i1(this, o), (a = t28.call(this, e, n)).active = a.options.active, a.set(a.active), a;
+            return i1(this, o), (a = t29.call(this, e, n)).active = a.options.active, a.set(a.active), a;
         }
         return s1(o, [
             {
@@ -1276,25 +1265,25 @@ var CarbonComponents = function(e1) {
     function ne1(e, t, n) {
         n ? e.setAttribute(t, "") : e.removeAttribute(t);
     }
-    var oe1 = function(e48) {
-        l1(o11, e48);
-        var t29 = f1(o11);
-        function o11(e, n) {
+    var oe1 = function(e49) {
+        l1(o12, e49);
+        var t30 = f1(o12);
+        function o12(e, n) {
             var a;
-            i1(this, o11);
-            var r = (a = t29.call(this, e, n)).options.initialState;
+            i1(this, o12);
+            var r = (a = t30.call(this, e, n)).options.initialState;
             return r && a.setState(r), a;
         }
-        return s1(o11, [
+        return s1(o12, [
             {
                 key: "setState",
-                value: function(e) {
+                value: function(e50) {
                     var t = this.constructor.states, n = Object.keys(t).map(function(e) {
                         return t[e];
                     });
-                    if (n.indexOf(e) < 0) throw new Error("One of the following value should be given as the state: ".concat(n.join(", ")));
+                    if (n.indexOf(e50) < 0) throw new Error("One of the following value should be given as the state: ".concat(n.join(", ")));
                     var o = this.element, a = this.options, i = a.selectorSpinner, r = a.selectorFinished, s = a.selectorError, c = a.selectorTextActive, l = a.selectorTextFinished, u = a.selectorTextError, d = o.querySelector(i), p = o.querySelector(r), h = o.querySelector(s), f = o.querySelector(c), m = o.querySelector(l), g = o.querySelector(u);
-                    return d && (d.classList.toggle(this.options.classLoadingStop, e !== t.ACTIVE), ne1(d, "hidden", e !== t.INACTIVE && e !== t.ACTIVE)), p && ne1(p, "hidden", e !== t.FINISHED), h && ne1(h, "hidden", e !== t.ERROR), f && ne1(f, "hidden", e !== t.ACTIVE), m && ne1(m, "hidden", e !== t.FINISHED), g && ne1(g, "hidden", e !== t.ERROR), this;
+                    return d && (d.classList.toggle(this.options.classLoadingStop, e50 !== t.ACTIVE), ne1(d, "hidden", e50 !== t.INACTIVE && e50 !== t.ACTIVE)), p && ne1(p, "hidden", e50 !== t.FINISHED), h && ne1(h, "hidden", e50 !== t.ERROR), f && ne1(f, "hidden", e50 !== t.ACTIVE), m && ne1(m, "hidden", e50 !== t.FINISHED), g && ne1(g, "hidden", e50 !== t.ERROR), this;
                 }
             }
         ], [
@@ -1313,7 +1302,7 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o11;
+        ]), o12;
     }(C1(k1, _1, E1));
     c1(oe1, "states", {
         INACTIVE: "inactive",
@@ -1323,12 +1312,12 @@ var CarbonComponents = function(e1) {
     }), c1(oe1, "components", new WeakMap);
     var ae1 = oe1, ie1 = function(e) {
         return Array.prototype.slice.call(e);
-    }, re1 = function(e49) {
-        l1(o12, e49);
-        var t30 = f1(o12);
-        function o12(e50, n) {
+    }, re1 = function(e51) {
+        l1(o13, e51);
+        var t31 = f1(o13);
+        function o13(e52, n) {
             var a;
-            return i1(this, o12), (a = t30.call(this, e50, n)).manage(D1(a.element.ownerDocument, "click", function(e) {
+            return i1(this, o13), (a = t31.call(this, e52, n)).manage(D1(a.element.ownerDocument, "click", function(e) {
                 a._toggle(e);
             })), a.manage(D1(a.element, "keydown", function(e) {
                 a._handleKeyDown(e);
@@ -1340,7 +1329,7 @@ var CarbonComponents = function(e1) {
                 t && a._updateFocus(t);
             })), a;
         }
-        return s1(o12, [
+        return s1(o13, [
             {
                 key: "_handleKeyDown",
                 value: function(e) {
@@ -1375,18 +1364,18 @@ var CarbonComponents = function(e1) {
             },
             {
                 key: "_toggle",
-                value: function(e51) {
+                value: function(e53) {
                     var t = this;
                     if (!this.element.classList.contains(this.options.classDisabled)) {
                         var n = this.element.querySelector(this.options.selectorTrigger);
-                        if (40 === e51.which && !e51.target.matches(this.options.selectorItem) || (!n || !n.contains(e51.target)) && [
+                        if (40 === e53.which && !e53.target.matches(this.options.selectorItem) || (!n || !n.contains(e53.target)) && [
                             13,
                             32
-                        ].indexOf(e51.which) >= 0 && !e51.target.matches(this.options.selectorItem) || 27 === e51.which || "click" === e51.type) {
-                            var o = this.element.classList.contains(this.options.classOpen), a = this.element.contains(e51.target), i = {
-                                add: a && 40 === e51.which && !o,
-                                remove: (!a || 27 === e51.which) && o,
-                                toggle: a && 27 !== e51.which && 40 !== e51.which
+                        ].indexOf(e53.which) >= 0 && !e53.target.matches(this.options.selectorItem) || 27 === e53.which || "click" === e53.type) {
+                            var o = this.element.classList.contains(this.options.classOpen), a = this.element.contains(e53.target), i = {
+                                add: a && 40 === e53.which && !o,
+                                remove: (!a || 27 === e53.which) && o,
+                                toggle: a && 27 !== e53.which && 40 !== e53.which
                             }, r = !1;
                             Object.keys(i).forEach(function(e) {
                                 i[e] && (r = !0, t.element.classList[e](t.options.classOpen));
@@ -1425,14 +1414,14 @@ var CarbonComponents = function(e1) {
             },
             {
                 key: "navigate",
-                value: function(e) {
-                    for(var t = ie1(this.element.querySelectorAll(this.options.selectorItem)), n11 = this.getCurrentNavigation() || this.element.querySelector(this.options.selectorLinkSelected), o = function(n) {
-                        var o, a, i = Math.max(t.indexOf(n) + e, -1);
-                        return t[(function(e, t) {
+                value: function(e54) {
+                    for(var t32 = ie1(this.element.querySelectorAll(this.options.selectorItem)), n11 = this.getCurrentNavigation() || this.element.querySelector(this.options.selectorLinkSelected), o14 = function(n) {
+                        var o, a, i = Math.max(t32.indexOf(n) + e54, -1);
+                        return t32[function(e, t) {
                             return e + (e >= 0 ? 0 : t);
-                        })((o = i, a = t.length, o - (o < a ? 0 : a)), t.length)];
-                    }, a = this.element.classList.contains(this.options.classShowSelected), i = o(n11); i && i !== n11; i = o(i))if (!i.matches(this.options.selectorItemHidden) && !i.parentNode.matches(this.options.selectorItemHidden) && (a || !a && !i.parentElement.matches(this.options.selectorItemSelected))) {
-                        this.element.querySelector(this.options.selectorTrigger) ? this._updateFocus(i) : i.focus();
+                        }((o = i, a = t32.length, o - (o < a ? 0 : a)), t32.length)];
+                    }, a7 = this.element.classList.contains(this.options.classShowSelected), i2 = o14(n11); i2 && i2 !== n11; i2 = o14(i2))if (!i2.matches(this.options.selectorItemHidden) && !i2.parentNode.matches(this.options.selectorItemHidden) && (a7 || !a7 && !i2.parentElement.matches(this.options.selectorItemSelected))) {
+                        this.element.querySelector(this.options.selectorTrigger) ? this._updateFocus(i2) : i2.focus();
                         break;
                     }
                 }
@@ -1496,24 +1485,24 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o12;
+        ]), o13;
     }(C1(k1, _1, V1));
     c1(re1, "components", new WeakMap), c1(re1, "NAVIGATE", {
         BACKWARD: -1,
         FORWARD: 1
     });
-    var se1 = re1, ce1 = function(e52) {
-        l1(o13, e52);
-        var t31 = f1(o13);
-        function o13(e53, n) {
+    var se1 = re1, ce1 = function(e55) {
+        l1(o15, e55);
+        var t33 = f1(o15);
+        function o15(e56, n) {
             var a;
-            return i1(this, o13), (a = t31.call(this, e53, n)).manage(D1(a.element.querySelector(".up-icon"), "click", function(e) {
+            return i1(this, o15), (a = t33.call(this, e56, n)).manage(D1(a.element.querySelector(".up-icon"), "click", function(e) {
                 a._handleClick(e);
             })), a.manage(D1(a.element.querySelector(".down-icon"), "click", function(e) {
                 a._handleClick(e);
             })), a;
         }
-        return s1(o13, [
+        return s1(o15, [
             {
                 key: "_handleClick",
                 value: function(e) {
@@ -1541,18 +1530,18 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o13;
+        ]), o15;
     }(C1(k1, _1, E1));
     c1(ce1, "components", new WeakMap);
     var le1 = ce1, ue1 = function(e) {
         return Array.prototype.slice.call(e);
-    }, de1 = function(e54) {
-        l1(o14, e54);
-        var t32 = f1(o14);
-        function o14(e55, n13) {
+    }, de1 = function(e57) {
+        l1(o16, e57);
+        var t34 = f1(o16);
+        function o16(e58, n13) {
             var a;
-            return i1(this, o14), c1(p1(a = t32.call(this, e55, n13)), "_sortToggle", function(e56) {
-                var t = e56.element, n14 = e56.previousValue;
+            return i1(this, o16), c1(p1(a = t34.call(this, e58, n13)), "_sortToggle", function(e59) {
+                var t = e59.element, n14 = e59.previousValue;
                 ue1(a.tableHeaders).forEach(function(e) {
                     var n = e.querySelector(a.options.selectorTableSort);
                     null !== n && n !== t && (n.classList.remove(a.options.classTableSortActive), n.classList.remove(a.options.classTableSortAscending));
@@ -1560,23 +1549,23 @@ var CarbonComponents = function(e1) {
             }), c1(p1(a), "_selectToggle", function(e) {
                 var t = e.element, n = t.checked;
                 a.state.checkboxCount += n ? 1 : -1, a.countEl.textContent = a.state.checkboxCount, t.parentNode.parentNode.classList.toggle(a.options.classTableSelected), a._actionBarToggle(a.state.checkboxCount > 0);
-            }), c1(p1(a), "_selectAllToggle", function(e57) {
-                var t = e57.element.checked, n15 = ue1(a.element.querySelectorAll(a.options.selectorCheckbox));
+            }), c1(p1(a), "_selectAllToggle", function(e60) {
+                var t = e60.element.checked, n15 = ue1(a.element.querySelectorAll(a.options.selectorCheckbox));
                 a.state.checkboxCount = t ? n15.length - 1 : 0, n15.forEach(function(e) {
                     e.checked = t;
                     var n = e.parentNode.parentNode;
                     t && n ? n.classList.add(a.options.classTableSelected) : n.classList.remove(a.options.classTableSelected);
                 }), a._actionBarToggle(a.state.checkboxCount > 0), a.batchActionEl && (a.countEl.textContent = a.state.checkboxCount);
             }), c1(p1(a), "_actionBarCancel", function() {
-                var e58 = ue1(a.element.querySelectorAll(a.options.selectorCheckbox));
+                var e61 = ue1(a.element.querySelectorAll(a.options.selectorCheckbox));
                 ue1(a.element.querySelectorAll(a.options.selectorTableSelected)).forEach(function(e) {
                     e.classList.remove(a.options.classTableSelected);
-                }), e58.forEach(function(e) {
+                }), e61.forEach(function(e) {
                     e.checked = !1;
                 }), a.state.checkboxCount = 0, a._actionBarToggle(!1), a.batchActionEl && (a.countEl.textContent = a.state.checkboxCount);
-            }), c1(p1(a), "_actionBarToggle", function(e59) {
+            }), c1(p1(a), "_actionBarToggle", function(e62) {
                 var t;
-                e59 ? (a.batchActionEl.dataset.active = !0, a.batchActionEl.classList.add(a.options.classActionBarActive)) : a.batchActionEl && (a.batchActionEl.dataset.active = !1, a.batchActionEl.classList.remove(a.options.classActionBarActive)), a.batchActionEl && (t = a.manage(D1(a.batchActionEl, "transitionend", function(e) {
+                e62 ? (a.batchActionEl.dataset.active = !0, a.batchActionEl.classList.add(a.options.classActionBarActive)) : a.batchActionEl && (a.batchActionEl.dataset.active = !1, a.batchActionEl.classList.remove(a.options.classActionBarActive)), a.batchActionEl && (t = a.manage(D1(a.batchActionEl, "transitionend", function(e) {
                     t && (t = a.unmanage(t).release()), e.target.matches(a.options.selectorActions) && ("false" === a.batchActionEl.dataset.active ? a.batchActionEl.setAttribute("tabIndex", -1) : a.batchActionEl.setAttribute("tabIndex", 0));
                 })));
             }), c1(p1(a), "_rowExpandToggle", function(e) {
@@ -1587,8 +1576,8 @@ var CarbonComponents = function(e1) {
                     var i = a.element.querySelector(a.options.selectorExpandHeader);
                     i && (i.dataset.previousValue = "expanded");
                 }
-            }), c1(p1(a), "_rowExpandToggleAll", function(e60) {
-                var t = e60.element, n = void 0 === t.dataset.previousValue || "expanded" === t.dataset.previousValue;
+            }), c1(p1(a), "_rowExpandToggleAll", function(e63) {
+                var t = e63.element, n = void 0 === t.dataset.previousValue || "expanded" === t.dataset.previousValue;
                 t.dataset.previousValue = n ? "collapsed" : "expanded";
                 var o = a.element.querySelectorAll(a.options.selectorExpandCells);
                 Array.prototype.forEach.call(o, function(e) {
@@ -1613,29 +1602,29 @@ var CarbonComponents = function(e1) {
                 var t = a.element.querySelector(a.options.selectorToolbarSearchContainer), n = N1(e, a.options.selectorSearchMagnifier), o = t.classList.contains(a.options.classToolbarSearchActive);
                 27 === e.which && a._actionBarCancel(), t && n && 13 === e.which && a.activateSearch(t), o && 27 === e.which && a.deactivateSearch(t, e);
             }), c1(p1(a), "refreshRows", function() {
-                var e61 = ue1(a.element.querySelectorAll(a.options.selectorExpandCells)), t33 = ue1(a.element.querySelectorAll(a.options.selectorExpandableRows)), n = ue1(a.element.querySelectorAll(a.options.selectorParentRows));
+                var e64 = ue1(a.element.querySelectorAll(a.options.selectorExpandCells)), t35 = ue1(a.element.querySelectorAll(a.options.selectorExpandableRows)), n = ue1(a.element.querySelectorAll(a.options.selectorParentRows));
                 if (a.parentRows.length > 0) {
                     var o = n.filter(function(e) {
                         return !a.parentRows.some(function(t) {
                             return t === e;
                         });
                     });
-                    if (t33.length > 0) {
+                    if (t35.length > 0) {
                         var i = o.map(function(e) {
                             return e.nextElementSibling;
                         }), r = [].concat(b1(ue1(a.expandableRows)), b1(ue1(i)));
                         a.expandableRows = r;
                     }
-                } else t33.length > 0 && (a.expandableRows = t33);
-                a.expandCells = e61, a.parentRows = n;
-            }), a.container = e55.parentNode, a.toolbarEl = a.element.querySelector(a.options.selectorToolbar), a.batchActionEl = a.element.querySelector(a.options.selectorActions), a.countEl = a.element.querySelector(a.options.selectorCount), a.cancelEl = a.element.querySelector(a.options.selectorActionCancel), a.tableHeaders = a.element.querySelectorAll("th"), a.tableBody = a.element.querySelector(a.options.selectorTableBody), a.expandCells = [], a.expandableRows = [], a.parentRows = [], a.refreshRows(), a.manage(D1(a.element, "mouseover", a._expandableHoverToggle)), a.manage(D1(a.element, "mouseout", a._expandableHoverToggle)), a.manage(D1(a.element, "click", function(e) {
+                } else t35.length > 0 && (a.expandableRows = t35);
+                a.expandCells = e64, a.parentRows = n;
+            }), a.container = e58.parentNode, a.toolbarEl = a.element.querySelector(a.options.selectorToolbar), a.batchActionEl = a.element.querySelector(a.options.selectorActions), a.countEl = a.element.querySelector(a.options.selectorCount), a.cancelEl = a.element.querySelector(a.options.selectorActionCancel), a.tableHeaders = a.element.querySelectorAll("th"), a.tableBody = a.element.querySelector(a.options.selectorTableBody), a.expandCells = [], a.expandableRows = [], a.parentRows = [], a.refreshRows(), a.manage(D1(a.element, "mouseover", a._expandableHoverToggle)), a.manage(D1(a.element, "mouseout", a._expandableHoverToggle)), a.manage(D1(a.element, "click", function(e) {
                 var t = N1(e, a.options.eventTrigger), n = a.element.querySelector(a.options.selectorToolbarSearchContainer);
                 t && a._toggleState(t, e), n && a._handleDocumentClick(e);
             })), a.manage(D1(a.element, "keydown", a._keydownHandler)), a.state = {
                 checkboxCount: 0
             }, a;
         }
-        return s1(o14, [
+        return s1(o16, [
             {
                 key: "_handleDocumentClick",
                 value: function(e) {
@@ -1705,7 +1694,7 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o14;
+        ]), o16;
     }(C1(k1, _1, M1, E1));
     c1(de1, "components", new WeakMap), c1(de1, "eventHandlers", {
         expand: "_rowExpandToggle",
@@ -1716,10 +1705,9 @@ var CarbonComponents = function(e1) {
         "action-bar-cancel": "_actionBarCancel"
     });
     var pe1 = de1, he1 = {
-        exports: {
-        }
+        exports: {}
     };
-    he1.exports = (function() {
+    he1.exports = function() {
         /*! *****************************************************************************
 	    Copyright (c) Microsoft Corporation. All rights reserved.
 	    Licensed under the Apache License, Version 2.0 (the "License"); you may not use
@@ -1733,12 +1721,12 @@ var CarbonComponents = function(e1) {
 
 	    See the Apache Version 2.0 License for specific language governing permissions
 	    and limitations under the License.
-	    ***************************************************************************** */ var e62 = function() {
-            return (e62 = Object.assign || function(e) {
+	    ***************************************************************************** */ var e65 = function() {
+            return (e65 = Object.assign || function(e) {
                 for(var t, n = 1, o = arguments.length; n < o; n++)for(var a in t = arguments[n])Object.prototype.hasOwnProperty.call(t, a) && (e[a] = t[a]);
                 return e;
             }).apply(this, arguments);
-        }, t34 = [
+        }, t36 = [
             "onChange",
             "onClose",
             "onDayCreate",
@@ -1779,7 +1767,7 @@ var CarbonComponents = function(e1) {
                 var t = new Date(e.getTime());
                 t.setHours(0, 0, 0, 0), t.setDate(t.getDate() + 3 - (t.getDay() + 6) % 7);
                 var n = new Date(t.getFullYear(), 0, 4);
-                return 1 + Math.round(((t.getTime() - n.getTime()) / 86400000 - 3 + (n.getDay() + 6) % 7) / 7);
+                return 1 + Math.round(((t.getTime() - n.getTime()) / 864e5 - 3 + (n.getDay() + 6) % 7) / 7);
             },
             hourIncrement: 1,
             ignoredFocusElements: [],
@@ -1812,7 +1800,7 @@ var CarbonComponents = function(e1) {
             time_24hr: !1,
             weekNumbers: !1,
             wrap: !1
-        }, o15 = {
+        }, o17 = {
             weekdays: {
                 shorthand: [
                     "Sun",
@@ -1902,9 +1890,9 @@ var CarbonComponents = function(e1) {
             ],
             yearAriaLabel: "Year",
             time_24hr: !1
-        }, a7 = function(e) {
+        }, a8 = function(e) {
             return ("0" + e).slice(-2);
-        }, i2 = function(e) {
+        }, i3 = function(e) {
             return !0 === e ? 1 : 0;
         };
         function r2(e, t, n) {
@@ -1937,8 +1925,7 @@ var CarbonComponents = function(e1) {
             if (-1 === navigator.userAgent.indexOf("MSIE 9.0") ? o.type = "number" : (o.type = "text", o.pattern = "\\d*"), void 0 !== t) for(var r in t)o.setAttribute(r, t[r]);
             return n.appendChild(o), n.appendChild(a), n.appendChild(i), n;
         }
-        var p2 = function() {
-        }, h2 = function(e, t, n) {
+        var p2 = function() {}, h2 = function(e, t, n) {
             return n.months[t ? "shorthand" : "longhand"][e];
         }, f2 = {
             D: p2,
@@ -1955,7 +1942,7 @@ var CarbonComponents = function(e1) {
                 e.setDate(parseFloat(t));
             },
             K: function(e, t, n) {
-                e.setHours(e.getHours() % 12 + 12 * i2(new RegExp(n.amPM[1], "i").test(t)));
+                e.setHours(e.getHours() % 12 + 12 * i3(new RegExp(n.amPM[1], "i").test(t)));
             },
             M: function(e, t, n) {
                 e.setMonth(n.months.shorthand.indexOf(t));
@@ -1964,7 +1951,7 @@ var CarbonComponents = function(e1) {
                 e.setSeconds(parseFloat(t));
             },
             U: function(e, t) {
-                return new Date(1000 * parseFloat(t));
+                return new Date(1e3 * parseFloat(t));
             },
             W: function(e, t, n) {
                 var o = parseInt(t), a = new Date(e.getFullYear(), 0, 2 + 7 * (o - 1), 0, 0, 0, 0);
@@ -2003,7 +1990,7 @@ var CarbonComponents = function(e1) {
             },
             w: p2,
             y: function(e, t) {
-                e.setFullYear(2000 + parseFloat(t));
+                e.setFullYear(2e3 + parseFloat(t));
             }
         }, m2 = {
             D: "(\\w+)",
@@ -2040,25 +2027,25 @@ var CarbonComponents = function(e1) {
                 return h2(g2.n(e, t, n) - 1, !1, t);
             },
             G: function(e, t, n) {
-                return a7(g2.h(e, t, n));
+                return a8(g2.h(e, t, n));
             },
             H: function(e) {
-                return a7(e.getHours());
+                return a8(e.getHours());
             },
             J: function(e, t) {
                 return void 0 !== t.ordinal ? e.getDate() + t.ordinal(e.getDate()) : e.getDate();
             },
             K: function(e, t) {
-                return t.amPM[i2(e.getHours() > 11)];
+                return t.amPM[i3(e.getHours() > 11)];
             },
             M: function(e, t) {
                 return h2(e.getMonth(), !0, t);
             },
             S: function(e) {
-                return a7(e.getSeconds());
+                return a8(e.getSeconds());
             },
             U: function(e) {
-                return e.getTime() / 1000;
+                return e.getTime() / 1e3;
             },
             W: function(e, t, n) {
                 return n.getWeek(e);
@@ -2067,13 +2054,13 @@ var CarbonComponents = function(e1) {
                 return e.getFullYear();
             },
             d: function(e) {
-                return a7(e.getDate());
+                return a8(e.getDate());
             },
             h: function(e) {
                 return e.getHours() % 12 ? e.getHours() % 12 : 12;
             },
             i: function(e) {
-                return a7(e.getMinutes());
+                return a8(e.getMinutes());
             },
             j: function(e) {
                 return e.getDate();
@@ -2082,7 +2069,7 @@ var CarbonComponents = function(e1) {
                 return t.weekdays.longhand[e.getDay()];
             },
             m: function(e) {
-                return a7(e.getMonth() + 1);
+                return a8(e.getMonth() + 1);
             },
             n: function(e) {
                 return e.getMonth() + 1;
@@ -2099,33 +2086,33 @@ var CarbonComponents = function(e1) {
             y: function(e) {
                 return String(e.getFullYear()).substring(2);
             }
-        }, v2 = function(e63) {
-            var t35 = e63.config, a = void 0 === t35 ? n16 : t35, i3 = e63.l10n, r = void 0 === i3 ? o15 : i3;
-            return function(e, t36, n) {
-                var o = n || r;
-                return void 0 !== a.formatDate ? a.formatDate(e, t36, o) : t36.split("").map(function(t, n, i) {
+        }, v2 = function(e66) {
+            var t37 = e66.config, a = void 0 === t37 ? n16 : t37, i4 = e66.l10n, r = void 0 === i4 ? o17 : i4;
+            return function(e, t38, n17) {
+                var o = n17 || r;
+                return void 0 !== a.formatDate ? a.formatDate(e, t38, o) : t38.split("").map(function(t, n, i) {
                     return g2[t] && "\\" !== i[n - 1] ? g2[t](e, o, a) : "\\" !== t ? t : "";
                 }).join("");
             };
-        }, b2 = function(e64) {
-            var t37 = e64.config, a = void 0 === t37 ? n16 : t37, i4 = e64.l10n, r = void 0 === i4 ? o15 : i4;
-            return function(e65, t38, o, i) {
-                if (0 === e65 || e65) {
-                    var s, c = i || r, l = e65;
-                    if (e65 instanceof Date) s = new Date(e65.getTime());
-                    else if ("string" != typeof e65 && void 0 !== e65.toFixed) s = new Date(e65);
-                    else if ("string" == typeof e65) {
-                        var u = t38 || (a || n16).dateFormat, d = String(e65).trim();
+        }, b2 = function(e67) {
+            var t39 = e67.config, a = void 0 === t39 ? n16 : t39, i5 = e67.l10n, r = void 0 === i5 ? o17 : i5;
+            return function(e68, t40, o, i) {
+                if (0 === e68 || e68) {
+                    var s, c = i || r, l = e68;
+                    if (e68 instanceof Date) s = new Date(e68.getTime());
+                    else if ("string" != typeof e68 && void 0 !== e68.toFixed) s = new Date(e68);
+                    else if ("string" == typeof e68) {
+                        var u = t40 || (a || n16).dateFormat, d = String(e68).trim();
                         if ("today" === d) s = new Date, o = !0;
-                        else if (/Z$/.test(d) || /GMT$/.test(d)) s = new Date(e65);
-                        else if (a && a.parseDate) s = a.parseDate(e65, u);
+                        else if (/Z$/.test(d) || /GMT$/.test(d)) s = new Date(e68);
+                        else if (a && a.parseDate) s = a.parseDate(e68, u);
                         else {
                             s = a && a.noCalendar ? new Date((new Date).setHours(0, 0, 0, 0)) : new Date((new Date).getFullYear(), 0, 1, 0, 0, 0, 0);
                             for(var p = void 0, h = [], g = 0, v = 0, b = ""; g < u.length; g++){
                                 var y = u[g], w = "\\" === y, S = "\\" === u[g - 1] || w;
                                 if (m2[y] && !S) {
                                     b += m2[y];
-                                    var C = new RegExp(b).exec(e65);
+                                    var C = new RegExp(b).exec(e68);
                                     C && (p = !0) && h["Y" !== y ? "push" : "unshift"]({
                                         fn: f2[y],
                                         val: C[++v]
@@ -2147,12 +2134,11 @@ var CarbonComponents = function(e1) {
         function y2(e, t, n) {
             return void 0 === n && (n = !0), !1 !== n ? new Date(e.getTime()).setHours(0, 0, 0, 0) - new Date(t.getTime()).setHours(0, 0, 0, 0) : e.getTime() - t.getTime();
         }
-        var w2 = 86400000;
+        var w2 = 864e5;
         function S2(p3, f3) {
             var g = {
-                config: e62({
-                }, n16, k.defaultConfig),
-                l10n: o15
+                config: e65({}, n16, k.defaultConfig),
+                l10n: o17
             };
             function S3(e) {
                 return e.bind(g);
@@ -2166,24 +2152,24 @@ var CarbonComponents = function(e1) {
                     }
                 });
             }
-            function _(e66) {
-                0 === g.selectedDates.length && ne(), void 0 !== e66 && "blur" !== e66.type && (function(e) {
+            function _(e69) {
+                0 === g.selectedDates.length && ne(), void 0 !== e69 && "blur" !== e69.type && function(e) {
                     e.preventDefault();
                     var t = "keydown" === e.type, n = e.target;
-                    void 0 !== g.amPM && e.target === g.amPM && (g.amPM.textContent = g.l10n.amPM[i2(g.amPM.textContent === g.l10n.amPM[0])]);
+                    void 0 !== g.amPM && e.target === g.amPM && (g.amPM.textContent = g.l10n.amPM[i3(g.amPM.textContent === g.l10n.amPM[0])]);
                     var o = parseFloat(n.getAttribute("min")), r = parseFloat(n.getAttribute("max")), s = parseFloat(n.getAttribute("step")), c = parseInt(n.value, 10), l = e.delta || (t ? 38 === e.which ? 1 : -1 : 0), u = c + s * l;
                     if (void 0 !== n.value && 2 === n.value.length) {
                         var d = n === g.hourElement, p = n === g.minuteElement;
-                        u < o ? (u = r + u + i2(!d) + (i2(d) && i2(!g.amPM)), p && F(void 0, -1, g.hourElement)) : u > r && (u = n === g.hourElement ? u - r - i2(!g.amPM) : o, p && F(void 0, 1, g.hourElement)), g.amPM && d && (1 === s ? u + c === 23 : Math.abs(u - c) > s) && (g.amPM.textContent = g.l10n.amPM[i2(g.amPM.textContent === g.l10n.amPM[0])]), n.value = a7(u);
+                        u < o ? (u = r + u + i3(!d) + (i3(d) && i3(!g.amPM)), p && F(void 0, -1, g.hourElement)) : u > r && (u = n === g.hourElement ? u - r - i3(!g.amPM) : o, p && F(void 0, 1, g.hourElement)), g.amPM && d && (1 === s ? u + c === 23 : Math.abs(u - c) > s) && (g.amPM.textContent = g.l10n.amPM[i3(g.amPM.textContent === g.l10n.amPM[0])]), n.value = a8(u);
                     }
-                })(e66);
-                var t39 = g._input.value;
-                E(), ve(), g._input.value !== t39 && g._debouncedChange();
+                }(e69);
+                var t41 = g._input.value;
+                E(), ve(), g._input.value !== t41 && g._debouncedChange();
             }
             function E() {
                 if (void 0 !== g.hourElement && void 0 !== g.minuteElement) {
                     var e, t, n = (parseInt(g.hourElement.value.slice(-2), 10) || 0) % 24, o = (parseInt(g.minuteElement.value, 10) || 0) % 60, a = void 0 !== g.secondElement ? (parseInt(g.secondElement.value, 10) || 0) % 60 : 0;
-                    void 0 !== g.amPM && (e = n, t = g.amPM.textContent, n = e % 12 + 12 * i2(t === g.l10n.amPM[1]));
+                    void 0 !== g.amPM && (e = n, t = g.amPM.textContent, n = e % 12 + 12 * i3(t === g.l10n.amPM[1]));
                     var r = void 0 !== g.config.minTime || g.config.minDate && g.minDateHasTime && g.latestSelectedDateObj && 0 === y2(g.latestSelectedDateObj, g.config.minDate, !0);
                     if (void 0 !== g.config.maxTime || g.config.maxDate && g.maxDateHasTime && g.latestSelectedDateObj && 0 === y2(g.latestSelectedDateObj, g.config.maxDate, !0)) {
                         var s = void 0 !== g.config.maxTime ? g.config.maxTime : g.config.maxDate;
@@ -2213,20 +2199,20 @@ var CarbonComponents = function(e1) {
                 x(e, t, n);
             }
             function x(e, t, n) {
-                void 0 !== g.latestSelectedDateObj && g.latestSelectedDateObj.setHours(e % 24, t, n || 0, 0), g.hourElement && g.minuteElement && !g.isMobile && (g.hourElement.value = a7(g.config.time_24hr ? e : (12 + e) % 12 + 12 * i2(e % 12 == 0)), g.minuteElement.value = a7(t), void 0 !== g.amPM && (g.amPM.textContent = g.l10n.amPM[i2(e >= 12)]), void 0 !== g.secondElement && (g.secondElement.value = a7(n)));
+                void 0 !== g.latestSelectedDateObj && g.latestSelectedDateObj.setHours(e % 24, t, n || 0, 0), g.hourElement && g.minuteElement && !g.isMobile && (g.hourElement.value = a8(g.config.time_24hr ? e : (12 + e) % 12 + 12 * i3(e % 12 == 0)), g.minuteElement.value = a8(t), void 0 !== g.amPM && (g.amPM.textContent = g.l10n.amPM[i3(e >= 12)]), void 0 !== g.secondElement && (g.secondElement.value = a8(n)));
             }
             function A(e) {
                 var t = parseInt(e.target.value) + (e.delta || 0);
-                (t / 1000 > 1 || "Enter" === e.key && !/[^\d]/.test(t.toString())) && $(t);
+                (t / 1e3 > 1 || "Enter" === e.key && !/[^\d]/.test(t.toString())) && $(t);
             }
-            function M(e67, t40, n, o) {
-                return t40 instanceof Array ? t40.forEach(function(t) {
-                    return M(e67, t, n, o);
-                }) : e67 instanceof Array ? e67.forEach(function(e) {
-                    return M(e, t40, n, o);
-                }) : (e67.addEventListener(t40, n, o), void g._handlers.push({
-                    element: e67,
-                    event: t40,
+            function M(e70, t42, n, o) {
+                return t42 instanceof Array ? t42.forEach(function(t) {
+                    return M(e70, t, n, o);
+                }) : e70 instanceof Array ? e70.forEach(function(e) {
+                    return M(e, t42, n, o);
+                }) : (e70.addEventListener(t42, n, o), void g._handlers.push({
+                    element: e70,
+                    event: t42,
                     handler: n,
                     options: o
                 }));
@@ -2243,8 +2229,8 @@ var CarbonComponents = function(e1) {
                 var n = void 0 !== e ? g.parseDate(e) : g.latestSelectedDateObj || (g.config.minDate && g.config.minDate > g.now ? g.config.minDate : g.config.maxDate && g.config.maxDate < g.now ? g.config.maxDate : g.now), o = g.currentYear, a = g.currentMonth;
                 try {
                     void 0 !== n && (g.currentYear = n.getFullYear(), g.currentMonth = n.getMonth());
-                } catch (e68) {
-                    e68.message = "Invalid date supplied: " + n, g.config.errorHandler(e68);
+                } catch (e71) {
+                    e71.message = "Invalid date supplied: " + n, g.config.errorHandler(e71);
                 }
                 t && g.currentYear !== o && (pe("onYearChange"), V()), !t || g.currentYear === o && g.currentMonth === a || pe("onMonthChange"), g.redraw();
             }
@@ -2255,11 +2241,11 @@ var CarbonComponents = function(e1) {
                 var o = e && e.target, a = n || o && o.parentNode && o.parentNode.firstChild, i = he("increment");
                 i.delta = t, a && a.dispatchEvent(i);
             }
-            function P(e69, t, n, o) {
-                var a = X(t, !0), i = l2("span", "flatpickr-day " + e69, t.getDate().toString());
-                return i.dateObj = t, i.$i = o, i.setAttribute("aria-label", g.formatDate(t, g.config.ariaDateFormat)), -1 === e69.indexOf("hidden") && 0 === y2(t, g.now) && (g.todayDateElem = i, i.classList.add("today"), i.setAttribute("aria-current", "date")), a ? (i.tabIndex = -1, fe(t) && (i.classList.add("selected"), g.selectedDateElem = i, "range" === g.config.mode && (c2(i, "startRange", g.selectedDates[0] && 0 === y2(t, g.selectedDates[0], !0)), c2(i, "endRange", g.selectedDates[1] && 0 === y2(t, g.selectedDates[1], !0)), "nextMonthDay" === e69 && i.classList.add("inRange")))) : i.classList.add("flatpickr-disabled"), "range" === g.config.mode && (function(e) {
+            function P(e72, t, n, o) {
+                var a = X(t, !0), i = l2("span", "flatpickr-day " + e72, t.getDate().toString());
+                return i.dateObj = t, i.$i = o, i.setAttribute("aria-label", g.formatDate(t, g.config.ariaDateFormat)), -1 === e72.indexOf("hidden") && 0 === y2(t, g.now) && (g.todayDateElem = i, i.classList.add("today"), i.setAttribute("aria-current", "date")), a ? (i.tabIndex = -1, fe(t) && (i.classList.add("selected"), g.selectedDateElem = i, "range" === g.config.mode && (c2(i, "startRange", g.selectedDates[0] && 0 === y2(t, g.selectedDates[0], !0)), c2(i, "endRange", g.selectedDates[1] && 0 === y2(t, g.selectedDates[1], !0)), "nextMonthDay" === e72 && i.classList.add("inRange")))) : i.classList.add("flatpickr-disabled"), "range" === g.config.mode && function(e) {
                     return !("range" !== g.config.mode || g.selectedDates.length < 2) && y2(e, g.selectedDates[0]) >= 0 && y2(e, g.selectedDates[1]) <= 0;
-                })(t) && !fe(t) && i.classList.add("inRange"), g.weekNumbers && 1 === g.config.showMonths && "prevMonthDay" !== e69 && n % 7 == 1 && g.weekNumbers.insertAdjacentHTML("beforeend", "<span class='flatpickr-day'>" + g.config.getWeek(t) + "</span>"), pe("onDayCreate", i), i;
+                }(t) && !fe(t) && i.classList.add("inRange"), g.weekNumbers && 1 === g.config.showMonths && "prevMonthDay" !== e72 && n % 7 == 1 && g.weekNumbers.insertAdjacentHTML("beforeend", "<span class='flatpickr-day'>" + g.config.getWeek(t) + "</span>"), pe("onDayCreate", i), i;
             }
             function B(e) {
                 e.focus(), "range" === g.config.mode && ee(e);
@@ -2270,15 +2256,15 @@ var CarbonComponents = function(e1) {
                     if (-1 === c.className.indexOf("hidden") && X(c.dateObj)) return c;
                 }
             }
-            function H(e70, t41) {
-                var n17 = Z(document.activeElement || document.body), o16 = void 0 !== e70 ? e70 : n17 ? document.activeElement : void 0 !== g.selectedDateElem && Z(g.selectedDateElem) ? g.selectedDateElem : void 0 !== g.todayDateElem && Z(g.todayDateElem) ? g.todayDateElem : q(t41 > 0 ? 1 : -1);
-                return void 0 === o16 ? g._input.focus() : n17 ? void function(e, t) {
+            function H(e73, t43) {
+                var n18 = Z(document.activeElement || document.body), o18 = void 0 !== e73 ? e73 : n18 ? document.activeElement : void 0 !== g.selectedDateElem && Z(g.selectedDateElem) ? g.selectedDateElem : void 0 !== g.todayDateElem && Z(g.todayDateElem) ? g.todayDateElem : q(t43 > 0 ? 1 : -1);
+                return void 0 === o18 ? g._input.focus() : n18 ? void function(e, t) {
                     for(var n = -1 === e.className.indexOf("Month") ? e.dateObj.getMonth() : g.currentMonth, o = t > 0 ? g.config.showMonths : -1, a = t > 0 ? 1 : -1, i = n - g.currentMonth; i != o; i += a)for(var r = g.daysContainer.children[i], s = n - g.currentMonth === i ? e.$i + t : t < 0 ? r.children.length - 1 : 0, c = r.children.length, l = s; l >= 0 && l < c && l != (t > 0 ? c : -1); l += a){
                         var u = r.children[l];
                         if (-1 === u.className.indexOf("hidden") && X(u.dateObj) && Math.abs(e.$i - l) >= Math.abs(t)) return B(u);
                     }
                     g.changeMonth(a), H(q(a), 0);
-                }(o16, t41) : B(o16);
+                }(o18, t43) : B(o18);
             }
             function j(e, t) {
                 for(var n = (new Date(e, t, 1).getDay() - g.l10n.firstDayOfWeek + 7) % 7, o = g.utils.getDaysInMonth((t - 1 + 12) % 12), a = g.utils.getDaysInMonth(t), i = window.document.createDocumentFragment(), r = g.config.showMonths > 1, s = r ? "prevMonthDay hidden" : "prevMonthDay", c = r ? "nextMonthDay hidden" : "nextMonthDay", u = o + 1 - n, d = 0; u <= o; u++, d++)i.appendChild(P(s, new Date(e, t - 1, u), u, d));
@@ -2299,31 +2285,31 @@ var CarbonComponents = function(e1) {
             }
             function V() {
                 if (!(g.config.showMonths > 1)) {
-                    var e71 = function(e) {
+                    var e74 = function(e) {
                         return !(void 0 !== g.config.minDate && g.currentYear === g.config.minDate.getFullYear() && e < g.config.minDate.getMonth() || void 0 !== g.config.maxDate && g.currentYear === g.config.maxDate.getFullYear() && e > g.config.maxDate.getMonth());
                     };
                     g.monthsDropdownContainer.tabIndex = -1, g.monthsDropdownContainer.innerHTML = "";
-                    for(var t = 0; t < 12; t++)if (e71(t)) {
+                    for(var t = 0; t < 12; t++)if (e74(t)) {
                         var n = l2("option", "flatpickr-monthDropdown-month");
                         n.value = new Date(g.currentYear, t).getMonth().toString(), n.textContent = h2(t, !1, g.l10n), n.tabIndex = -1, g.currentMonth === t && (n.selected = !0), g.monthsDropdownContainer.appendChild(n);
                     }
                 }
             }
             function Y() {
-                var e73, t42 = l2("div", "flatpickr-month"), n18 = window.document.createDocumentFragment();
-                g.config.showMonths > 1 ? e73 = l2("span", "cur-month") : (g.monthsDropdownContainer = l2("select", "flatpickr-monthDropdown-months"), M(g.monthsDropdownContainer, "change", function(e) {
+                var e76, t44 = l2("div", "flatpickr-month"), n19 = window.document.createDocumentFragment();
+                g.config.showMonths > 1 ? e76 = l2("span", "cur-month") : (g.monthsDropdownContainer = l2("select", "flatpickr-monthDropdown-months"), M(g.monthsDropdownContainer, "change", function(e) {
                     var t = e.target, n = parseInt(t.value, 10);
                     g.changeMonth(n - g.currentMonth), pe("onMonthChange");
-                }), V(), e73 = g.monthsDropdownContainer);
+                }), V(), e76 = g.monthsDropdownContainer);
                 var o = d2("cur-year", {
                     tabindex: "-1"
                 }), a = o.getElementsByTagName("input")[0];
                 a.setAttribute("aria-label", g.l10n.yearAriaLabel), g.config.minDate && a.setAttribute("min", g.config.minDate.getFullYear().toString()), g.config.maxDate && (a.setAttribute("max", g.config.maxDate.getFullYear().toString()), a.disabled = !!g.config.minDate && g.config.minDate.getFullYear() === g.config.maxDate.getFullYear());
                 var i = l2("div", "flatpickr-current-month");
-                return i.appendChild(e73), i.appendChild(o), n18.appendChild(i), t42.appendChild(n18), {
-                    container: t42,
+                return i.appendChild(e76), i.appendChild(o), n19.appendChild(i), t44.appendChild(n19), {
+                    container: t44,
                     yearElement: a,
-                    monthElement: e73
+                    monthElement: e76
                 };
             }
             function W() {
@@ -2355,9 +2341,9 @@ var CarbonComponents = function(e1) {
             function z(e) {
                 return !(!g.config.appendTo || !g.config.appendTo.contains(e)) || g.calendarContainer.contains(e);
             }
-            function J(e74) {
+            function J(e77) {
                 if (g.isOpen && !g.config.inline) {
-                    var t = "function" == typeof (r = e74).composedPath ? r.composedPath()[0] : r.target, n = z(t), o = t === g.input || t === g.altInput || g.element.contains(t) || e74.path && e74.path.indexOf && (~e74.path.indexOf(g.input) || ~e74.path.indexOf(g.altInput)), a = "blur" === e74.type ? o && e74.relatedTarget && !z(e74.relatedTarget) : !o && !n && !z(e74.relatedTarget), i = !g.config.ignoredFocusElements.some(function(e) {
+                    var t = "function" == typeof (r = e77).composedPath ? r.composedPath()[0] : r.target, n = z(t), o = t === g.input || t === g.altInput || g.element.contains(t) || e77.path && e77.path.indexOf && (~e77.path.indexOf(g.input) || ~e77.path.indexOf(g.altInput)), a = "blur" === e77.type ? o && e77.relatedTarget && !z(e77.relatedTarget) : !o && !n && !z(e77.relatedTarget), i = !g.config.ignoredFocusElements.some(function(e) {
                         return e.contains(t);
                     });
                     a && i && (g.close(), "range" === g.config.mode && 1 === g.selectedDates.length && (g.clear(!1), g.redraw()));
@@ -2390,37 +2376,37 @@ var CarbonComponents = function(e1) {
             function Z(e) {
                 return void 0 !== g.daysContainer && -1 === e.className.indexOf("hidden") && g.daysContainer.contains(e);
             }
-            function Q(e75) {
-                var t = e75.target === g._input, n = g.config.allowInput, o = g.isOpen && (!n || !t), a = g.config.inline && t && !n;
-                if (13 === e75.keyCode && t) {
-                    if (n) return g.setDate(g._input.value, !0, e75.target === g.altInput ? g.config.altFormat : g.config.dateFormat), e75.target.blur();
+            function Q(e78) {
+                var t = e78.target === g._input, n = g.config.allowInput, o = g.isOpen && (!n || !t), a = g.config.inline && t && !n;
+                if (13 === e78.keyCode && t) {
+                    if (n) return g.setDate(g._input.value, !0, e78.target === g.altInput ? g.config.altFormat : g.config.dateFormat), e78.target.blur();
                     g.open();
-                } else if (z(e75.target) || o || a) {
-                    var i = !!g.timeContainer && g.timeContainer.contains(e75.target);
-                    switch(e75.keyCode){
+                } else if (z(e78.target) || o || a) {
+                    var i = !!g.timeContainer && g.timeContainer.contains(e78.target);
+                    switch(e78.keyCode){
                         case 13:
-                            i ? (e75.preventDefault(), _(), se()) : ce(e75);
+                            i ? (e78.preventDefault(), _(), se()) : ce(e78);
                             break;
                         case 27:
-                            e75.preventDefault(), se();
+                            e78.preventDefault(), se();
                             break;
                         case 8:
                         case 46:
-                            t && !g.config.allowInput && (e75.preventDefault(), g.clear());
+                            t && !g.config.allowInput && (e78.preventDefault(), g.clear());
                             break;
                         case 37:
                         case 39:
                             if (i || t) g.hourElement && g.hourElement.focus();
-                            else if (e75.preventDefault(), void 0 !== g.daysContainer && (!1 === n || document.activeElement && Z(document.activeElement))) {
-                                var r = 39 === e75.keyCode ? 1 : -1;
-                                e75.ctrlKey ? (e75.stopPropagation(), G(r), H(q(1), 0)) : H(void 0, r);
+                            else if (e78.preventDefault(), void 0 !== g.daysContainer && (!1 === n || document.activeElement && Z(document.activeElement))) {
+                                var r = 39 === e78.keyCode ? 1 : -1;
+                                e78.ctrlKey ? (e78.stopPropagation(), G(r), H(q(1), 0)) : H(void 0, r);
                             }
                             break;
                         case 38:
                         case 40:
-                            e75.preventDefault();
-                            var s = 40 === e75.keyCode ? 1 : -1;
-                            g.daysContainer && void 0 !== e75.target.$i || e75.target === g.input ? e75.ctrlKey ? (e75.stopPropagation(), $(g.currentYear - s), H(q(1), 0)) : i || H(void 0, 7 * s) : e75.target === g.currentYearElement ? $(g.currentYear - s) : g.config.enableTime && (!i && g.hourElement && g.hourElement.focus(), _(e75), g._debouncedChange());
+                            e78.preventDefault();
+                            var s = 40 === e78.keyCode ? 1 : -1;
+                            g.daysContainer && void 0 !== e78.target.$i || e78.target === g.input ? e78.ctrlKey ? (e78.stopPropagation(), $(g.currentYear - s), H(q(1), 0)) : i || H(void 0, 7 * s) : e78.target === g.currentYearElement ? $(g.currentYear - s) : g.config.enableTime && (!i && g.hourElement && g.hourElement.focus(), _(e78), g._debouncedChange());
                             break;
                         case 9:
                             if (i) {
@@ -2431,15 +2417,15 @@ var CarbonComponents = function(e1) {
                                     g.amPM
                                 ].concat(g.pluginElements).filter(function(e) {
                                     return e;
-                                }), l = c.indexOf(e75.target);
+                                }), l = c.indexOf(e78.target);
                                 if (-1 !== l) {
-                                    var u = c[l + (e75.shiftKey ? -1 : 1)];
-                                    e75.preventDefault(), (u || g._input).focus();
+                                    var u = c[l + (e78.shiftKey ? -1 : 1)];
+                                    e78.preventDefault(), (u || g._input).focus();
                                 }
-                            } else !g.config.noCalendar && g.daysContainer && g.daysContainer.contains(e75.target) && e75.shiftKey && (e75.preventDefault(), g._input.focus());
+                            } else !g.config.noCalendar && g.daysContainer && g.daysContainer.contains(e78.target) && e78.shiftKey && (e78.preventDefault(), g._input.focus());
                     }
                 }
-                if (void 0 !== g.amPM && e75.target === g.amPM) switch(e75.key){
+                if (void 0 !== g.amPM && e78.target === g.amPM) switch(e78.key){
                     case g.l10n.amPM[0].charAt(0):
                     case g.l10n.amPM[0].charAt(0).toLowerCase():
                         g.amPM.textContent = g.l10n.amPM[0], E(), ve();
@@ -2448,11 +2434,11 @@ var CarbonComponents = function(e1) {
                     case g.l10n.amPM[1].charAt(0).toLowerCase():
                         g.amPM.textContent = g.l10n.amPM[1], E(), ve();
                 }
-                (t || z(e75.target)) && pe("onKeyDown", e75);
+                (t || z(e78.target)) && pe("onKeyDown", e78);
             }
-            function ee(e76) {
-                if (1 === g.selectedDates.length && (!e76 || e76.classList.contains("flatpickr-day") && !e76.classList.contains("flatpickr-disabled"))) {
-                    for(var t = e76 ? e76.dateObj.getTime() : g.days.firstElementChild.dateObj.getTime(), n = g.parseDate(g.selectedDates[0], void 0, !0).getTime(), o = Math.min(t, g.selectedDates[0].getTime()), a = Math.max(t, g.selectedDates[0].getTime()), i = !1, r = 0, s = 0, c3 = o; c3 < a; c3 += w2)X(new Date(c3), !0) || (i = i || c3 > o && c3 < a, c3 < n && (!r || c3 > r) ? r = c3 : c3 > n && (!s || c3 < s) && (s = c3));
+            function ee(e79) {
+                if (1 === g.selectedDates.length && (!e79 || e79.classList.contains("flatpickr-day") && !e79.classList.contains("flatpickr-disabled"))) {
+                    for(var t = e79 ? e79.dateObj.getTime() : g.days.firstElementChild.dateObj.getTime(), n = g.parseDate(g.selectedDates[0], void 0, !0).getTime(), o19 = Math.min(t, g.selectedDates[0].getTime()), a = Math.max(t, g.selectedDates[0].getTime()), i = !1, r = 0, s = 0, c3 = o19; c3 < a; c3 += w2)X(new Date(c3), !0) || (i = i || c3 > o19 && c3 < a, c3 < n && (!r || c3 > r) ? r = c3 : c3 > n && (!s || c3 < s) && (s = c3));
                     for(var l3 = 0; l3 < g.config.showMonths; l3++)for(var u = g.daysContainer.children[l3], d3 = function(o, a) {
                         var c, l, d, p = u.children[o], h = p.dateObj.getTime(), f = r > 0 && h < r || s > 0 && h > s;
                         return f ? (p.classList.add("notAllowed"), [
@@ -2468,7 +2454,7 @@ var CarbonComponents = function(e1) {
                             "notAllowed"
                         ].forEach(function(e) {
                             p.classList.remove(e);
-                        }), void (void 0 !== e76 && (e76.classList.add(t <= g.selectedDates[0].getTime() ? "startRange" : "endRange"), n < t && h === n ? p.classList.add("startRange") : n > t && h === n && p.classList.add("endRange"), h >= r && (0 === s || h <= s) && (l = n, d = t, (c = h) > Math.min(l, d) && c < Math.max(l, d)) && p.classList.add("inRange"))));
+                        }), void (void 0 !== e79 && (e79.classList.add(t <= g.selectedDates[0].getTime() ? "startRange" : "endRange"), n < t && h === n ? p.classList.add("startRange") : n > t && h === n && p.classList.add("endRange"), h >= r && (0 === s || h <= s) && (l = n, d = t, (c = h) > Math.min(l, d) && c < Math.max(l, d)) && p.classList.add("inRange"))));
                     }, p4 = 0, h3 = u.children.length; p4 < h3; p4++)d3(p4);
                 }
             }
@@ -2478,29 +2464,26 @@ var CarbonComponents = function(e1) {
             function ne() {
                 g.setDate(void 0 !== g.config.minDate ? new Date(g.config.minDate.getTime()) : new Date, !0), T(), ve();
             }
-            function oe(e77) {
+            function oe(e80) {
                 return function(t) {
-                    var n = g.config["_" + e77 + "Date"] = g.parseDate(t, g.config.dateFormat), o = g.config["_" + ("min" === e77 ? "max" : "min") + "Date"];
-                    void 0 !== n && (g["min" === e77 ? "minDateHasTime" : "maxDateHasTime"] = n.getHours() > 0 || n.getMinutes() > 0 || n.getSeconds() > 0), g.selectedDates && (g.selectedDates = g.selectedDates.filter(function(e) {
+                    var n = g.config["_" + e80 + "Date"] = g.parseDate(t, g.config.dateFormat), o = g.config["_" + ("min" === e80 ? "max" : "min") + "Date"];
+                    void 0 !== n && (g["min" === e80 ? "minDateHasTime" : "maxDateHasTime"] = n.getHours() > 0 || n.getMinutes() > 0 || n.getSeconds() > 0), g.selectedDates && (g.selectedDates = g.selectedDates.filter(function(e) {
                         return X(e);
-                    }), g.selectedDates.length || "min" !== e77 || D(n), ve()), g.daysContainer && (re(), void 0 !== n ? g.currentYearElement[e77] = n.getFullYear().toString() : g.currentYearElement.removeAttribute(e77), g.currentYearElement.disabled = !!o && void 0 !== n && o.getFullYear() === n.getFullYear());
+                    }), g.selectedDates.length || "min" !== e80 || D(n), ve()), g.daysContainer && (re(), void 0 !== n ? g.currentYearElement[e80] = n.getFullYear().toString() : g.currentYearElement.removeAttribute(e80), g.currentYearElement.disabled = !!o && void 0 !== n && o.getFullYear() === n.getFullYear());
                 };
             }
             function ae() {
-                "object" != typeof g.config.locale && void 0 === k.l10ns[g.config.locale] && g.config.errorHandler(new Error("flatpickr: invalid locale " + g.config.locale)), g.l10n = e62({
-                }, k.l10ns.default, "object" == typeof g.config.locale ? g.config.locale : "default" !== g.config.locale ? k.l10ns[g.config.locale] : void 0), m2.K = "(" + g.l10n.amPM[0] + "|" + g.l10n.amPM[1] + "|" + g.l10n.amPM[0].toLowerCase() + "|" + g.l10n.amPM[1].toLowerCase() + ")", void 0 === e62({
-                }, f3, JSON.parse(JSON.stringify(p3.dataset || {
-                }))).time_24hr && void 0 === k.defaultConfig.time_24hr && (g.config.time_24hr = g.l10n.time_24hr), g.formatDate = v2(g), g.parseDate = b2({
+                "object" != typeof g.config.locale && void 0 === k.l10ns[g.config.locale] && g.config.errorHandler(new Error("flatpickr: invalid locale " + g.config.locale)), g.l10n = e65({}, k.l10ns.default, "object" == typeof g.config.locale ? g.config.locale : "default" !== g.config.locale ? k.l10ns[g.config.locale] : void 0), m2.K = "(" + g.l10n.amPM[0] + "|" + g.l10n.amPM[1] + "|" + g.l10n.amPM[0].toLowerCase() + "|" + g.l10n.amPM[1].toLowerCase() + ")", void 0 === e65({}, f3, JSON.parse(JSON.stringify(p3.dataset || {}))).time_24hr && void 0 === k.defaultConfig.time_24hr && (g.config.time_24hr = g.l10n.time_24hr), g.formatDate = v2(g), g.parseDate = b2({
                     config: g.config,
                     l10n: g.l10n
                 });
             }
-            function ie(e78) {
+            function ie(e81) {
                 if (void 0 !== g.calendarContainer) {
                     pe("onPreCalendarPosition");
-                    var t43 = e78 || g._positionElement, n = Array.prototype.reduce.call(g.calendarContainer.children, function(e, t) {
+                    var t45 = e81 || g._positionElement, n = Array.prototype.reduce.call(g.calendarContainer.children, function(e, t) {
                         return e + t.offsetHeight;
-                    }, 0), o = g.calendarContainer.offsetWidth, a = g.config.position.split(" "), i = a[0], r = a.length > 1 ? a[1] : null, s = t43.getBoundingClientRect(), l = window.innerHeight - s.bottom, u = "above" === i || "below" !== i && l < n && s.top > n, d = window.pageYOffset + s.top + (u ? -n - 2 : t43.offsetHeight + 2);
+                    }, 0), o = g.calendarContainer.offsetWidth, a = g.config.position.split(" "), i = a[0], r = a.length > 1 ? a[1] : null, s = t45.getBoundingClientRect(), l = window.innerHeight - s.bottom, u = "above" === i || "below" !== i && l < n && s.top > n, d = window.pageYOffset + s.top + (u ? -n - 2 : t45.offsetHeight + 2);
                     if (c2(g.calendarContainer, "arrowTop", !u), c2(g.calendarContainer, "arrowBottom", u), !g.config.inline) {
                         var p = window.pageXOffset + s.left - (null != r && "center" === r ? (o - s.width) / 2 : 0), h = window.document.body.offsetWidth - s.right, f = p + o > window.document.body.offsetWidth, m = h + o > window.document.body.offsetWidth;
                         if (c2(g.calendarContainer, "rightMost", f), !g.config.static) {
@@ -2522,16 +2505,16 @@ var CarbonComponents = function(e1) {
             function se() {
                 g._input.focus(), -1 !== window.navigator.userAgent.indexOf("MSIE") || void 0 !== navigator.msMaxTouchPoints ? setTimeout(g.close, 0) : g.close();
             }
-            function ce(e79) {
-                e79.preventDefault(), e79.stopPropagation();
-                var t45 = function e(t, n) {
+            function ce(e82) {
+                e82.preventDefault(), e82.stopPropagation();
+                var t47 = function e(t, n) {
                     return n(t) ? t : t.parentNode ? e(t.parentNode, n) : void 0;
-                }(e79.target, function(e) {
+                }(e82.target, function(e) {
                     return e.classList && e.classList.contains("flatpickr-day") && !e.classList.contains("flatpickr-disabled") && !e.classList.contains("notAllowed");
                 });
-                if (void 0 !== t45) {
-                    var n19 = t45, o = g.latestSelectedDateObj = new Date(n19.dateObj.getTime()), a = (o.getMonth() < g.currentMonth || o.getMonth() > g.currentMonth + g.config.showMonths - 1) && "range" !== g.config.mode;
-                    if (g.selectedDateElem = n19, "single" === g.config.mode) g.selectedDates = [
+                if (void 0 !== t47) {
+                    var n20 = t47, o = g.latestSelectedDateObj = new Date(n20.dateObj.getTime()), a = (o.getMonth() < g.currentMonth || o.getMonth() > g.currentMonth + g.config.showMonths - 1) && "range" !== g.config.mode;
+                    if (g.selectedDateElem = n20, "single" === g.config.mode) g.selectedDates = [
                         o
                     ];
                     else if ("multiple" === g.config.mode) {
@@ -2546,7 +2529,7 @@ var CarbonComponents = function(e1) {
                     }
                     if (me(), R(), ve(), g.config.enableTime && setTimeout(function() {
                         return g.showTimeInput = !0;
-                    }, 50), a || "range" === g.config.mode || 1 !== g.config.showMonths ? void 0 !== g.selectedDateElem && void 0 === g.hourElement && g.selectedDateElem && g.selectedDateElem.focus() : B(n19), void 0 !== g.hourElement && void 0 !== g.hourElement && g.hourElement.focus(), g.config.closeOnSelect) {
+                    }, 50), a || "range" === g.config.mode || 1 !== g.config.showMonths ? void 0 !== g.selectedDateElem && void 0 === g.hourElement && g.selectedDateElem && g.selectedDateElem.focus() : B(n20), void 0 !== g.hourElement && void 0 !== g.hourElement && g.hourElement.focus(), g.config.closeOnSelect) {
                         var s = "single" === g.config.mode && !g.config.enableTime, c = "range" === g.config.mode && 2 === g.selectedDates.length && !g.config.enableTime;
                         (s || c) && se();
                     }
@@ -2562,8 +2545,8 @@ var CarbonComponents = function(e1) {
                 g.isOpen = !1, g.isMobile || (void 0 !== g.calendarContainer && g.calendarContainer.classList.remove("open"), void 0 !== g._input && g._input.classList.remove("active")), pe("onClose");
             }, g._createElement = l2, g.destroy = function() {
                 void 0 !== g.config && pe("onDestroy");
-                for(var e = g._handlers.length; e--;){
-                    var t = g._handlers[e];
+                for(var e83 = g._handlers.length; e83--;){
+                    var t = g._handlers[e83];
                     t.element.removeEventListener(t.event, t.handler, t.options);
                 }
                 if (g._handlers = [], g.mobileInput) g.mobileInput.parentNode && g.mobileInput.parentNode.removeChild(g.mobileInput), g.mobileInput = void 0;
@@ -2609,8 +2592,7 @@ var CarbonComponents = function(e1) {
                 ].forEach(function(e) {
                     try {
                         delete g[e];
-                    } catch (e80) {
-                    }
+                    } catch (e84) {}
                 });
             }, g.isEnabled = X, g.jumpToDate = I, g.open = function(e, t) {
                 if (void 0 === t && (t = g._positionElement), !0 === g.isMobile) return e && (e.preventDefault(), e.target && e.target.blur()), void 0 !== g.mobileInput && (g.mobileInput.focus(), g.mobileInput.click()), void pe("onOpen");
@@ -2620,13 +2602,13 @@ var CarbonComponents = function(e1) {
                         return g.hourElement.select();
                     }, 50));
                 }
-            }, g.redraw = re, g.set = function(e81, n) {
-                if (null !== e81 && "object" == typeof e81) for(var o in Object.assign(g.config, e81), e81)void 0 !== le[o] && le[o].forEach(function(e) {
+            }, g.redraw = re, g.set = function(e85, n) {
+                if (null !== e85 && "object" == typeof e85) for(var o in Object.assign(g.config, e85), e85)void 0 !== le[o] && le[o].forEach(function(e) {
                     return e();
                 });
-                else g.config[e81] = n, void 0 !== le[e81] ? le[e81].forEach(function(e) {
+                else g.config[e85] = n, void 0 !== le[e85] ? le[e85].forEach(function(e) {
                     return e();
-                }) : t34.indexOf(e81) > -1 && (g.config[e81] = s2(n));
+                }) : t36.indexOf(e85) > -1 && (g.config[e85] = s2(n));
                 g.redraw(), ve(!1);
             }, g.setDate = function(e, t, n) {
                 if (void 0 === t && (t = !1), void 0 === n && (n = g.config.dateFormat), 0 !== e && !e || e instanceof Array && 0 === e.length) return g.clear(t);
@@ -2652,40 +2634,40 @@ var CarbonComponents = function(e1) {
                     I
                 ]
             };
-            function ue(e82, t46) {
+            function ue(e86, t48) {
                 var n = [];
-                if (e82 instanceof Array) n = e82.map(function(e) {
-                    return g.parseDate(e, t46);
+                if (e86 instanceof Array) n = e86.map(function(e) {
+                    return g.parseDate(e, t48);
                 });
-                else if (e82 instanceof Date || "number" == typeof e82) n = [
-                    g.parseDate(e82, t46)
+                else if (e86 instanceof Date || "number" == typeof e86) n = [
+                    g.parseDate(e86, t48)
                 ];
-                else if ("string" == typeof e82) switch(g.config.mode){
+                else if ("string" == typeof e86) switch(g.config.mode){
                     case "single":
                     case "time":
                         n = [
-                            g.parseDate(e82, t46)
+                            g.parseDate(e86, t48)
                         ];
                         break;
                     case "multiple":
-                        n = e82.split(g.config.conjunction).map(function(e) {
-                            return g.parseDate(e, t46);
+                        n = e86.split(g.config.conjunction).map(function(e) {
+                            return g.parseDate(e, t48);
                         });
                         break;
                     case "range":
-                        n = e82.split(g.l10n.rangeSeparator).map(function(e) {
-                            return g.parseDate(e, t46);
+                        n = e86.split(g.l10n.rangeSeparator).map(function(e) {
+                            return g.parseDate(e, t48);
                         });
                 }
-                else g.config.errorHandler(new Error("Invalid date supplied: " + JSON.stringify(e82)));
+                else g.config.errorHandler(new Error("Invalid date supplied: " + JSON.stringify(e86)));
                 g.selectedDates = n.filter(function(e) {
                     return e instanceof Date && X(e, !1);
                 }), "range" === g.config.mode && g.selectedDates.sort(function(e, t) {
                     return e.getTime() - t.getTime();
                 });
             }
-            function de(e83) {
-                return e83.slice().map(function(e) {
+            function de(e87) {
+                return e87.slice().map(function(e) {
                     return "string" == typeof e || "number" == typeof e || e instanceof Date ? g.parseDate(e, void 0, !0) : e && "object" == typeof e && e.from && e.to ? {
                         from: g.parseDate(e.from, void 0),
                         to: g.parseDate(e.to, void 0)
@@ -2715,9 +2697,9 @@ var CarbonComponents = function(e1) {
                     n.setMonth(g.currentMonth + t), g.config.showMonths > 1 ? g.monthElements[t].textContent = h2(n.getMonth(), g.config.shorthandCurrentMonth, g.l10n) + " " : g.monthsDropdownContainer.value = n.getMonth().toString(), e.value = n.getFullYear().toString();
                 }), g._hidePrevMonthArrow = void 0 !== g.config.minDate && (g.currentYear === g.config.minDate.getFullYear() ? g.currentMonth <= g.config.minDate.getMonth() : g.currentYear < g.config.minDate.getFullYear()), g._hideNextMonthArrow = void 0 !== g.config.maxDate && (g.currentYear === g.config.maxDate.getFullYear() ? g.currentMonth + 1 > g.config.maxDate.getMonth() : g.currentYear > g.config.maxDate.getFullYear()));
             }
-            function ge(e84) {
+            function ge(e88) {
                 return g.selectedDates.map(function(t) {
-                    return g.formatDate(t, e84);
+                    return g.formatDate(t, e88);
                 }).filter(function(e, t, n) {
                     return "range" !== g.config.mode || g.config.enableTime || n.indexOf(e) === t;
                 }).join("range" !== g.config.mode ? g.config.conjunction : g.l10n.rangeSeparator);
@@ -2729,8 +2711,8 @@ var CarbonComponents = function(e1) {
                 var t = g.prevMonthNav.contains(e.target), n = g.nextMonthNav.contains(e.target);
                 t || n ? G(t ? -1 : 1) : g.yearElements.indexOf(e.target) >= 0 ? e.target.select() : e.target.classList.contains("arrowUp") ? g.changeYear(g.currentYear + 1) : e.target.classList.contains("arrowDown") && g.changeYear(g.currentYear - 1);
             }
-            return (function() {
-                g.element = g.input = p3, g.isOpen = !1, (function() {
+            return function() {
+                g.element = g.input = p3, g.isOpen = !1, function() {
                     var o = [
                         "wrap",
                         "weekNumbers",
@@ -2745,10 +2727,7 @@ var CarbonComponents = function(e1) {
                         "static",
                         "enableSeconds",
                         "disableMobile"
-                    ], a = e62({
-                    }, f3, JSON.parse(JSON.stringify(p3.dataset || {
-                    }))), i = {
-                    };
+                    ], a = e65({}, f3, JSON.parse(JSON.stringify(p3.dataset || {}))), i = {};
                     g.config.parseDate = a.parseDate, g.config.formatDate = a.formatDate, Object.defineProperty(g.config, "enable", {
                         get: function() {
                             return g.config._enable;
@@ -2801,20 +2780,19 @@ var CarbonComponents = function(e1) {
                         set: u("max")
                     }), "time" === a.mode && (g.config.noCalendar = !0, g.config.enableTime = !0), Object.assign(g.config, i, a);
                     for(var d = 0; d < o.length; d++)g.config[o[d]] = !0 === g.config[o[d]] || "true" === g.config[o[d]];
-                    for(t34.filter(function(e) {
+                    for(t36.filter(function(e) {
                         return void 0 !== g.config[e];
                     }).forEach(function(e) {
                         g.config[e] = s2(g.config[e] || []).map(S3);
                     }), g.isMobile = !g.config.disableMobile && !g.config.inline && "single" === g.config.mode && !g.config.disable.length && !g.config.enable.length && !g.config.weekNumbers && /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent), d = 0; d < g.config.plugins.length; d++){
-                        var h = g.config.plugins[d](g) || {
-                        };
-                        for(var m in h)t34.indexOf(m) > -1 ? g.config[m] = s2(h[m]).map(S3).concat(g.config[m]) : void 0 === a[m] && (g.config[m] = h[m]);
+                        var h = g.config.plugins[d](g) || {};
+                        for(var m in h)t36.indexOf(m) > -1 ? g.config[m] = s2(h[m]).map(S3).concat(g.config[m]) : void 0 === a[m] && (g.config[m] = h[m]);
                     }
                     pe("onParseConfig");
-                })(), ae(), g.input = g.config.wrap ? p3.querySelector("[data-input]") : p3, g.input ? (g.input._type = g.input.type, g.input.type = "text", g.input.classList.add("flatpickr-input"), g._input = g.input, g.config.altInput && (g.altInput = l2(g.input.nodeName, g.config.altInputClass), g._input = g.altInput, g.altInput.placeholder = g.input.placeholder, g.altInput.disabled = g.input.disabled, g.altInput.required = g.input.required, g.altInput.tabIndex = g.input.tabIndex, g.altInput.type = "text", g.input.setAttribute("type", "hidden"), !g.config.static && g.input.parentNode && g.input.parentNode.insertBefore(g.altInput, g.input.nextSibling)), g.config.allowInput || g._input.setAttribute("readonly", "readonly"), g._positionElement = g.config.positionElement || g._input) : g.config.errorHandler(new Error("Invalid input element specified")), (function() {
+                }(), ae(), g.input = g.config.wrap ? p3.querySelector("[data-input]") : p3, g.input ? (g.input._type = g.input.type, g.input.type = "text", g.input.classList.add("flatpickr-input"), g._input = g.input, g.config.altInput && (g.altInput = l2(g.input.nodeName, g.config.altInputClass), g._input = g.altInput, g.altInput.placeholder = g.input.placeholder, g.altInput.disabled = g.input.disabled, g.altInput.required = g.input.required, g.altInput.tabIndex = g.input.tabIndex, g.altInput.type = "text", g.input.setAttribute("type", "hidden"), !g.config.static && g.input.parentNode && g.input.parentNode.insertBefore(g.altInput, g.input.nextSibling)), g.config.allowInput || g._input.setAttribute("readonly", "readonly"), g._positionElement = g.config.positionElement || g._input) : g.config.errorHandler(new Error("Invalid input element specified")), function() {
                     g.selectedDates = [], g.now = g.parseDate(g.config.now) || new Date;
-                    var e85 = g.config.defaultDate || ("INPUT" !== g.input.nodeName && "TEXTAREA" !== g.input.nodeName || !g.input.placeholder || g.input.value !== g.input.placeholder ? g.input.value : null);
-                    e85 && ue(e85, g.config.dateFormat), g._initialDate = g.selectedDates.length > 0 ? g.selectedDates[0] : g.config.minDate && g.config.minDate.getTime() > g.now.getTime() ? g.config.minDate : g.config.maxDate && g.config.maxDate.getTime() < g.now.getTime() ? g.config.maxDate : g.now, g.currentYear = g._initialDate.getFullYear(), g.currentMonth = g._initialDate.getMonth(), g.selectedDates.length > 0 && (g.latestSelectedDateObj = g.selectedDates[0]), void 0 !== g.config.minTime && (g.config.minTime = g.parseDate(g.config.minTime, "H:i")), void 0 !== g.config.maxTime && (g.config.maxTime = g.parseDate(g.config.maxTime, "H:i")), g.minDateHasTime = !!g.config.minDate && (g.config.minDate.getHours() > 0 || g.config.minDate.getMinutes() > 0 || g.config.minDate.getSeconds() > 0), g.maxDateHasTime = !!g.config.maxDate && (g.config.maxDate.getHours() > 0 || g.config.maxDate.getMinutes() > 0 || g.config.maxDate.getSeconds() > 0), Object.defineProperty(g, "showTimeInput", {
+                    var e89 = g.config.defaultDate || ("INPUT" !== g.input.nodeName && "TEXTAREA" !== g.input.nodeName || !g.input.placeholder || g.input.value !== g.input.placeholder ? g.input.value : null);
+                    e89 && ue(e89, g.config.dateFormat), g._initialDate = g.selectedDates.length > 0 ? g.selectedDates[0] : g.config.minDate && g.config.minDate.getTime() > g.now.getTime() ? g.config.minDate : g.config.maxDate && g.config.maxDate.getTime() < g.now.getTime() ? g.config.maxDate : g.now, g.currentYear = g._initialDate.getFullYear(), g.currentMonth = g._initialDate.getMonth(), g.selectedDates.length > 0 && (g.latestSelectedDateObj = g.selectedDates[0]), void 0 !== g.config.minTime && (g.config.minTime = g.parseDate(g.config.minTime, "H:i")), void 0 !== g.config.maxTime && (g.config.maxTime = g.parseDate(g.config.maxTime, "H:i")), g.minDateHasTime = !!g.config.minDate && (g.config.minDate.getHours() > 0 || g.config.minDate.getMinutes() > 0 || g.config.minDate.getSeconds() > 0), g.maxDateHasTime = !!g.config.maxDate && (g.config.maxDate.getHours() > 0 || g.config.maxDate.getMinutes() > 0 || g.config.maxDate.getSeconds() > 0), Object.defineProperty(g, "showTimeInput", {
                         get: function() {
                             return g._showTimeInput;
                         },
@@ -2822,14 +2800,14 @@ var CarbonComponents = function(e1) {
                             g._showTimeInput = e, g.calendarContainer && c2(g.calendarContainer, "showTimeInput", e), g.isOpen && ie();
                         }
                     });
-                })(), g.utils = {
+                }(), g.utils = {
                     getDaysInMonth: function(e, t) {
                         return void 0 === e && (e = g.currentMonth), void 0 === t && (t = g.currentYear), 1 === e && (t % 4 == 0 && t % 100 != 0 || t % 400 == 0) ? 29 : g.l10n.daysInMonth[e];
                     }
-                }, g.isMobile || (function() {
-                    var e86 = window.document.createDocumentFragment();
+                }, g.isMobile || function() {
+                    var e90 = window.document.createDocumentFragment();
                     if (g.calendarContainer = l2("div", "flatpickr-calendar"), g.calendarContainer.tabIndex = -1, !g.config.noCalendar) {
-                        if (e86.appendChild((g.monthNav = l2("div", "flatpickr-months"), g.yearElements = [], g.monthElements = [], g.prevMonthNav = l2("span", "flatpickr-prev-month"), g.prevMonthNav.innerHTML = g.config.prevArrow, g.nextMonthNav = l2("span", "flatpickr-next-month"), g.nextMonthNav.innerHTML = g.config.nextArrow, W(), Object.defineProperty(g, "_hidePrevMonthArrow", {
+                        if (e90.appendChild((g.monthNav = l2("div", "flatpickr-months"), g.yearElements = [], g.monthElements = [], g.prevMonthNav = l2("span", "flatpickr-prev-month"), g.prevMonthNav.innerHTML = g.config.prevArrow, g.nextMonthNav = l2("span", "flatpickr-next-month"), g.nextMonthNav.innerHTML = g.config.nextArrow, W(), Object.defineProperty(g, "_hidePrevMonthArrow", {
                             get: function() {
                                 return g.__hidePrevMonthArrow;
                             },
@@ -2844,7 +2822,7 @@ var CarbonComponents = function(e1) {
                                 g.__hideNextMonthArrow !== e && (c2(g.nextMonthNav, "flatpickr-disabled", e), g.__hideNextMonthArrow = e);
                             }
                         }), g.currentYearElement = g.yearElements[0], me(), g.monthNav)), g.innerContainer = l2("div", "flatpickr-innerContainer"), g.config.weekNumbers) {
-                            var t47 = function() {
+                            var t49 = function() {
                                 g.calendarContainer.classList.add("hasWeeks");
                                 var e = l2("div", "flatpickr-weekwrapper");
                                 e.appendChild(l2("span", "flatpickr-weekday", g.l10n.weekAbbreviation));
@@ -2853,17 +2831,17 @@ var CarbonComponents = function(e1) {
                                     weekWrapper: e,
                                     weekNumbers: t
                                 };
-                            }(), n = t47.weekWrapper, o = t47.weekNumbers;
+                            }(), n = t49.weekWrapper, o = t49.weekNumbers;
                             g.innerContainer.appendChild(n), g.weekNumbers = o, g.weekWrapper = n;
                         }
-                        g.rContainer = l2("div", "flatpickr-rContainer"), g.rContainer.appendChild(U()), g.daysContainer || (g.daysContainer = l2("div", "flatpickr-days"), g.daysContainer.tabIndex = -1), R(), g.rContainer.appendChild(g.daysContainer), g.innerContainer.appendChild(g.rContainer), e86.appendChild(g.innerContainer);
+                        g.rContainer = l2("div", "flatpickr-rContainer"), g.rContainer.appendChild(U()), g.daysContainer || (g.daysContainer = l2("div", "flatpickr-days"), g.daysContainer.tabIndex = -1), R(), g.rContainer.appendChild(g.daysContainer), g.innerContainer.appendChild(g.rContainer), e90.appendChild(g.innerContainer);
                     }
-                    g.config.enableTime && e86.appendChild(function() {
+                    g.config.enableTime && e90.appendChild(function() {
                         g.calendarContainer.classList.add("hasTime"), g.config.noCalendar && g.calendarContainer.classList.add("noCalendar"), g.timeContainer = l2("div", "flatpickr-time"), g.timeContainer.tabIndex = -1;
-                        var e87 = l2("span", "flatpickr-time-separator", ":"), t = d2("flatpickr-hour");
+                        var e91 = l2("span", "flatpickr-time-separator", ":"), t = d2("flatpickr-hour");
                         g.hourElement = t.getElementsByTagName("input")[0];
                         var n = d2("flatpickr-minute");
-                        if (g.minuteElement = n.getElementsByTagName("input")[0], g.hourElement.tabIndex = g.minuteElement.tabIndex = -1, g.hourElement.value = a7(g.latestSelectedDateObj ? g.latestSelectedDateObj.getHours() : g.config.time_24hr ? g.config.defaultHour : function(e) {
+                        if (g.minuteElement = n.getElementsByTagName("input")[0], g.hourElement.tabIndex = g.minuteElement.tabIndex = -1, g.hourElement.value = a8(g.latestSelectedDateObj ? g.latestSelectedDateObj.getHours() : g.config.time_24hr ? g.config.defaultHour : function(e) {
                             switch(e % 24){
                                 case 0:
                                 case 12:
@@ -2871,20 +2849,20 @@ var CarbonComponents = function(e1) {
                                 default:
                                     return e % 12;
                             }
-                        }(g.config.defaultHour)), g.minuteElement.value = a7(g.latestSelectedDateObj ? g.latestSelectedDateObj.getMinutes() : g.config.defaultMinute), g.hourElement.setAttribute("step", g.config.hourIncrement.toString()), g.minuteElement.setAttribute("step", g.config.minuteIncrement.toString()), g.hourElement.setAttribute("min", g.config.time_24hr ? "0" : "1"), g.hourElement.setAttribute("max", g.config.time_24hr ? "23" : "12"), g.minuteElement.setAttribute("min", "0"), g.minuteElement.setAttribute("max", "59"), g.timeContainer.appendChild(t), g.timeContainer.appendChild(e87), g.timeContainer.appendChild(n), g.config.time_24hr && g.timeContainer.classList.add("time24hr"), g.config.enableSeconds) {
+                        }(g.config.defaultHour)), g.minuteElement.value = a8(g.latestSelectedDateObj ? g.latestSelectedDateObj.getMinutes() : g.config.defaultMinute), g.hourElement.setAttribute("step", g.config.hourIncrement.toString()), g.minuteElement.setAttribute("step", g.config.minuteIncrement.toString()), g.hourElement.setAttribute("min", g.config.time_24hr ? "0" : "1"), g.hourElement.setAttribute("max", g.config.time_24hr ? "23" : "12"), g.minuteElement.setAttribute("min", "0"), g.minuteElement.setAttribute("max", "59"), g.timeContainer.appendChild(t), g.timeContainer.appendChild(e91), g.timeContainer.appendChild(n), g.config.time_24hr && g.timeContainer.classList.add("time24hr"), g.config.enableSeconds) {
                             g.timeContainer.classList.add("hasSeconds");
                             var o = d2("flatpickr-second");
-                            g.secondElement = o.getElementsByTagName("input")[0], g.secondElement.value = a7(g.latestSelectedDateObj ? g.latestSelectedDateObj.getSeconds() : g.config.defaultSeconds), g.secondElement.setAttribute("step", g.minuteElement.getAttribute("step")), g.secondElement.setAttribute("min", "0"), g.secondElement.setAttribute("max", "59"), g.timeContainer.appendChild(l2("span", "flatpickr-time-separator", ":")), g.timeContainer.appendChild(o);
+                            g.secondElement = o.getElementsByTagName("input")[0], g.secondElement.value = a8(g.latestSelectedDateObj ? g.latestSelectedDateObj.getSeconds() : g.config.defaultSeconds), g.secondElement.setAttribute("step", g.minuteElement.getAttribute("step")), g.secondElement.setAttribute("min", "0"), g.secondElement.setAttribute("max", "59"), g.timeContainer.appendChild(l2("span", "flatpickr-time-separator", ":")), g.timeContainer.appendChild(o);
                         }
-                        return g.config.time_24hr || (g.amPM = l2("span", "flatpickr-am-pm", g.l10n.amPM[i2((g.latestSelectedDateObj ? g.hourElement.value : g.config.defaultHour) > 11)]), g.amPM.title = g.l10n.toggleTitle, g.amPM.tabIndex = -1, g.timeContainer.appendChild(g.amPM)), g.timeContainer;
-                    }()), c2(g.calendarContainer, "rangeMode", "range" === g.config.mode), c2(g.calendarContainer, "animate", !0 === g.config.animate), c2(g.calendarContainer, "multiMonth", g.config.showMonths > 1), g.calendarContainer.appendChild(e86);
+                        return g.config.time_24hr || (g.amPM = l2("span", "flatpickr-am-pm", g.l10n.amPM[i3((g.latestSelectedDateObj ? g.hourElement.value : g.config.defaultHour) > 11)]), g.amPM.title = g.l10n.toggleTitle, g.amPM.tabIndex = -1, g.timeContainer.appendChild(g.amPM)), g.timeContainer;
+                    }()), c2(g.calendarContainer, "rangeMode", "range" === g.config.mode), c2(g.calendarContainer, "animate", !0 === g.config.animate), c2(g.calendarContainer, "multiMonth", g.config.showMonths > 1), g.calendarContainer.appendChild(e90);
                     var r = void 0 !== g.config.appendTo && void 0 !== g.config.appendTo.nodeType;
                     if ((g.config.inline || g.config.static) && (g.calendarContainer.classList.add(g.config.inline ? "inline" : "static"), g.config.inline && (!r && g.element.parentNode ? g.element.parentNode.insertBefore(g.calendarContainer, g._input.nextSibling) : void 0 !== g.config.appendTo && g.config.appendTo.appendChild(g.calendarContainer)), g.config.static)) {
                         var s = l2("div", "flatpickr-wrapper");
                         g.element.parentNode && g.element.parentNode.insertBefore(s, g.element), s.appendChild(g.element), g.altInput && s.appendChild(g.altInput), s.appendChild(g.calendarContainer);
                     }
                     g.config.static || g.config.inline || (void 0 !== g.config.appendTo ? g.config.appendTo : window.document.body).appendChild(g.calendarContainer);
-                })(), (function() {
+                }(), function() {
                     if (g.config.wrap && [
                         "open",
                         "close",
@@ -2895,21 +2873,20 @@ var CarbonComponents = function(e1) {
                             return M(t, "click", g[e]);
                         });
                     }), g.isMobile) !function() {
-                        var e90 = g.config.enableTime ? g.config.noCalendar ? "time" : "datetime-local" : "date";
-                        g.mobileInput = l2("input", g.input.className + " flatpickr-mobile"), g.mobileInput.step = g.input.getAttribute("step") || "any", g.mobileInput.tabIndex = 1, g.mobileInput.type = e90, g.mobileInput.disabled = g.input.disabled, g.mobileInput.required = g.input.required, g.mobileInput.placeholder = g.input.placeholder, g.mobileFormatStr = "datetime-local" === e90 ? "Y-m-d\\TH:i:S" : "date" === e90 ? "Y-m-d" : "H:i:S", g.selectedDates.length > 0 && (g.mobileInput.defaultValue = g.mobileInput.value = g.formatDate(g.selectedDates[0], g.mobileFormatStr)), g.config.minDate && (g.mobileInput.min = g.formatDate(g.config.minDate, "Y-m-d")), g.config.maxDate && (g.mobileInput.max = g.formatDate(g.config.maxDate, "Y-m-d")), g.input.type = "hidden", void 0 !== g.altInput && (g.altInput.type = "hidden");
+                        var e94 = g.config.enableTime ? g.config.noCalendar ? "time" : "datetime-local" : "date";
+                        g.mobileInput = l2("input", g.input.className + " flatpickr-mobile"), g.mobileInput.step = g.input.getAttribute("step") || "any", g.mobileInput.tabIndex = 1, g.mobileInput.type = e94, g.mobileInput.disabled = g.input.disabled, g.mobileInput.required = g.input.required, g.mobileInput.placeholder = g.input.placeholder, g.mobileFormatStr = "datetime-local" === e94 ? "Y-m-d\\TH:i:S" : "date" === e94 ? "Y-m-d" : "H:i:S", g.selectedDates.length > 0 && (g.mobileInput.defaultValue = g.mobileInput.value = g.formatDate(g.selectedDates[0], g.mobileFormatStr)), g.config.minDate && (g.mobileInput.min = g.formatDate(g.config.minDate, "Y-m-d")), g.config.maxDate && (g.mobileInput.max = g.formatDate(g.config.maxDate, "Y-m-d")), g.input.type = "hidden", void 0 !== g.altInput && (g.altInput.type = "hidden");
                         try {
                             g.input.parentNode && g.input.parentNode.insertBefore(g.mobileInput, g.input.nextSibling);
-                        } catch (e89) {
-                        }
+                        } catch (e93) {}
                         M(g.mobileInput, "change", function(e) {
                             g.setDate(e.target.value, !1, g.mobileFormatStr), pe("onChange"), pe("onClose");
                         });
                     }();
                     else {
-                        var e88 = r2(te, 50);
+                        var e92 = r2(te, 50);
                         g._debouncedChange = r2(L, 300), g.daysContainer && !/iPhone|iPad|iPod/i.test(navigator.userAgent) && M(g.daysContainer, "mouseover", function(e) {
                             "range" === g.config.mode && ee(e.target);
-                        }), M(window.document.body, "keydown", Q), g.config.inline || g.config.static || M(window, "resize", e88), void 0 !== window.ontouchstart ? M(window.document, "touchstart", J) : M(window.document, "mousedown", N(J)), M(window.document, "focus", J, {
+                        }), M(window.document.body, "keydown", Q), g.config.inline || g.config.static || M(window, "resize", e92), void 0 !== window.ontouchstart ? M(window.document, "touchstart", J) : M(window.document, "mousedown", N(J)), M(window.document, "focus", J, {
                             capture: !0
                         }), !0 === g.config.clickOpens && (M(g._input, "focus", g.open), M(g._input, "mousedown", N(g.open))), void 0 !== g.daysContainer && (M(g.monthNav, "mousedown", N(be)), M(g.monthNav, [
                             "keyup",
@@ -2932,20 +2909,19 @@ var CarbonComponents = function(e1) {
                             _(e), L();
                         })));
                     }
-                })(), (g.selectedDates.length || g.config.noCalendar) && (g.config.enableTime && D(g.config.noCalendar ? g.latestSelectedDateObj || g.config.minDate : void 0), ve(!1)), C(), g.showTimeInput = g.selectedDates.length > 0 || g.config.noCalendar;
-                var o17 = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-                !g.isMobile && o17 && ie(), pe("onReady");
-            })(), g;
+                }(), (g.selectedDates.length || g.config.noCalendar) && (g.config.enableTime && D(g.config.noCalendar ? g.latestSelectedDateObj || g.config.minDate : void 0), ve(!1)), C(), g.showTimeInput = g.selectedDates.length > 0 || g.config.noCalendar;
+                var o21 = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+                !g.isMobile && o21 && ie(), pe("onReady");
+            }(), g;
         }
-        function C2(e91, t) {
-            for(var n = Array.prototype.slice.call(e91).filter(function(e) {
+        function C2(e95, t) {
+            for(var n = Array.prototype.slice.call(e95).filter(function(e) {
                 return e instanceof HTMLElement;
             }), o = [], a = 0; a < n.length; a++){
                 var i = n[a];
                 try {
                     if (null !== i.getAttribute("data-fp-omit")) continue;
-                    void 0 !== i._flatpickr && (i._flatpickr.destroy(), i._flatpickr = void 0), i._flatpickr = S2(i, t || {
-                    }), o.push(i._flatpickr);
+                    void 0 !== i._flatpickr && (i._flatpickr.destroy(), i._flatpickr = void 0), i._flatpickr = S2(i, t || {}), o.push(i._flatpickr);
                 } catch (e) {
                     console.error(e);
                 }
@@ -2953,13 +2929,13 @@ var CarbonComponents = function(e1) {
             return 1 === o.length ? o[0] : o;
         }
         "function" != typeof Object.assign && (Object.assign = function(e) {
-            for(var t50 = [], n = 1; n < arguments.length; n++)t50[n - 1] = arguments[n];
+            for(var t52 = [], n21 = 1; n21 < arguments.length; n21++)t52[n21 - 1] = arguments[n21];
             if (!e) throw TypeError("Cannot convert undefined or null to object");
             for(var o = function(t) {
                 t && Object.keys(t).forEach(function(n) {
                     return e[n] = t[n];
                 });
-            }, a = 0, i = t50; a < i.length; a++){
+            }, a = 0, i = t52; a < i.length; a++){
                 var r = i[a];
                 o(r);
             }
@@ -2976,26 +2952,19 @@ var CarbonComponents = function(e1) {
                 e
             ], t) : C2(e, t);
         };
-        return k.defaultConfig = {
-        }, k.l10ns = {
-            en: e62({
-            }, o15),
-            default: e62({
-            }, o15)
+        return k.defaultConfig = {}, k.l10ns = {
+            en: e65({}, o17),
+            default: e65({}, o17)
         }, k.localize = function(t) {
-            k.l10ns.default = e62({
-            }, k.l10ns.default, t);
+            k.l10ns.default = e65({}, k.l10ns.default, t);
         }, k.setDefaults = function(t) {
-            k.defaultConfig = e62({
-            }, k.defaultConfig, t);
-        }, k.parseDate = b2({
-        }), k.formatDate = v2({
-        }), k.compareDates = y2, "undefined" != typeof jQuery && void 0 !== jQuery.fn && (jQuery.fn.flatpickr = function(e) {
+            k.defaultConfig = e65({}, k.defaultConfig, t);
+        }, k.parseDate = b2({}), k.formatDate = v2({}), k.compareDates = y2, "undefined" != typeof jQuery && void 0 !== jQuery.fn && (jQuery.fn.flatpickr = function(e) {
             return C2(this, e);
         }), Date.prototype.fp_incr = function(e) {
             return new Date(this.getFullYear(), this.getMonth(), this.getDate() + ("string" == typeof e ? parseInt(e, 10) : e));
         }, "undefined" != typeof window && (window.flatpickr = k), k;
-    })();
+    }();
     var fe1 = he1.exports;
     fe1.l10ns.en.weekdays.shorthand.forEach(function(e, t) {
         var n = fe1.l10ns.en.weekdays.shorthand;
@@ -3005,48 +2974,47 @@ var CarbonComponents = function(e1) {
         return Array.prototype.slice.call(e);
     }, ge1 = function(e, t, n) {
         return n.months[t ? "shorthand" : "longhand"][e];
-    }, ve1 = function(e92) {
-        l1(o18, e92);
-        var t51 = f1(o18);
-        function o18(e93, n20) {
-            var a8;
-            i1(this, o18), c1(p1(a8 = t51.call(this, e93, n20)), "_handleFocus", function() {
-                a8.calendar && a8.calendar.open();
-            }), c1(p1(a8), "_handleBlur", function(e) {
-                if (a8.calendar) {
+    }, ve1 = function(e96) {
+        l1(o22, e96);
+        var t53 = f1(o22);
+        function o22(e97, n22) {
+            var a9;
+            i1(this, o22), c1(p1(a9 = t53.call(this, e97, n22)), "_handleFocus", function() {
+                a9.calendar && a9.calendar.open();
+            }), c1(p1(a9), "_handleBlur", function(e) {
+                if (a9.calendar) {
                     var t = e.relatedTarget;
-                    t && (a8.element.contains(t) || a8.calendar.calendarContainer && a8.calendar.calendarContainer.contains(t)) || a8.calendar.close();
+                    t && (a9.element.contains(t) || a9.calendar.calendarContainer && a9.calendar.calendarContainer.contains(t)) || a9.calendar.close();
                 }
-            }), c1(p1(a8), "_initDatePicker", function(e94) {
-                if ("range" === e94) {
-                    var t = a8.element.ownerDocument, n = t.createElement("input");
-                    n.className = a8.options.classVisuallyHidden, n.setAttribute("aria-hidden", "true"), a8.element.appendChild(n), a8._rangeInput = n;
+            }), c1(p1(a9), "_initDatePicker", function(e98) {
+                if ("range" === e98) {
+                    var t = a9.element.ownerDocument, n = t.createElement("input");
+                    n.className = a9.options.classVisuallyHidden, n.setAttribute("aria-hidden", "true"), a9.element.appendChild(n), a9._rangeInput = n;
                     var o = t.defaultView, i = "onfocusin" in o, r = "onfocusout" in o, s = i ? "focusin" : "focus", c = r ? "focusout" : "blur";
-                    a8.manage(D1(a8.element, s, a8._handleFocus, !i)), a8.manage(D1(a8.element, c, a8._handleBlur, !r)), a8.manage(D1(a8.element.querySelector(a8.options.selectorDatePickerIcon), c, a8._handleBlur, !r));
+                    a9.manage(D1(a9.element, s, a9._handleFocus, !i)), a9.manage(D1(a9.element, c, a9._handleBlur, !r)), a9.manage(D1(a9.element.querySelector(a9.options.selectorDatePickerIcon), c, a9._handleBlur, !r));
                 }
-                var l, u = p1(a8), d = "range" === e94 ? a8._rangeInput : a8.element.querySelector(a8.options.selectorDatePickerInput), h = a8.options, f = h.onClose, m = h.onChange, g = h.onMonthChange, v = h.onYearChange, y = h.onOpen, w = h.onValueUpdate, S = new fe1(d, Object.assign(function(e) {
-                    var t = {
-                    };
+                var l, u = p1(a9), d = "range" === e98 ? a9._rangeInput : a9.element.querySelector(a9.options.selectorDatePickerInput), h = a9.options, f = h.onClose, m = h.onChange, g = h.onMonthChange, v = h.onYearChange, y = h.onOpen, w = h.onValueUpdate, S = new fe1(d, Object.assign(function(e) {
+                    var t = {};
                     for(var n in e)t[n] = e[n];
                     return t;
-                }(a8.options), {
+                }(a9.options), {
                     allowInput: !0,
-                    mode: e94,
+                    mode: e98,
                     disableMobile: !0,
-                    positionElement: "range" === e94 && a8.element.querySelector(a8.options.selectorDatePickerInputFrom),
+                    positionElement: "range" === e98 && a9.element.querySelector(a9.options.selectorDatePickerInputFrom),
                     onClose: function(t) {
                         u.shouldForceOpen && (u.calendar.calendarContainer && u.calendar.calendarContainer.classList.add("open"), u.calendar.isOpen = !0);
                         for(var n = arguments.length, o = new Array(n > 1 ? n - 1 : 0), a = 1; a < n; a++)o[a - 1] = arguments[a];
                         f && !1 === f.call.apply(f, [
                             this,
                             t
-                        ].concat(o)) || (u._updateClassNames(S), u._updateInputFields(t, e94));
+                        ].concat(o)) || (u._updateClassNames(S), u._updateInputFields(t, e98));
                     },
                     onChange: function() {
                         for(var t = arguments.length, n = new Array(t), o = 0; o < t; o++)n[o] = arguments[o];
                         m && !1 === m.call.apply(m, [
                             this
-                        ].concat(n)) || (u._updateClassNames(S), "range" === e94 && (1 === S.selectedDates.length && S.isOpen ? u.element.querySelector(u.options.selectorDatePickerInputTo).classList.add(u.options.classFocused) : u.element.querySelector(u.options.selectorDatePickerInputTo).classList.remove(u.options.classFocused)));
+                        ].concat(n)) || (u._updateClassNames(S), "range" === e98 && (1 === S.selectedDates.length && S.isOpen ? u.element.querySelector(u.options.selectorDatePickerInputTo).classList.add(u.options.classFocused) : u.element.querySelector(u.options.selectorDatePickerInputTo).classList.remove(u.options.classFocused)));
                     },
                     onMonthChange: function() {
                         for(var e = arguments.length, t = new Array(e), n = 0; n < e; n++)t[n] = arguments[n];
@@ -3073,92 +3041,92 @@ var CarbonComponents = function(e1) {
                         for(var t = arguments.length, n = new Array(t), o = 0; o < t; o++)n[o] = arguments[o];
                         w && !1 === w.call.apply(w, [
                             this
-                        ].concat(n)) || "range" !== e94 || u._updateInputFields(u.calendar.selectedDates, e94);
+                        ].concat(n)) || "range" !== e98 || u._updateInputFields(u.calendar.selectedDates, e98);
                     },
-                    nextArrow: a8._rightArrowHTML(),
-                    prevArrow: a8._leftArrowHTML(),
-                    plugins: [].concat(b1(a8.options.plugins || []), [
-                        (l = a8.options, function(e95) {
-                            var t52 = function() {
-                                var t = ge1(e95.currentMonth, !0 === l.shorthand, e95.l10n);
-                                e95.yearElements.forEach(function(e96) {
-                                    var n = e96.closest(l.selectorFlatpickrMonthYearContainer);
+                    nextArrow: a9._rightArrowHTML(),
+                    prevArrow: a9._leftArrowHTML(),
+                    plugins: [].concat(b1(a9.options.plugins || []), [
+                        (l = a9.options, function(e99) {
+                            var t54 = function() {
+                                var t = ge1(e99.currentMonth, !0 === l.shorthand, e99.l10n);
+                                e99.yearElements.forEach(function(e100) {
+                                    var n = e100.closest(l.selectorFlatpickrMonthYearContainer);
                                     Array.prototype.forEach.call(n.querySelectorAll(".cur-month"), function(e) {
                                         e.textContent = t;
                                     });
                                 });
                             };
                             return {
-                                onMonthChange: t52,
-                                onValueUpdate: t52,
-                                onOpen: t52,
+                                onMonthChange: t54,
+                                onValueUpdate: t54,
+                                onOpen: t54,
                                 onReady: [
                                     function() {
-                                        var t53;
-                                        e95.monthElements && (e95.monthElements.forEach(function(e) {
+                                        var t55;
+                                        e99.monthElements && (e99.monthElements.forEach(function(e) {
                                             e.parentNode && e.parentNode.removeChild(e);
-                                        }), (t53 = e95.monthElements).splice.apply(t53, [
+                                        }), (t55 = e99.monthElements).splice.apply(t55, [
                                             0,
-                                            e95.monthElements.length
-                                        ].concat(b1(e95.monthElements.map(function() {
-                                            var t = e95._createElement("span", l.classFlatpickrCurrentMonth);
-                                            return t.textContent = ge1(e95.currentMonth, !0 === l.shorthand, e95.l10n), e95.yearElements[0].closest(l.selectorFlatpickrMonthYearContainer).insertBefore(t, e95.yearElements[0].closest(l.selectorFlatpickrYearContainer)), t;
+                                            e99.monthElements.length
+                                        ].concat(b1(e99.monthElements.map(function() {
+                                            var t = e99._createElement("span", l.classFlatpickrCurrentMonth);
+                                            return t.textContent = ge1(e99.currentMonth, !0 === l.shorthand, e99.l10n), e99.yearElements[0].closest(l.selectorFlatpickrMonthYearContainer).insertBefore(t, e99.yearElements[0].closest(l.selectorFlatpickrYearContainer)), t;
                                         })))));
                                     },
-                                    t52,
+                                    t54,
                                     function() {
-                                        e95.loadedPlugins.push("carbonFlatpickrMonthSelectPlugin");
+                                        e99.loadedPlugins.push("carbonFlatpickrMonthSelectPlugin");
                                     }
                                 ]
                             };
                         })
                     ])
                 }));
-                return "range" === e94 && (a8._addInputLogic(a8.element.querySelector(a8.options.selectorDatePickerInputFrom), 0), a8._addInputLogic(a8.element.querySelector(a8.options.selectorDatePickerInputTo), 1)), a8.manage(D1(a8.element.querySelector(a8.options.selectorDatePickerIcon), "click", function() {
+                return "range" === e98 && (a9._addInputLogic(a9.element.querySelector(a9.options.selectorDatePickerInputFrom), 0), a9._addInputLogic(a9.element.querySelector(a9.options.selectorDatePickerInputTo), 1)), a9.manage(D1(a9.element.querySelector(a9.options.selectorDatePickerIcon), "click", function() {
                     S.open();
-                })), a8._updateClassNames(S), "range" !== e94 && a8._addInputLogic(d), S;
-            }), c1(p1(a8), "_addInputLogic", function(e97, t54) {
-                if (!isNaN(t54) && (t54 < 0 || t54 > 1)) throw new RangeError("The index of <input> (".concat(t54, ") is out of range."));
-                var n = e97;
-                a8.manage(D1(n, "change", function(e) {
+                })), a9._updateClassNames(S), "range" !== e98 && a9._addInputLogic(d), S;
+            }), c1(p1(a9), "_addInputLogic", function(e101, t56) {
+                if (!isNaN(t56) && (t56 < 0 || t56 > 1)) throw new RangeError("The index of <input> (".concat(t56, ") is out of range."));
+                var n = e101;
+                a9.manage(D1(n, "change", function(e) {
                     if (e.isTrusted || e.detail && e.detail.isNotFromFlatpickr) {
-                        var o = a8.calendar.parseDate(n.value);
+                        var o = a9.calendar.parseDate(n.value);
                         if (o && !isNaN(o.valueOf())) {
-                            if (isNaN(t54)) a8.calendar.setDate(o);
+                            if (isNaN(t56)) a9.calendar.setDate(o);
                             else {
-                                var i = a8.calendar.selectedDates;
-                                i[t54] = o, a8.calendar.setDate(i);
+                                var i = a9.calendar.selectedDates;
+                                i[t56] = o, a9.calendar.setDate(i);
                             }
                         }
                     }
-                    a8._updateClassNames(a8.calendar);
-                })), a8.manage(D1(n, "keydown", function(e) {
-                    var t = a8.calendar._input;
-                    a8.calendar._input = e.target, setTimeout(function() {
-                        a8.calendar._input = t;
+                    a9._updateClassNames(a9.calendar);
+                })), a9.manage(D1(n, "keydown", function(e) {
+                    var t = a9.calendar._input;
+                    a9.calendar._input = e.target, setTimeout(function() {
+                        a9.calendar._input = t;
                     });
                 }));
-            }), c1(p1(a8), "_updateClassNames", function(e98) {
-                var t55 = e98.calendarContainer, n = e98.selectedDates;
-                t55 && (t55.classList.add(a8.options.classCalendarContainer), t55.querySelector(".flatpickr-month").classList.add(a8.options.classMonth), t55.querySelector(".flatpickr-weekdays").classList.add(a8.options.classWeekdays), t55.querySelector(".flatpickr-days").classList.add(a8.options.classDays), me1(t55.querySelectorAll(".flatpickr-weekday")).forEach(function(e) {
+            }), c1(p1(a9), "_updateClassNames", function(e102) {
+                var t57 = e102.calendarContainer, n = e102.selectedDates;
+                t57 && (t57.classList.add(a9.options.classCalendarContainer), t57.querySelector(".flatpickr-month").classList.add(a9.options.classMonth), t57.querySelector(".flatpickr-weekdays").classList.add(a9.options.classWeekdays), t57.querySelector(".flatpickr-days").classList.add(a9.options.classDays), me1(t57.querySelectorAll(".flatpickr-weekday")).forEach(function(e) {
                     var t = e;
-                    t.innerHTML = t.innerHTML.replace(/\s+/g, ""), t.classList.add(a8.options.classWeekday);
-                }), me1(t55.querySelectorAll(".flatpickr-day")).forEach(function(e) {
-                    e.classList.add(a8.options.classDay), e.classList.contains("today") && n.length > 0 ? e.classList.add("no-border") : e.classList.contains("today") && 0 === n.length && e.classList.remove("no-border");
+                    t.innerHTML = t.innerHTML.replace(/\s+/g, ""), t.classList.add(a9.options.classWeekday);
+                }), me1(t57.querySelectorAll(".flatpickr-day")).forEach(function(e) {
+                    e.classList.add(a9.options.classDay), e.classList.contains("today") && n.length > 0 ? e.classList.add("no-border") : e.classList.contains("today") && 0 === n.length && e.classList.remove("no-border");
                 }));
-            }), c1(p1(a8), "_updateInputFields", function(e, t) {
-                "range" === t ? 2 === e.length ? (a8.element.querySelector(a8.options.selectorDatePickerInputFrom).value = a8._formatDate(e[0]), a8.element.querySelector(a8.options.selectorDatePickerInputTo).value = a8._formatDate(e[1])) : 1 === e.length && (a8.element.querySelector(a8.options.selectorDatePickerInputFrom).value = a8._formatDate(e[0])) : 1 === e.length && (a8.element.querySelector(a8.options.selectorDatePickerInput).value = a8._formatDate(e[0])), a8._updateClassNames(a8.calendar);
-            }), c1(p1(a8), "_formatDate", function(e) {
-                return a8.calendar.formatDate(e, a8.calendar.config.dateFormat);
+            }), c1(p1(a9), "_updateInputFields", function(e, t) {
+                "range" === t ? 2 === e.length ? (a9.element.querySelector(a9.options.selectorDatePickerInputFrom).value = a9._formatDate(e[0]), a9.element.querySelector(a9.options.selectorDatePickerInputTo).value = a9._formatDate(e[1])) : 1 === e.length && (a9.element.querySelector(a9.options.selectorDatePickerInputFrom).value = a9._formatDate(e[0])) : 1 === e.length && (a9.element.querySelector(a9.options.selectorDatePickerInput).value = a9._formatDate(e[0])), a9._updateClassNames(a9.calendar);
+            }), c1(p1(a9), "_formatDate", function(e) {
+                return a9.calendar.formatDate(e, a9.calendar.config.dateFormat);
             });
-            var r3 = a8.element.getAttribute(a8.options.attribType);
-            return a8.calendar = a8._initDatePicker(r3), a8.calendar.calendarContainer && (a8.manage(D1(a8.element, "keydown", function(e) {
-                40 === e.which && (e.preventDefault(), (a8.calendar.selectedDateElem || a8.calendar.todayDateElem || a8.calendar.calendarContainer).focus());
-            })), a8.manage(D1(a8.calendar.calendarContainer, "keydown", function(e) {
-                9 === e.which && "range" === r3 && (a8._updateClassNames(a8.calendar), a8.element.querySelector(a8.options.selectorDatePickerInputFrom).focus());
-            }))), a8;
+            var r3 = a9.element.getAttribute(a9.options.attribType);
+            return a9.calendar = a9._initDatePicker(r3), a9.calendar.calendarContainer && (a9.manage(D1(a9.element, "keydown", function(e) {
+                40 === e.which && (e.preventDefault(), (a9.calendar.selectedDateElem || a9.calendar.todayDateElem || a9.calendar.calendarContainer).focus());
+            })), a9.manage(D1(a9.calendar.calendarContainer, "keydown", function(e) {
+                9 === e.which && "range" === r3 && (a9._updateClassNames(a9.calendar), a9.element.querySelector(a9.options.selectorDatePickerInputFrom).focus());
+            }))), a9;
         }
-        return s1(o18, [
+        return s1(o22, [
             {
                 key: "_rightArrowHTML",
                 value: function() {
@@ -3177,11 +3145,10 @@ var CarbonComponents = function(e1) {
                     if (this._rangeInput && this._rangeInput.parentNode && this._rangeInput.parentNode.removeChild(this._rangeInput), this.calendar) {
                         try {
                             this.calendar.destroy();
-                        } catch (e) {
-                        }
+                        } catch (e) {}
                         this.calendar = null;
                     }
-                    return g1(u1(o18.prototype), "release", this).call(this);
+                    return g1(u1(o22.prototype), "release", this).call(this);
                 }
             }
         ], [
@@ -3212,15 +3179,15 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o18;
+        ]), o22;
     }(C1(k1, _1, E1));
     c1(ve1, "components", new WeakMap);
-    var be1 = ve1, ye = function(e99) {
-        l1(n21, e99);
-        var t56 = f1(n21);
-        function n21(e100, o) {
+    var be1 = ve1, ye = function(e103) {
+        l1(n23, e103);
+        var t58 = f1(n23);
+        function n23(e104, o) {
             var a;
-            return i1(this, n21), c1(p1(a = t56.call(this, e100, o)), "_emitEvent", function(e, t) {
+            return i1(this, n23), c1(p1(a = t58.call(this, e104, o)), "_emitEvent", function(e, t) {
                 var n = new CustomEvent("".concat(e), {
                     bubbles: !0,
                     cancelable: !0,
@@ -3261,7 +3228,7 @@ var CarbonComponents = function(e1) {
                 }
             })), a;
         }
-        return s1(n21);
+        return s1(n23);
     }(C1(k1, _1, E1));
     c1(ye, "components", new WeakMap), c1(ye, "options", {
         selectorInit: "[data-pagination]",
@@ -3274,21 +3241,19 @@ var CarbonComponents = function(e1) {
         eventPageChange: "pageChange"
     });
     var we = ye;
-    function Se(e101, t57, n) {
-        var o = e101.getAttribute("class").trim().split(/\s+/), a = Object.keys(o.reduce(function(e, t) {
-            return Object.assign(e, c1({
-            }, t, 1));
-        }, {
-        })), i = a.indexOf(t57), r = i >= 0, s = void 0 === n ? !r : n;
-        r === !s && (s ? a.push(t57) : a.splice(i, 1), e101.setAttribute("class", a.join(" ")));
+    function Se(e105, t59, n) {
+        var o = e105.getAttribute("class").trim().split(/\s+/), a = Object.keys(o.reduce(function(e, t) {
+            return Object.assign(e, c1({}, t, 1));
+        }, {})), i = a.indexOf(t59), r = i >= 0, s = void 0 === n ? !r : n;
+        r === !s && (s ? a.push(t59) : a.splice(i, 1), e105.setAttribute("class", a.join(" ")));
     }
-    var Ce = function(e102) {
-        l1(o, e102);
-        var t58 = f1(o);
-        function o(e103, n) {
+    var Ce = function(e106) {
+        l1(o, e106);
+        var t60 = f1(o);
+        function o(e107, n) {
             var a;
             i1(this, o);
-            var r = (a = t58.call(this, e103, n)).element.querySelector(a.options.selectorClearIcon), s = a.element.querySelector(a.options.selectorSearchInput);
+            var r = (a = t60.call(this, e107, n)).element.querySelector(a.options.selectorClearIcon), s = a.element.querySelector(a.options.selectorSearchInput);
             if (!s) throw new Error("Cannot find the search input.");
             return r && a.manage(D1(r, "click", function() {
                 Se(r, a.options.classClearHidden, !0), s.value = "", s.focus();
@@ -3302,9 +3267,9 @@ var CarbonComponents = function(e1) {
         return s1(o, [
             {
                 key: "toggleLayout",
-                value: function(e104) {
+                value: function(e108) {
                     var t, n = this;
-                    (t = e104.querySelectorAll(this.options.selectorSearchView), Array.prototype.slice.call(t)).forEach(function(e) {
+                    (t = e108.querySelectorAll(this.options.selectorSearchView), Array.prototype.slice.call(t)).forEach(function(e) {
                         e.classList.toggle(n.options.classLayoutHidden);
                     });
                 }
@@ -3334,12 +3299,12 @@ var CarbonComponents = function(e1) {
         ]), o;
     }(C1(k1, _1, E1));
     c1(Ce, "components", new WeakMap);
-    var ke = Ce, _e = function(e105) {
-        l1(o, e105);
-        var t59 = f1(o);
-        function o(e106, n) {
+    var ke = Ce, _e = function(e109) {
+        l1(o, e109);
+        var t61 = f1(o);
+        function o(e110, n) {
             var a;
-            return i1(this, o), (a = t59.call(this, e106, n)).manage(D1(a.element, "click", function(e) {
+            return i1(this, o), (a = t61.call(this, e110, n)).manage(D1(a.element, "click", function(e) {
                 var t = N1(e, a.options.selectorAccordionItem);
                 t && !N1(e, a.options.selectorAccordionContent) && a._toggle(t);
             })), a._checkIfButton() || a.manage(D1(a.element, "keypress", function(e) {
@@ -3383,12 +3348,12 @@ var CarbonComponents = function(e1) {
         ]), o;
     }(C1(k1, _1, E1));
     c1(_e, "components", new WeakMap);
-    var Ee = _e, De = function(e107) {
-        l1(o, e107);
-        var t60 = f1(o);
-        function o(e108, n) {
+    var Ee = _e, De = function(e111) {
+        l1(o, e111);
+        var t62 = f1(o);
+        function o(e112, n) {
             var a;
-            return i1(this, o), (a = t60.call(this, e108, n)).manage(D1(a.element, "click", function() {
+            return i1(this, o), (a = t62.call(this, e112, n)).manage(D1(a.element, "click", function() {
                 return a.handleClick();
             })), a.manage(D1(a.element, "animationend", function(e) {
                 return a.handleAnimationEnd(e);
@@ -3424,21 +3389,21 @@ var CarbonComponents = function(e1) {
                         classAnimating: "".concat(e, "--copy-btn--animating"),
                         classFadeIn: "".concat(e, "--copy-btn--fade-in"),
                         classFadeOut: "".concat(e, "--copy-btn--fade-out"),
-                        timeoutValue: 2000
+                        timeoutValue: 2e3
                     };
                 }
             }
         ]), o;
     }(C1(k1, _1, E1));
     c1(De, "components", new WeakMap);
-    var Te = De, xe = function(e109) {
-        l1(n, e109);
-        var t61 = f1(n);
-        function n(e110, o) {
+    var Te = De, xe = function(e113) {
+        l1(n, e113);
+        var t63 = f1(n);
+        function n(e114, o) {
             var a;
-            return i1(this, n), c1(p1(a = t61.call(this, e110, o)), "_changeState", function(e, t) {
+            return i1(this, n), c1(p1(a = t63.call(this, e114, o)), "_changeState", function(e, t) {
                 "delete-notification" === e && (a.element.parentNode.removeChild(a.element), a.release()), t();
-            }), a.button = e110.querySelector(a.options.selectorButton), a.button && a.manage(D1(a.button, "click", function(e) {
+            }), a.button = e114.querySelector(a.options.selectorButton), a.button && a.manage(D1(a.button, "click", function(e) {
                 e.currentTarget === a.button && a.remove();
             })), a;
         }
@@ -3457,12 +3422,12 @@ var CarbonComponents = function(e1) {
         eventBeforeDeleteNotification: "notification-before-delete",
         eventAfterDeleteNotification: "notification-after-delete"
     });
-    var Ae = xe, Me = function(e111) {
-        l1(o19, e111);
-        var t62 = f1(o19);
-        function o19(e112, n) {
+    var Ae = xe, Me = function(e115) {
+        l1(o23, e115);
+        var t64 = f1(o23);
+        function o23(e116, n) {
             var a;
-            if (i1(this, o19), (a = t62.call(this, e112, n)).element.dataset.tableTarget) {
+            if (i1(this, o23), (a = t64.call(this, e116, n)).element.dataset.tableTarget) {
                 var r = a.element.ownerDocument.querySelector(a.element.dataset.tableTarget), s = a.element.querySelector(a.options.selectorRowHeight);
                 s && a.manage(D1(s, "click", function(e) {
                     a._handleRowHeightChange(e, r);
@@ -3474,16 +3439,16 @@ var CarbonComponents = function(e1) {
                 a._handleDocumentClick(e);
             })), a;
         }
-        return s1(o19, [
+        return s1(o23, [
             {
                 key: "_handleDocumentClick",
-                value: function(e113) {
-                    var t = this, n = N1(e113, this.options.selectorSearch), o = n && this.element.contains(n);
+                value: function(e117) {
+                    var t = this, n = N1(e117, this.options.selectorSearch), o = n && this.element.contains(n);
                     if (o) {
                         var a = o && !this.element.classList.contains(this.options.classSearchActive);
                         n.classList.toggle(this.options.classSearchActive, a), a && n.querySelector("input").focus();
                     }
-                    var i, r = N1(e113, this.options.selectorInit);
+                    var i, r = N1(e117, this.options.selectorInit);
                     (i = this.element.ownerDocument.querySelectorAll(this.options.selectorSearch), Array.prototype.slice.call(i)).forEach(function(e) {
                         r && r.contains(e) || e.classList.remove(t.options.classSearchActive);
                     });
@@ -3516,25 +3481,19 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o19;
+        ]), o23;
     }(C1(k1, _1, E1));
     c1(Me, "components", new WeakMap);
     var Ne = Me;
-    var Le = function(e114, t63) {
-        var n, o, i = e114.ownerDocument.defaultView.getComputedStyle(e114, ":before"), r = (n = {
-        }, c1(n, "left", "right"), c1(n, "top", "bottom"), c1(n, "right", "left"), c1(n, "bottom", "top"), n)[t63], s = (o = {
-        }, c1(o, "left", "left"), c1(o, "top", "top"), c1(o, "right", "left"), c1(o, "bottom", "top"), o)[t63], l = [
+    var Le = function(e118, t65) {
+        var n, o, i = e118.ownerDocument.defaultView.getComputedStyle(e118, ":before"), r = (n = {}, c1(n, "left", "right"), c1(n, "top", "bottom"), c1(n, "right", "left"), c1(n, "bottom", "top"), n)[t65], s = (o = {}, c1(o, "left", "left"), c1(o, "top", "top"), c1(o, "right", "left"), c1(o, "bottom", "top"), o)[t65], l = [
             r,
             "border-bottom-width"
         ].reduce(function(e, t) {
-            return a1(a1({
-            }, e), {
-            }, c1({
-            }, t, Number((/^([\d-.]+)px$/.exec(i.getPropertyValue(t)) || [])[1])));
-        }, {
-        }), u = 0;
-        if ("bottom" !== t63) {
-            var d = e114.ownerDocument.defaultView.getComputedStyle(e114);
+            return a1(a1({}, e), {}, c1({}, t, Number((/^([\d-.]+)px$/.exec(i.getPropertyValue(t)) || [])[1])));
+        }, {}), u = 0;
+        if ("bottom" !== t65) {
+            var d = e118.ownerDocument.defaultView.getComputedStyle(e118);
             u = Number((/^([\d-.]+)px$/.exec(d.getPropertyValue("margin-top")) || [])[1]);
         }
         if (l[r] = l[r] || -6, Object.keys(l).every(function(e) {
@@ -3544,19 +3503,19 @@ var CarbonComponents = function(e1) {
             return c1({
                 left: 0,
                 top: 0
-            }, s, Math.sqrt(2 * Math.pow(h, 2)) - p + u * ("top" === t63 ? 2 : 1));
+            }, s, Math.sqrt(2 * Math.pow(h, 2)) - p + u * ("top" === t65 ? 2 : 1));
         }
     }, Ie = [
         32,
         13
-    ], Oe = function(e115) {
-        l1(o20, e115);
-        var t64 = f1(o20);
-        function o20(e, n) {
+    ], Oe = function(e119) {
+        l1(o24, e119);
+        var t66 = f1(o24);
+        function o24(e, n) {
             var a;
-            return i1(this, o20), c1(p1(a = t64.call(this, e, n)), "_hasContextMenu", !1), a._hookOn(e), a;
+            return i1(this, o24), c1(p1(a = t66.call(this, e, n)), "_hasContextMenu", !1), a._hookOn(e), a;
         }
-        return s1(o20, [
+        return s1(o24, [
             {
                 key: "createdByEvent",
                 value: function(e) {
@@ -3588,8 +3547,8 @@ var CarbonComponents = function(e1) {
             },
             {
                 key: "_hookOn",
-                value: function(e116) {
-                    var t = this, n22 = function(e, n) {
+                value: function(e120) {
+                    var t = this, n24 = function(e, n) {
                         var o = e.relatedTarget, a = e.type, i = e.which;
                         if (void 0 === n || n.includes(i)) {
                             var r = t._hasContextMenu;
@@ -3601,8 +3560,8 @@ var CarbonComponents = function(e1) {
                             });
                         }
                     };
-                    this.manage(D1(e116, "click", n22, !1)), "BUTTON" !== this.element.tagName && this.manage(D1(this.element, "keydown", function(e) {
-                        n22(e, Ie);
+                    this.manage(D1(e120, "click", n24, !1)), "BUTTON" !== this.element.tagName && this.manage(D1(this.element, "keydown", function(e) {
+                        n24(e, Ie);
                     }, !1));
                 }
             },
@@ -3641,43 +3600,42 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o20;
-    }(C1(k1, function(e117) {
-        var t65 = function(e118) {
-            l1(n23, e118);
-            var t66 = f1(n23);
-            function n23() {
-                return i1(this, n23), t66.apply(this, arguments);
+        ]), o24;
+    }(C1(k1, function(e121) {
+        var t67 = function(e122) {
+            l1(n25, e122);
+            var t68 = f1(n25);
+            function n25() {
+                return i1(this, n25), t68.apply(this, arguments);
             }
-            return s1(n23, null, [
+            return s1(n25, null, [
                 {
                     key: "init",
                     value: function() {
-                        var e119 = this, t67 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : document, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
-                        }, o = Object.assign(Object.create(this.options), n);
-                        if (!t67 || t67.nodeType !== Node.ELEMENT_NODE && t67.nodeType !== Node.DOCUMENT_NODE) throw new TypeError("DOM document or DOM element should be given to search for and initialize this widget.");
-                        if (t67.nodeType !== Node.ELEMENT_NODE || !t67.matches(o.selectorInit)) {
-                            var a9 = "onfocusin" in (t67.nodeType === Node.ELEMENT_NODE ? t67.ownerDocument : t67).defaultView, i5 = o.initEventNames.map(function(i7) {
-                                return D1(t67, "focus" === i7 && a9 ? "focusin" : i7, function(t) {
+                        var e123 = this, t69 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : document, n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {}, o = Object.assign(Object.create(this.options), n);
+                        if (!t69 || t69.nodeType !== Node.ELEMENT_NODE && t69.nodeType !== Node.DOCUMENT_NODE) throw new TypeError("DOM document or DOM element should be given to search for and initialize this widget.");
+                        if (t69.nodeType !== Node.ELEMENT_NODE || !t69.matches(o.selectorInit)) {
+                            var a10 = "onfocusin" in (t69.nodeType === Node.ELEMENT_NODE ? t69.ownerDocument : t69).defaultView, i6 = o.initEventNames.map(function(i8) {
+                                return D1(t69, "focus" === i8 && a10 ? "focusin" : i8, function(t) {
                                     var a = N1(t, o.selectorInit);
-                                    if (a && !e119.components.has(a)) {
-                                        var i = e119.create(a, n);
+                                    if (a && !e123.components.has(a)) {
+                                        var i = e123.create(a, n);
                                         "function" == typeof i.createdByEvent && i.createdByEvent(t);
                                     }
-                                }, "focus" === i7 && !a9);
+                                }, "focus" === i8 && !a10);
                             });
                             return {
                                 release: function() {
-                                    for(var e = i5.pop(); e; e = i5.pop())e.release();
+                                    for(var e = i6.pop(); e; e = i6.pop())e.release();
                                 }
                             };
                         }
-                        return this.create(t67, n), "";
+                        return this.create(t69, n), "";
                     }
                 }
-            ]), n23;
-        }(e117);
-        return c1(t65, "forLazyInit", !0), t65;
+            ]), n25;
+        }(e121);
+        return c1(t67, "forLazyInit", !0), t67;
     }, R1, E1));
     c1(Oe, "components", new WeakMap);
     var Fe = Oe, Pe = /^\s+|\s+$/g, Be = /^[-+]0x[0-9a-f]+$/i, qe = /^0b[01]+$/i, He = /^0o[0-7]+$/i, je = parseInt, Re = "object" == typeof t1 && t1 && t1.Object === Object && t1, Ve = "object" == typeof self && self && self.Object === Object && self, Ye = Re || Ve || Function("return this")(), We = Object.prototype.toString, Ue = Math.max, Ke = Math.min, Ge = function() {
@@ -3687,43 +3645,43 @@ var CarbonComponents = function(e1) {
         var t = typeof e;
         return !!e && ("object" == t || "function" == t);
     }
-    function Je(e120) {
-        if ("number" == typeof e120) return e120;
-        if ((function(e121) {
-            return "symbol" == typeof e121 || (function(e) {
+    function Je(e124) {
+        if ("number" == typeof e124) return e124;
+        if (function(e125) {
+            return "symbol" == typeof e125 || function(e) {
                 return !!e && "object" == typeof e;
-            })(e121) && "[object Symbol]" == We.call(e121);
-        })(e120)) return NaN;
-        if (ze(e120)) {
-            var t = "function" == typeof e120.valueOf ? e120.valueOf() : e120;
-            e120 = ze(t) ? t + "" : t;
+            }(e125) && "[object Symbol]" == We.call(e125);
+        }(e124)) return NaN;
+        if (ze(e124)) {
+            var t = "function" == typeof e124.valueOf ? e124.valueOf() : e124;
+            e124 = ze(t) ? t + "" : t;
         }
-        if ("string" != typeof e120) return 0 === e120 ? e120 : +e120;
-        e120 = e120.replace(Pe, "");
-        var n = qe.test(e120);
-        return n || He.test(e120) ? je(e120.slice(2), n ? 2 : 8) : Be.test(e120) ? NaN : +e120;
+        if ("string" != typeof e124) return 0 === e124 ? e124 : +e124;
+        e124 = e124.replace(Pe, "");
+        var n = qe.test(e124);
+        return n || He.test(e124) ? je(e124.slice(2), n ? 2 : 8) : Be.test(e124) ? NaN : +e124;
     }
-    var $e = function(e122, t68, n24) {
-        var o, a, i8, r, s, c, l = 0, u = !1, d = !1, p = !0;
-        if ("function" != typeof e122) throw new TypeError("Expected a function");
+    var $e = function(e126, t70, n26) {
+        var o, a, i9, r, s, c, l = 0, u = !1, d = !1, p = !0;
+        if ("function" != typeof e126) throw new TypeError("Expected a function");
         function h(t) {
             var n = o, i = a;
-            return o = a = void 0, l = t, r = e122.apply(i, n);
+            return o = a = void 0, l = t, r = e126.apply(i, n);
         }
         function f(e) {
-            return l = e, s = setTimeout(g, t68), u ? h(e) : r;
+            return l = e, s = setTimeout(g, t70), u ? h(e) : r;
         }
         function m(e) {
             var n = e - c;
-            return void 0 === c || n >= t68 || n < 0 || d && e - l >= i8;
+            return void 0 === c || n >= t70 || n < 0 || d && e - l >= i9;
         }
         function g() {
-            var e123 = Ge();
-            if (m(e123)) return v(e123);
+            var e127 = Ge();
+            if (m(e127)) return v(e127);
             s = setTimeout(g, function(e) {
-                var n = t68 - (e - c);
-                return d ? Ke(n, i8 - (e - l)) : n;
-            }(e123));
+                var n = t70 - (e - c);
+                return d ? Ke(n, i9 - (e - l)) : n;
+            }(e127));
         }
         function v(e) {
             return s = void 0, p && o ? h(e) : (o = a = void 0, r);
@@ -3732,21 +3690,21 @@ var CarbonComponents = function(e1) {
             var e = Ge(), n = m(e);
             if (o = arguments, a = this, c = e, n) {
                 if (void 0 === s) return f(c);
-                if (d) return s = setTimeout(g, t68), h(c);
+                if (d) return s = setTimeout(g, t70), h(c);
             }
-            return void 0 === s && (s = setTimeout(g, t68)), r;
+            return void 0 === s && (s = setTimeout(g, t70)), r;
         }
-        return t68 = Je(t68) || 0, ze(n24) && (u = !!n24.leading, i8 = (d = "maxWait" in n24) ? Ue(Je(n24.maxWait) || 0, t68) : i8, p = "trailing" in n24 ? !!n24.trailing : p), b.cancel = function() {
+        return t70 = Je(t70) || 0, ze(n26) && (u = !!n26.leading, i9 = (d = "maxWait" in n26) ? Ue(Je(n26.maxWait) || 0, t70) : i9, p = "trailing" in n26 ? !!n26.trailing : p), b.cancel = function() {
             void 0 !== s && clearTimeout(s), l = 0, o = c = a = s = void 0;
         }, b.flush = function() {
             return void 0 === s ? r : v(Ge());
         }, b;
-    }, Xe = function(e124) {
-        l1(o, e124);
-        var t69 = f1(o);
-        function o(e125, n25) {
+    }, Xe = function(e128) {
+        l1(o, e128);
+        var t71 = f1(o);
+        function o(e129, n27) {
             var a;
-            return i1(this, o), c1(p1(a = t69.call(this, e125, n25)), "tooltipFadeOut", $e(function() {
+            return i1(this, o), c1(p1(a = t71.call(this, e129, n27)), "tooltipFadeOut", $e(function() {
                 var e = a.getTooltipTriggerButton();
                 e && e.classList.remove(a.options.classTooltipVisible);
             }, 100)), c1(p1(a), "getTooltipTriggerButton", function() {
@@ -3792,17 +3750,17 @@ var CarbonComponents = function(e1) {
     c1(Xe, "components", new WeakMap);
     var Ze = function(e) {
         return Array.prototype.slice.call(e);
-    }, Qe = function(e126) {
-        l1(o21, e126);
-        var t70 = f1(o21);
-        function o21(e, n) {
+    }, Qe = function(e130) {
+        l1(o25, e130);
+        var t72 = f1(o25);
+        function o25(e, n) {
             var a;
-            return i1(this, o21), (a = t70.call(this, e, n)).state = {
+            return i1(this, o25), (a = t72.call(this, e, n)).state = {
                 currentIndex: a.getCurrent().index,
                 totalSteps: a.getSteps().length
             }, a.addOverflowTooltip(), a;
         }
-        return s1(o21, [
+        return s1(o25, [
             {
                 key: "getSteps",
                 value: function() {
@@ -3826,8 +3784,8 @@ var CarbonComponents = function(e1) {
             {
                 key: "setCurrent",
                 value: function() {
-                    var e = this, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.state.currentIndex, n26 = !1;
-                    t !== this.state.currentIndex && (this.state.currentIndex = t, n26 = !0), n26 && this.getSteps().forEach(function(n) {
+                    var e = this, t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : this.state.currentIndex, n28 = !1;
+                    t !== this.state.currentIndex && (this.state.currentIndex = t, n28 = !0), n28 && this.getSteps().forEach(function(n) {
                         n.index < t && e._updateStep({
                             element: n.element,
                             className: e.options.classComplete,
@@ -3872,8 +3830,8 @@ var CarbonComponents = function(e1) {
             {
                 key: "addOverflowTooltip",
                 value: function() {
-                    var e = this, t71 = Ze(this.element.querySelectorAll(this.options.selectorLabel)), n = Ze(this.element.querySelectorAll(this.options.selectorTooltip));
-                    t71.forEach(function(t) {
+                    var e = this, t73 = Ze(this.element.querySelectorAll(this.options.selectorLabel)), n = Ze(this.element.querySelectorAll(this.options.selectorTooltip));
+                    t73.forEach(function(t) {
                         t.scrollWidth > e.options.maxWidth && t.classList.add(e.options.classOverflowLabel);
                     }), n.forEach(function(t) {
                         t.querySelector(e.options.selectorTooltipText).scrollHeight > e.options.tooltipMaxHeight && t.classList.add(e.options.classTooltipMulti);
@@ -3905,23 +3863,23 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o21;
+        ]), o25;
     }(C1(k1, _1));
     c1(Qe, "components", new WeakMap);
     var et = Qe, tt = function(e) {
         return Array.prototype.slice.call(e);
-    }, nt = function(e127) {
-        l1(o22, e127);
-        var t72 = f1(o22);
-        function o22(e128, n) {
+    }, nt = function(e131) {
+        l1(o26, e131);
+        var t74 = f1(o26);
+        function o26(e132, n) {
             var a;
-            return i1(this, o22), (a = t72.call(this, e128, n)).manage(D1(a.element, "keydown", function(e) {
+            return i1(this, o26), (a = t74.call(this, e132, n)).manage(D1(a.element, "keydown", function(e) {
                 37 !== e.which && 38 !== e.which && 39 !== e.which && 40 !== e.which || a._handleKeydownArrow(e), 13 !== e.which && 32 !== e.which || a._handleKeydownChecked(e);
             })), a.manage(D1(a.element, "click", function(e) {
                 a._handleClick(e);
             })), a;
         }
-        return s1(o22, [
+        return s1(o26, [
             {
                 key: "_direction",
                 value: function(e) {
@@ -3955,8 +3913,8 @@ var CarbonComponents = function(e1) {
             },
             {
                 key: "_handleClick",
-                value: function(e129) {
-                    var t = this, n = N1(e129, this.options.selectorRow);
+                value: function(e133) {
+                    var t = this, n = N1(e133, this.options.selectorRow);
                     tt(this.element.querySelectorAll(this.options.selectorRow)).forEach(function(e) {
                         return e.classList.remove(t.options.classActive);
                     }), n && n.classList.add(this.options.classActive);
@@ -3964,10 +3922,10 @@ var CarbonComponents = function(e1) {
             },
             {
                 key: "_handleKeydownChecked",
-                value: function(e130) {
+                value: function(e134) {
                     var t = this;
-                    e130.preventDefault();
-                    var n = N1(e130, this.options.selectorRow);
+                    e134.preventDefault();
+                    var n = N1(e134, this.options.selectorRow);
                     (tt(this.element.querySelectorAll(this.options.selectorRow)).forEach(function(e) {
                         return e.classList.remove(t.options.classActive);
                     }), n) && (n.classList.add(this.options.classActive), (n.querySelector(this.options.selectorListInput(n.getAttribute("for"))) || n.querySelector("input")).checked = !0);
@@ -3975,10 +3933,10 @@ var CarbonComponents = function(e1) {
             },
             {
                 key: "_handleKeydownArrow",
-                value: function(e131) {
+                value: function(e135) {
                     var t = this;
-                    e131.preventDefault();
-                    var n = N1(e131, this.options.selectorRow), o = this._direction(e131);
+                    e135.preventDefault();
+                    var n = N1(e135, this.options.selectorRow), o = this._direction(e135);
                     if (o && void 0 !== n) {
                         var a = tt(this.element.querySelectorAll(this.options.selectorRow));
                         a.forEach(function(e) {
@@ -4013,15 +3971,15 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o22;
+        ]), o26;
     }(C1(k1, _1, E1));
     c1(nt, "components", new WeakMap);
-    var ot = nt, at = function(e132) {
-        l1(o23, e132);
-        var t73 = f1(o23);
-        function o23(e133, n27) {
+    var ot = nt, at = function(e136) {
+        l1(o27, e136);
+        var t75 = f1(o27);
+        function o27(e137, n29) {
             var a;
-            return i1(this, o23), c1(p1(a = t73.call(this, e133, n27)), "_changeState", function(e, t, n) {
+            return i1(this, o27), c1(p1(a = t75.call(this, e137, n29)), "_changeState", function(e, t, n) {
                 n();
             }), a.sliderActive = !1, a.dragging = !1, a.track = a.element.querySelector(a.options.selectorTrack), a.filledTrack = a.element.querySelector(a.options.selectorFilledTrack), a.thumb = a.element.querySelector(a.options.selectorThumb), a.input = a.element.querySelector(a.options.selectorInput), a.element.dataset.sliderInputBox && (a.boundInput = a.element.ownerDocument.querySelector(a.element.dataset.sliderInputBox), a._updateInput(), a.manage(D1(a.boundInput, "change", function(e) {
                 a.setValue(e.target.value);
@@ -4042,7 +4000,7 @@ var CarbonComponents = function(e1) {
                 a.element.classList.contains(a.options.classDisabled) || a._updatePosition(e);
             })), a;
         }
-        return s1(o23, [
+        return s1(o27, [
             {
                 key: "_updatePosition",
                 value: function(e) {
@@ -4138,15 +4096,15 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o23;
+        ]), o27;
     }(C1(k1, _1, M1, E1));
     c1(at, "components", new WeakMap);
-    var it = at, rt = function(e134) {
-        l1(o24, e134);
-        var t74 = f1(o24);
-        function o24(e135, n28) {
+    var it = at, rt = function(e138) {
+        l1(o28, e138);
+        var t76 = f1(o28);
+        function o28(e139, n30) {
             var a;
-            return i1(this, o24), c1(p1(a = t74.call(this, e135, n28)), "_getClass", function(e) {
+            return i1(this, o28), c1(p1(a = t76.call(this, e139, n30)), "_getClass", function(e) {
                 return ({
                     expandable: a.options.classExpandedTile,
                     clickable: a.options.classClickableTile,
@@ -4169,11 +4127,11 @@ var CarbonComponents = function(e1) {
                 a.element.style.maxHeight = "".concat(e ? a.tileHeight : a.atfHeight, "px");
             }), a.tileType = a.element.dataset.tile, a.tileHeight = 0, a.atfHeight = 0, a._hookActions(a._getClass(a.tileType)), a;
         }
-        return s1(o24, [
+        return s1(o28, [
             {
                 key: "release",
                 value: function() {
-                    g1(u1(o24.prototype), "release", this).call(this);
+                    g1(u1(o28.prototype), "release", this).call(this);
                 }
             }
         ], [
@@ -4191,15 +4149,15 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o24;
+        ]), o28;
     }(C1(k1, _1));
     c1(rt, "components", new WeakMap);
-    var st = rt, ct = function(e136) {
-        l1(o, e136);
+    var st = rt, ct = function(e140) {
+        l1(o, e140);
         var t = f1(o);
-        function o(e137, n) {
+        function o(e141, n) {
             var a;
-            return i1(this, o), (a = t.call(this, e137, n))._initCodeSnippet(), a.element.querySelector(a.options.classExpandBtn).addEventListener("click", function(e) {
+            return i1(this, o), (a = t.call(this, e141, n))._initCodeSnippet(), a.element.querySelector(a.options.classExpandBtn).addEventListener("click", function(e) {
                 return a._handleClick(e);
             }), a;
         }
@@ -4239,34 +4197,34 @@ var CarbonComponents = function(e1) {
         ]), o;
     }(C1(k1, _1, E1));
     c1(ct, "components", new WeakMap);
-    var lt = ct, ut = function(e138) {
-        l1(o25, e138);
-        var t75 = f1(o25);
-        function o25(e139, n29) {
-            var a11;
-            return i1(this, o25), c1(p1(a11 = t75.call(this, e139, n29)), "_setIconVisibility", function(e) {
+    var lt = ct, ut = function(e142) {
+        l1(o29, e142);
+        var t77 = f1(o29);
+        function o29(e143, n31) {
+            var a12;
+            return i1(this, o29), c1(p1(a12 = t77.call(this, e143, n31)), "_setIconVisibility", function(e) {
                 var t = e.iconVisibilityOn, n = e.iconVisibilityOff, o = e.passwordIsVisible, a = e.selectorPasswordVisibilityTooltip;
                 if (o) return t.setAttribute("hidden", !0), n.removeAttribute("hidden"), void (a.textContent = "Hide password");
                 t.removeAttribute("hidden"), n.setAttribute("hidden", !0), a.textContent = "Show password";
-            }), c1(p1(a11), "_toggle", function(e) {
+            }), c1(p1(a12), "_toggle", function(e) {
                 var t = e.element, n = e.button;
-                t.classList.toggle(a11.options.passwordIsVisible);
-                var o = t.classList.contains(a11.options.passwordIsVisible), i = n.querySelector(a11.options.svgIconVisibilityOn), r = n.querySelector(a11.options.svgIconVisibilityOff), s = t.querySelector(a11.options.selectorPasswordField), c = t.querySelector(a11.options.selectorPasswordVisibilityTooltip);
-                a11._setIconVisibility({
+                t.classList.toggle(a12.options.passwordIsVisible);
+                var o = t.classList.contains(a12.options.passwordIsVisible), i = n.querySelector(a12.options.svgIconVisibilityOn), r = n.querySelector(a12.options.svgIconVisibilityOff), s = t.querySelector(a12.options.selectorPasswordField), c = t.querySelector(a12.options.selectorPasswordVisibilityTooltip);
+                a12._setIconVisibility({
                     iconVisibilityOn: i,
                     iconVisibilityOff: r,
                     passwordIsVisible: o,
                     selectorPasswordVisibilityTooltip: c
                 }), s.type = o ? "text" : "password";
-            }), a11.manage(D1(a11.element, "click", function(t) {
-                var n = N1(t, a11.options.selectorPasswordVisibilityButton);
-                n && a11._toggle({
-                    element: e139,
+            }), a12.manage(D1(a12.element, "click", function(t) {
+                var n = N1(t, a12.options.selectorPasswordVisibilityButton);
+                n && a12._toggle({
+                    element: e143,
                     button: n
                 });
-            })), a11;
+            })), a12;
         }
-        return s1(o25, null, [
+        return s1(o29, null, [
             {
                 key: "options",
                 get: function() {
@@ -4282,16 +4240,16 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o25;
+        ]), o29;
     }(C1(k1, _1, E1));
     c1(ut, "components", new WeakMap);
-    var dt = n1.prefix, pt = function(e140) {
-        l1(n30, e140);
-        var t76 = f1(n30);
-        function n30(e141, o26) {
+    var dt = n1.prefix, pt = function(e144) {
+        l1(n32, e144);
+        var t78 = f1(n32);
+        function n32(e145, o30) {
             var a;
-            return i1(this, n30), c1(p1(a = t76.call(this, e141, o26)), "_handleClick", function(e142) {
-                var t = N1(e142, a.options.selectorSideNavToggle), n = N1(e142, a.options.selectorSideNavSubmenu), o = N1(e142, a.options.selectorSideNavLink);
+            return i1(this, n32), c1(p1(a = t78.call(this, e145, o30)), "_handleClick", function(e146) {
+                var t = N1(e146, a.options.selectorSideNavToggle), n = N1(e146, a.options.selectorSideNavSubmenu), o = N1(e146, a.options.selectorSideNavLink);
                 if (t || n || o) {
                     if (t) a.changeState(a.isNavExpanded() ? a.constructor.state.COLLAPSED : a.constructor.state.EXPANDED);
                     else if (n) {
@@ -4305,9 +4263,9 @@ var CarbonComponents = function(e1) {
                         r && r.classList.add(a.options.classSideNavItemActive);
                     }
                 }
-            }), a.manage(D1(e141, "click", a._handleClick)), a;
+            }), a.manage(D1(e145, "click", a._handleClick)), a;
         }
-        return s1(n30, [
+        return s1(n32, [
             {
                 key: "isNavExpanded",
                 value: function() {
@@ -4320,7 +4278,7 @@ var CarbonComponents = function(e1) {
                     this.element.classList.toggle(this.options.classSideNavExpanded, e === this.constructor.state.EXPANDED);
                 }
             }
-        ]), n30;
+        ]), n32;
     }(C1(k1, _1, E1));
     c1(pt, "components", new WeakMap), c1(pt, "state", {
         EXPANDED: "expanded",
@@ -4338,12 +4296,12 @@ var CarbonComponents = function(e1) {
     });
     var ht = pt, ft = function() {
         return Array.prototype.forEach;
-    }(), mt = function(e143) {
-        l1(o27, e143);
-        var t77 = f1(o27);
-        function o27(e144, n31) {
+    }(), mt = function(e147) {
+        l1(o31, e147);
+        var t79 = f1(o31);
+        function o31(e148, n33) {
             var a;
-            i1(this, o27), c1(p1(a = t77.call(this, e144, n31)), "_getAction", function(e) {
+            i1(this, o31), c1(p1(a = t79.call(this, e148, n33)), "_getAction", function(e) {
                 if (N1(e, a.options.selectorFlyoutMenu)) return a.constructor.actions.DELEGATE_TO_FLYOUT_MENU;
                 switch(e.type){
                     case "keydown":
@@ -4376,23 +4334,23 @@ var CarbonComponents = function(e1) {
                     default:
                         return t;
                 }
-            }), c1(p1(a), "_setState", function(e145) {
-                var t = e145.shouldBeExpanded, n = e145.shouldFocusOnOpen;
+            }), c1(p1(a), "_setState", function(e149) {
+                var t = e149.shouldBeExpanded, n = e149.shouldFocusOnOpen;
                 a.element.querySelector(a.options.selectorTrigger).setAttribute(a.options.attribExpanded, t), ft.call(a.element.querySelectorAll(a.options.selectorItem), function(e) {
                     e.tabIndex = t ? 0 : -1;
                 }), t && n && a.element.querySelector(a.options.selectorItem).focus();
             }), c1(p1(a), "getCurrentNavigation", function() {
                 var e = a.element.ownerDocument.activeElement;
                 return e.nodeType === Node.ELEMENT_NODE && e.matches(a.options.selectorItem) ? e : null;
-            }), c1(p1(a), "navigate", function(e) {
-                for(var t78, n = (t78 = a.element.querySelectorAll(a.options.selectorItem), Array.prototype.slice.call(t78)), o = a.getCurrentNavigation() || a.element.querySelector(a.options.selectorItemSelected), i = function(t) {
-                    var o = Math.max(n.indexOf(t) + e, -1);
-                    return n[(function(e, t) {
+            }), c1(p1(a), "navigate", function(e150) {
+                for(var t80, n = (t80 = a.element.querySelectorAll(a.options.selectorItem), Array.prototype.slice.call(t80)), o32 = a.getCurrentNavigation() || a.element.querySelector(a.options.selectorItemSelected), i = function(t81) {
+                    var o = Math.max(n.indexOf(t81) + e150, -1);
+                    return n[function(e, t) {
                         return e + (e >= 0 ? 0 : t);
-                    })(function(e, t) {
+                    }(function(e, t) {
                         return e - (e < t ? 0 : t);
                     }(o, n.length), n.length)];
-                }, r = i(o); r && r !== o; r = i(r))if (!r.matches(a.options.selectorItemHidden) && !r.parentNode.matches(a.options.selectorItemHidden) && !r.matches(a.options.selectorItemSelected)) {
+                }, r = i(o32); r && r !== o32; r = i(r))if (!r.matches(a.options.selectorItemHidden) && !r.parentNode.matches(a.options.selectorItemHidden) && !r.matches(a.options.selectorItemSelected)) {
                     r.focus();
                     break;
                 }
@@ -4454,7 +4412,7 @@ var CarbonComponents = function(e1) {
             var r4 = "onfocusout" in window;
             return a.manage(D1(a.element, r4 ? "focusout" : "blur", a._handleEvent, !r4)), a.manage(D1(a.element, "mouseenter", a._handleEvent)), a.manage(D1(a.element, "mouseleave", a._handleEvent)), a.manage(D1(a.element, "click", a._handleEvent)), a.manage(D1(a.element, "keydown", a._handleKeyDown)), a;
         }
-        return s1(o27, null, [
+        return s1(o31, null, [
             {
                 key: "options",
                 get: function() {
@@ -4467,7 +4425,7 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o27;
+        ]), o31;
     }(C1(k1, _1, E1));
     c1(mt, "components", new WeakMap), c1(mt, "actions", {
         CLOSE_SUBMENU: "CLOSE_SUBMENU",
@@ -4478,19 +4436,19 @@ var CarbonComponents = function(e1) {
         BACKWARD: -1,
         FORWARD: 1
     });
-    var gt = mt, vt = function(e146) {
-        l1(o28, e146);
-        var t79 = f1(o28);
-        function o28(e147, n32) {
+    var gt = mt, vt = function(e151) {
+        l1(o33, e151);
+        var t82 = f1(o33);
+        function o33(e152, n34) {
             var a;
-            return i1(this, o28), c1(p1(a = t79.call(this, e147, n32)), "getCurrentNavigation", function() {
+            return i1(this, o33), c1(p1(a = t82.call(this, e152, n34)), "getCurrentNavigation", function() {
                 var e = a.element.ownerDocument.activeElement.closest(a.options.selectorSubmenu);
                 return e && e.nodeType === Node.ELEMENT_NODE ? e.querySelector(a.options.selectorSubmenuLink) : null;
-            }), c1(p1(a), "navigate", function(e) {
-                var t, n, o, i = (t = a.element.querySelectorAll(a.options.selectorSubmenuLink), Array.prototype.slice.call(t)), r = a.getCurrentNavigation();
-                (n = r, o = Math.max(i.indexOf(n) + e, -1), i[(function(e, t) {
+            }), c1(p1(a), "navigate", function(e153) {
+                var t83, n, o, i = (t83 = a.element.querySelectorAll(a.options.selectorSubmenuLink), Array.prototype.slice.call(t83)), r = a.getCurrentNavigation();
+                (n = r, o = Math.max(i.indexOf(n) + e153, -1), i[function(e, t) {
                     return e + (e >= 0 ? 0 : t);
-                })(function(e, t) {
+                }(function(e, t) {
                     return e - (e < t ? 0 : t);
                 }(o, i.length), i.length)]).focus();
             }), c1(p1(a), "_handleKeyDown", function(e) {
@@ -4501,7 +4459,7 @@ var CarbonComponents = function(e1) {
                 t && a.navigate(t);
             }), a.manage(D1(a.element, "keydown", a._handleKeyDown)), a;
         }
-        return s1(o28, null, [
+        return s1(o33, null, [
             {
                 key: "options",
                 get: function() {
@@ -4515,22 +4473,22 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o28;
+        ]), o33;
     }(C1(k1, _1, E1));
     c1(vt, "components", new WeakMap), c1(vt, "NAVIGATE", {
         BACKWARD: -1,
         FORWARD: 1
     });
-    var bt = vt, yt = function(e148) {
-        l1(o29, e148);
-        var t80 = f1(o29);
-        function o29() {
+    var bt = vt, yt = function(e154) {
+        l1(o34, e154);
+        var t84 = f1(o34);
+        function o34() {
             var e;
-            i1(this, o29);
-            for(var n33 = arguments.length, a12 = new Array(n33), r = 0; r < n33; r++)a12[r] = arguments[r];
-            return c1(p1(e = t80.call.apply(t80, [
+            i1(this, o34);
+            for(var n35 = arguments.length, a13 = new Array(n35), r = 0; r < n35; r++)a13[r] = arguments[r];
+            return c1(p1(e = t84.call.apply(t84, [
                 this
-            ].concat(a12))), "createdByLauncher", function(t) {
+            ].concat(a13))), "createdByLauncher", function(t) {
                 var n = !e.element.hasAttribute("hidden") ? "collapsed" : "expanded";
                 e.triggerButton = t.delegateTarget, e.changeState(n);
             }), c1(p1(e), "shouldStateBeChanged", function(t) {
@@ -4547,7 +4505,7 @@ var CarbonComponents = function(e1) {
                 n();
             }), e;
         }
-        return s1(o29, null, [
+        return s1(o34, null, [
             {
                 key: "options",
                 get: function() {
@@ -4567,21 +4525,21 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o29;
+        ]), o34;
     }(C1(k1, X1, R1, E1, M1));
     c1(yt, "components", new WeakMap);
-    var wt = function(e149) {
-        l1(o30, e149);
-        var t81 = f1(o30);
-        function o30(e150, n34) {
+    var wt = function(e155) {
+        l1(o35, e155);
+        var t85 = f1(o35);
+        function o35(e156, n36) {
             var a;
-            i1(this, o30), c1(p1(a = t81.call(this, e150, n34)), "getCurrentNavigation", function() {
+            i1(this, o35), c1(p1(a = t85.call(this, e156, n36)), "getCurrentNavigation", function() {
                 return a.element.ownerDocument.activeElement;
-            }), c1(p1(a), "navigate", function(e) {
-                var t, n, o = b1(a.element.querySelectorAll(a.options.selectorFocusableNavItems)), i = a.getCurrentNavigation();
-                (t = i, n = Math.max(o.indexOf(t) + e, -1), o[(function(e, t) {
+            }), c1(p1(a), "navigate", function(e157) {
+                var t86, n, o = b1(a.element.querySelectorAll(a.options.selectorFocusableNavItems)), i = a.getCurrentNavigation();
+                (t86 = i, n = Math.max(o.indexOf(t86) + e157, -1), o[function(e, t) {
                     return e + (e >= 0 ? 0 : t);
-                })(function(e, t) {
+                }(function(e, t) {
                     return e - (e < t ? 0 : t);
                 }(n, o.length), o.length)]).focus();
             }), c1(p1(a), "_handleKeyDown", function(e) {
@@ -4598,13 +4556,13 @@ var CarbonComponents = function(e1) {
             }), c1(p1(a), "_handleFocusOut", function(e) {
                 var t = a.element.contains(e.relatedTarget) || e.relatedTarget === a.triggerButton || !e.relatedTarget;
                 a.element.contains(e.target) && !t && (a.changeState("collapsed"), a.triggerButton.focus());
-            }), c1(p1(a), "changeNavSubmenuState", function(e151) {
-                var t = e151.matchesNavSubmenu, n = e151.shouldBeCollapsed, o = t.closest(a.options.selectorShellNavCategory);
+            }), c1(p1(a), "changeNavSubmenuState", function(e158) {
+                var t = e158.matchesNavSubmenu, n = e158.shouldBeCollapsed, o = t.closest(a.options.selectorShellNavCategory);
                 o && (t.setAttribute("aria-expanded", !n), o.classList.toggle(a.options.classShellNavCategoryExpanded), Array.prototype.forEach.call(o.querySelectorAll(a.options.selectorShellNavLink), function(e) {
                     e.tabIndex = n ? -1 : 0;
                 }));
-            }), c1(p1(a), "_handleClick", function(e152) {
-                var t = N1(e152, a.options.selectorShellNavSubmenu), n = N1(e152, a.options.selectorShellNavLink), o = N1(e152, a.options.selectorShellNestedNavLink);
+            }), c1(p1(a), "_handleClick", function(e159) {
+                var t = N1(e159, a.options.selectorShellNavSubmenu), n = N1(e159, a.options.selectorShellNavLink), o = N1(e159, a.options.selectorShellNestedNavLink);
                 if (t || n) {
                     if (o) return b1(a.element.querySelectorAll(a.options.selectorShellNavLinkCurrent)).forEach(function(e) {
                         e.classList.remove(a.options.classShellNavItemActive, a.options.classShellNavLinkCurrent);
@@ -4619,13 +4577,13 @@ var CarbonComponents = function(e1) {
                         e.classList.remove(a.options.classShellNavItemActive, a.options.classShellNavLinkCurrent);
                     }), n.closest(a.options.selectorShellNavItem).classList.add(a.options.classShellNavItemActive));
                 }
-            }), a.manage(D1(e150, "click", a._handleClick)), a.manage(D1(e150, "keydown", a._handleKeyDown)), a.manage(D1(a.element.ownerDocument, "click", function(e) {
+            }), a.manage(D1(e156, "click", a._handleClick)), a.manage(D1(e156, "keydown", a._handleKeyDown)), a.manage(D1(a.element.ownerDocument, "click", function(e) {
                 a.element.hasAttribute("hidden") || a.triggerButton.contains(e.target) || a.element.contains(e.target) || a.changeState("collapsed");
             }));
             var r = "onfocusout" in window;
             return a.manage(D1(a.element, r ? "focusout" : "blur", a._handleFocusOut, !r)), a;
         }
-        return s1(o30, null, [
+        return s1(o35, null, [
             {
                 key: "options",
                 get: function() {
@@ -4647,47 +4605,47 @@ var CarbonComponents = function(e1) {
                     });
                 }
             }
-        ]), o30;
+        ]), o35;
     }(yt);
     c1(wt, "components", new WeakMap), c1(wt, "NAVIGATE", {
         BACKWARD: -1,
         FORWARD: 1
     });
-    var St = 0, Ct = function(e153) {
-        l1(o31, e153);
-        var t82 = f1(o31);
-        function o31(e154, n35) {
-            var a13;
-            return i1(this, o31), c1(p1(a13 = t82.call(this, e154, n35)), "current", ""), c1(p1(a13), "triggerButtonIds", new Set), c1(p1(a13), "_handleFocusOut", function(e) {
-                if (!a13.element.contains(e.relatedTarget)) {
-                    var t = a13.element.ownerDocument.getElementById(a13.current);
-                    t && e.relatedTarget && !e.relatedTarget.matches(a13.options.selectorFloatingMenus) && t.focus();
+    var St = 0, Ct = function(e160) {
+        l1(o36, e160);
+        var t87 = f1(o36);
+        function o36(e161, n37) {
+            var a14;
+            return i1(this, o36), c1(p1(a14 = t87.call(this, e161, n37)), "current", ""), c1(p1(a14), "triggerButtonIds", new Set), c1(p1(a14), "_handleFocusOut", function(e) {
+                if (!a14.element.contains(e.relatedTarget)) {
+                    var t = a14.element.ownerDocument.getElementById(a14.current);
+                    t && e.relatedTarget && !e.relatedTarget.matches(a14.options.selectorFloatingMenus) && t.focus();
                 }
-            }), c1(p1(a13), "_handleKeyDown", function(e) {
-                var t = !a13.element.hasAttribute("hidden");
+            }), c1(p1(a14), "_handleKeyDown", function(e) {
+                var t = !a14.element.hasAttribute("hidden");
                 if (27 === e.which && t) {
-                    var n = a13.current;
-                    a13.changeState(a13.constructor.SELECT_NONE), a13.element.ownerDocument.getElementById(n).focus();
+                    var n = a14.current;
+                    a14.changeState(a14.constructor.SELECT_NONE), a14.element.ownerDocument.getElementById(n).focus();
                 }
-            }), c1(p1(a13), "createdByLauncher", function(e) {
-                var t = a13.element.classList.contains(a13.options.classProductSwitcherExpanded), n = e.delegateTarget;
+            }), c1(p1(a14), "createdByLauncher", function(e) {
+                var t = a14.element.classList.contains(a14.options.classProductSwitcherExpanded), n = e.delegateTarget;
                 n.id || (n.id = "__carbon-product-switcher-launcher-".concat(St++));
                 var o = n.id;
-                a13.changeState(t && a13.current === o ? a13.constructor.SELECT_NONE : o);
-            }), c1(p1(a13), "shouldStateBeChanged", function(e) {
-                return a13.current !== e;
-            }), c1(p1(a13), "_changeState", function(e155, t83) {
-                a13.element.classList.toggle(a13.options.classProductSwitcherExpanded, e155 !== a13.constructor.SELECT_NONE), a13.current = e155, a13.current !== a13.constructor.SELECT_NONE && a13.triggerButtonIds.add(a13.current), a13.triggerButtonIds.forEach(function(e) {
-                    var t = a13.element.ownerDocument.getElementById(e), n = t.getAttribute(a13.options.attribLabelExpand);
-                    t.classList.remove(a13.options.classNavigationMenuPanelHeaderActionActive), t.setAttribute("aria-label", n), t.setAttribute("title", n);
+                a14.changeState(t && a14.current === o ? a14.constructor.SELECT_NONE : o);
+            }), c1(p1(a14), "shouldStateBeChanged", function(e) {
+                return a14.current !== e;
+            }), c1(p1(a14), "_changeState", function(e162, t88) {
+                a14.element.classList.toggle(a14.options.classProductSwitcherExpanded, e162 !== a14.constructor.SELECT_NONE), a14.current = e162, a14.current !== a14.constructor.SELECT_NONE && a14.triggerButtonIds.add(a14.current), a14.triggerButtonIds.forEach(function(e) {
+                    var t = a14.element.ownerDocument.getElementById(e), n = t.getAttribute(a14.options.attribLabelExpand);
+                    t.classList.remove(a14.options.classNavigationMenuPanelHeaderActionActive), t.setAttribute("aria-label", n), t.setAttribute("title", n);
                 });
-                var n36 = a13.element.ownerDocument.getElementById(a13.current);
-                if (n36) {
-                    var o = n36.getAttribute(a13.options.attribLabelCollapse);
-                    n36.classList.toggle(a13.options.classNavigationMenuPanelHeaderActionActive), n36.setAttribute("aria-label", o), n36.setAttribute("title", o);
+                var n38 = a14.element.ownerDocument.getElementById(a14.current);
+                if (n38) {
+                    var o = n38.getAttribute(a14.options.attribLabelCollapse);
+                    n38.classList.toggle(a14.options.classNavigationMenuPanelHeaderActionActive), n38.setAttribute("aria-label", o), n38.setAttribute("title", o);
                 }
-                e155 !== a13.constructor.SELECT_NONE ? (a13.element.setAttribute("tabindex", "0"), a13.element.focus()) : a13.element.setAttribute("tabindex", "-1"), t83();
-            }), a13.manage(D1(e154, "keydown", a13._handleKeyDown)), a13.manage(function(e156, t, n) {
+                e162 !== a14.constructor.SELECT_NONE ? (a14.element.setAttribute("tabindex", "0"), a14.element.focus()) : a14.element.setAttribute("tabindex", "-1"), t88();
+            }), a14.manage(D1(e161, "keydown", a14._handleKeyDown)), a14.manage(function(e163, t, n) {
                 var o, a = "onfocusout" in window, i = {
                     focus: a ? "focusin" : "focus",
                     blur: a ? "focusout" : "blur"
@@ -4700,18 +4658,18 @@ var CarbonComponents = function(e1) {
                 }, s = function(e) {
                     o || n(e);
                 };
-                return e156.ownerDocument.addEventListener("mousedown", r), e156.addEventListener(i, s, !a), {
+                return e163.ownerDocument.addEventListener("mousedown", r), e163.addEventListener(i, s, !a), {
                     release: function() {
-                        return s && (e156.removeEventListener(i, s, !a), s = null), r && (e156.ownerDocument.removeEventListener("mousedown", r), r = null), null;
+                        return s && (e163.removeEventListener(i, s, !a), s = null), r && (e163.ownerDocument.removeEventListener("mousedown", r), r = null), null;
                     }
                 };
-            }(e154, "blur", a13._handleFocusOut)), a13;
+            }(e161, "blur", a14._handleFocusOut)), a14;
         }
-        return s1(o31, [
+        return s1(o36, [
             {
                 key: "release",
                 value: function() {
-                    return this.triggerButtonIds.clear(), g1(u1(o31.prototype), "release", this).call(this);
+                    return this.triggerButtonIds.clear(), g1(u1(o36.prototype), "release", this).call(this);
                 }
             }
         ], [
@@ -4727,18 +4685,18 @@ var CarbonComponents = function(e1) {
                     });
                 }
             }
-        ]), o31;
+        ]), o36;
     }(yt);
     c1(Ct, "SELECT_NONE", "__carbon-product-switcher-launcher-NONE"), c1(Ct, "components", new WeakMap);
-    var kt = Ct, _t = function(e157) {
-        l1(o32, e157);
-        var t84 = f1(o32);
-        function o32(e158, n37) {
+    var kt = Ct, _t = function(e164) {
+        l1(o37, e164);
+        var t89 = f1(o37);
+        function o37(e165, n39) {
             var a;
-            return i1(this, o32), c1(p1(a = t84.call(this, e158, n37)), "getActivePageNumber", function() {
+            return i1(this, o37), c1(p1(a = t89.call(this, e165, n39)), "getActivePageNumber", function() {
                 var e, t = a.element.querySelector(a.options.selectorPageActive);
                 return t && (e = Number(t.getAttribute(a.options.attribPage))), e;
-            }), c1(p1(a), "clearActivePage", function(e159) {
+            }), c1(p1(a), "clearActivePage", function(e166) {
                 var t = a.element.querySelectorAll(a.options.selectorPageButton), n = a.element.querySelector(a.options.selectorPageSelect);
                 if (Array.prototype.forEach.call(t, function(e) {
                     e.classList.remove(a.options.classActive, a.options.classDisabled), e.removeAttribute(a.options.attribActive), e.removeAttribute("aria-disabled"), e.removeAttribute("aria-current");
@@ -4747,7 +4705,7 @@ var CarbonComponents = function(e1) {
                     var o = n.options;
                     Array.prototype.forEach.call(o, function(e) {
                         e.removeAttribute(a.options.attribActive);
-                    }), e159.target.matches(a.options.selectorPageSelect) || (n.classList.remove(a.options.classActive), n.value = "");
+                    }), e166.target.matches(a.options.selectorPageSelect) || (n.classList.remove(a.options.classActive), n.value = "");
                 }
             }), c1(p1(a), "handleClick", function(e) {
                 if (!0 == !e.target.getAttribute("aria-disabled")) {
@@ -4769,7 +4727,7 @@ var CarbonComponents = function(e1) {
                 e.target.matches(a.options.selectorPageSelect) && a.handleSelectChange(e);
             })), a;
         }
-        return s1(o32, null, [
+        return s1(o37, null, [
             {
                 key: "options",
                 get: function() {
@@ -4789,7 +4747,7 @@ var CarbonComponents = function(e1) {
                     };
                 }
             }
-        ]), o32;
+        ]), o37;
     }(C1(k1, _1, E1));
     c1(_t, "components", new WeakMap);
     var Et = _t, Dt = Object.freeze({
@@ -4829,28 +4787,28 @@ var CarbonComponents = function(e1) {
         ProductSwitcher: kt,
         PaginationNav: Et
     }), Tt = Dt, xt = function() {
-        var e160 = Object.keys(Tt).map(function(e) {
+        var e167 = Object.keys(Tt).map(function(e) {
             return Tt[e];
         }).filter(function(e) {
             return "function" == typeof e.init;
         });
-        n1.disableAutoInit || e160.forEach(function(e) {
+        n1.disableAutoInit || e167.forEach(function(e) {
             e.init();
         });
     };
     "loading" === document.readyState ? document.addEventListener("DOMContentLoaded", xt) : setTimeout(xt, 0);
-    var At = Array.prototype.forEach, Mt = function(e161, t85, n38, o) {
-        e161.forEach(function(e162) {
-            At.call(e162.addedNodes, function(e) {
-                e.nodeType === Node.ELEMENT_NODE && n38.forEach(function(t) {
+    var At = Array.prototype.forEach, Mt = function(e168, t90, n40, o) {
+        e168.forEach(function(e169) {
+            At.call(e169.addedNodes, function(e) {
+                e.nodeType === Node.ELEMENT_NODE && n40.forEach(function(t) {
                     t.init(e, o);
                 });
-            }), At.call(e162.removedNodes, function(e163) {
-                e163.nodeType === Node.ELEMENT_NODE && t85.forEach(function(t) {
-                    if (e163.matches(t.options.selectorInit)) {
-                        var n = t.components.get(e163);
+            }), At.call(e169.removedNodes, function(e170) {
+                e170.nodeType === Node.ELEMENT_NODE && t90.forEach(function(t) {
+                    if (e170.matches(t.options.selectorInit)) {
+                        var n = t.components.get(e170);
                         n && n.release();
-                    } else At.call(e163.querySelectorAll(t.options.selectorInit), function(e) {
+                    } else At.call(e170.querySelectorAll(t.options.selectorInit), function(e) {
                         var n = t.components.get(e);
                         n && n.release();
                     });
@@ -4859,21 +4817,20 @@ var CarbonComponents = function(e1) {
         });
     };
     return e1.Accordion = Ee, e1.Checkbox = A1, e1.CodeSnippet = lt, e1.ContentSwitcher = B1, e1.CopyButton = Te, e1.DataTable = pe1, e1.DataTableV2 = pe1, e1.DatePicker = be1, e1.Dropdown = se1, e1.FileUploader = O1, e1.FloatingMenu = U1, e1.HeaderNav = bt, e1.HeaderSubmenu = gt, e1.InlineLoading = ae1, e1.Loading = te1, e1.Modal = Q1, e1.NavigationMenu = wt, e1.Notification = Ae, e1.NumberInput = le1, e1.OverflowMenu = $1, e1.Pagination = we, e1.PaginationNav = Et, e1.ProductSwitcher = kt, e1.ProgressIndicator = et, e1.Search = ke, e1.SideNav = ht, e1.Slider = it, e1.StructuredList = ot, e1.Tab = H1, e1.TextInput = ut, e1.Tile = st, e1.Toolbar = Ne, e1.Tooltip = Fe, e1.TooltipSimple = Xe, e1.settings = n1, e1.watch = function() {
-        var e164 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : document, t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {
-        };
-        if (e164.nodeType !== Node.ELEMENT_NODE && e164.nodeType !== Node.DOCUMENT_NODE) throw new TypeError("DOM document or DOM element should be given to watch for DOM node to create/release components.");
-        var n39 = Object.keys(Dt).map(function(e) {
+        var e171 = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : document, t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+        if (e171.nodeType !== Node.ELEMENT_NODE && e171.nodeType !== Node.DOCUMENT_NODE) throw new TypeError("DOM document or DOM element should be given to watch for DOM node to create/release components.");
+        var n41 = Object.keys(Dt).map(function(e) {
             return Dt[e];
         }).filter(function(e) {
             return "function" == typeof e.init;
-        }), o = n39.map(function(n) {
-            return n.init(e164, t);
-        }).filter(Boolean), a = n39.filter(function(e) {
+        }), o = n41.map(function(n) {
+            return n.init(e171, t);
+        }).filter(Boolean), a = n41.filter(function(e) {
             return !e.forLazyInit;
         }), i = new MutationObserver(function(e) {
-            Mt(e, n39, a, t);
+            Mt(e, n41, a, t);
         });
-        return i.observe(e164, {
+        return i.observe(e171, {
             childList: !0,
             subtree: !0
         }), {
@@ -4885,7 +4842,6 @@ var CarbonComponents = function(e1) {
     }, Object.defineProperty(e1, "__esModule", {
         value: !0
     }), e1;
-}({
-});
+}({});
 
 //# sourceMappingURL=presentation.1b41ccc2.js.map

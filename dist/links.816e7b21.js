@@ -54,8 +54,7 @@ function setChapters() {
             else if (window.location.href.includes("details-libro3")) _setChaptersList(chaptersBook3, list);
             else if (window.location.href.includes("details-libro5")) _setChaptersList(chaptersBook5, list);
         }
-    } catch (err) {
-    }
+    } catch (err) {}
 }
 function _setChaptersList(chaptersList, list) {
     chaptersList.map((el)=>{
