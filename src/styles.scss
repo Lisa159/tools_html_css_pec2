@@ -8,6 +8,7 @@
   --main-color: rgb(255, 0, 0);
   --form-color: rgb(242, 232, 228);
   --font-family: "Open Sans", sans-serif;
+  --scale-carousel: 1.2;
 }
 
 *,
@@ -318,11 +319,16 @@ aside {
         box-shadow: 0px 0px 10px 6px rgb(0 0 0 / 12%);
         text-align: center;
         border-radius: 10px;
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        --scale-carousel: 1;
         &.selected {
           opacity: 1;
           a {
             pointer-events: all;
           }
+        }
+        &.selected:hover {
+          --scale-carousel: 1.2;
         }
         a {
           pointer-events: none;

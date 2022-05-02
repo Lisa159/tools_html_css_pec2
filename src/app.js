@@ -64,7 +64,10 @@ function nextBook() {
         }
         counterCarousel += -230;
         arr.forEach((el) => {
-          el.style.transform = "translateX(" + counterCarousel + "px)";
+          el.style.transform =
+            "translateX(" +
+            counterCarousel +
+            "px) scale(var(--scale-carousel))";
         });
         _setDisabledBtnCarousel();
       },
@@ -91,7 +94,10 @@ function prevBook() {
         }
         counterCarousel += 230;
         arr.forEach((el) => {
-          el.style.transform = "translateX(" + counterCarousel + "px)";
+          el.style.transform =
+            "translateX(" +
+            counterCarousel +
+            "px) scale(var(--scale-carousel))";
         });
         _setDisabledBtnCarousel();
       },
@@ -134,15 +140,18 @@ function setCarousel() {
     document.querySelectorAll(".elementCat").forEach((el) => {
       if (el.classList.contains("selected")) {
         el.style.marginLeft = "20%";
+        el.style.transform =
+          "translateX(" + counterCarousel + "px) scale(var(--scale-carousel))";
       }
     });
     _setDisabledBtnCarousel();
   }
 }
 
+//Animation for the carousel
 setCarousel();
-
 nextBook();
 prevBook();
 
+//Display chapters
 setChapters();
