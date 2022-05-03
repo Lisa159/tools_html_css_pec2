@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css2?family=Cinzel:ital,wght@0,400;0,700;0,800;1,400&display=swap";
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   font: inherit;
   vertical-align: baseline;
@@ -1207,6 +1208,7 @@ a.bx--tabs__nav-link:focus, a.bx--tabs__nav-link:active {
   --main-color: red;
   --form-color: #f2e8e4;
   --font-family: "Open Sans", sans-serif;
+  --secondary-font-family: "Cinzel", sans-serif;
   --scale-carousel: 1.2;
 }
 
@@ -1225,8 +1227,6 @@ html {
 
 body {
   min-height: 100%;
-  background-image: url("map.1537fe39.jpg");
-  background-size: cover;
   flex-direction: column;
   margin: 0;
   display: flex;
@@ -1246,6 +1246,11 @@ body {
   position: sticky;
   top: 0;
   box-shadow: 0 5px 5px #0000000d;
+}
+
+.header .titleName {
+  font-family: var(--secondary-font-family);
+  font-weight: 700;
 }
 
 .header #non-responsive {
@@ -1401,6 +1406,14 @@ aside h3 {
 main {
   width: inherit;
   height: 100%;
+  background-color: #0000;
+  background-image: linear-gradient(#ffffff73, #fff6), url("map.1537fe39.jpg");
+  background-position: 0 0, 0 0;
+  background-repeat: repeat, repeat;
+  background-size: cover;
+  background-attachment: scroll, scroll;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
   flex: 1 0 auto;
   padding: 20px;
 }
@@ -1409,10 +1422,6 @@ main {
   flex-direction: column;
   align-items: center;
   display: flex;
-}
-
-#portada .introContainer div {
-  background-color: #ffffffe6;
 }
 
 #portada .introContainer .imgContainer {
@@ -1440,6 +1449,11 @@ main {
   display: flex;
 }
 
+#portada .introContainer .titleContainer h1 {
+  font-family: var(--secondary-font-family);
+  font-weight: 600;
+}
+
 #portada .introContainer .titleContainer span {
   color: var(--contrast-color);
 }
@@ -1448,6 +1462,7 @@ main {
   max-width: 400px;
   width: 100%;
   text-align: center;
+  background-color: #ffffffe6;
   border-radius: 4px;
   flex-direction: column;
   padding: 20px;
@@ -1858,6 +1873,10 @@ footer .bottomFooter .subjectContainer p:first-of-type {
   .header #non-responsive ul li .navSelected {
     border-bottom: 2px solid var(--contrast-color);
     font-weight: 700;
+  }
+
+  #portada .imgContainer {
+    align-self: flex-start;
   }
 
   #portada .introContainer {
