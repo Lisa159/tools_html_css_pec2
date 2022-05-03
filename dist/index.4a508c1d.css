@@ -1380,7 +1380,7 @@ body {
 }
 
 .header #logoContainer a {
-  content: url("targaryen_shield.f6cffc0d.png");
+  content: url("dragon.55d4672f.svg");
   height: 55px;
 }
 
@@ -1406,28 +1406,32 @@ main {
 }
 
 #portada {
+  padding-bottom: 0;
+}
+
+#portada .introContainer {
   flex-direction: column;
   align-items: center;
   display: flex;
 }
 
-#portada div {
+#portada .introContainer div {
   background-color: #ffffffe6;
 }
 
-#portada .imgContainer {
+#portada .introContainer .imgContainer {
   height: 300px;
   max-width: 300px;
   border-radius: 30px;
   display: flex;
 }
 
-#portada .imgContainer img {
+#portada .introContainer .imgContainer img {
   width: 100%;
   height: 100%;
 }
 
-#portada .titleContainer {
+#portada .introContainer .titleContainer {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -1440,11 +1444,11 @@ main {
   display: flex;
 }
 
-#portada .titleContainer span {
+#portada .introContainer .titleContainer span {
   color: var(--contrast-color);
 }
 
-#portada .titleContainer .containerQuote {
+#portada .introContainer .titleContainer .containerQuote {
   max-width: 400px;
   width: 100%;
   text-align: center;
@@ -1455,9 +1459,45 @@ main {
   display: flex;
 }
 
-#portada .titleContainer .containerQuote blockquote {
+#portada .introContainer .titleContainer .containerQuote blockquote {
   margin: 0 0 20px;
   font-style: italic;
+}
+
+#portada .animationFire {
+  height: 135px;
+  width: 100%;
+  place-content: center;
+  animation: flameMovement 2s ease-in-out infinite;
+  display: flex;
+  background-color: #0000 !important;
+}
+
+#portada .animationFire img {
+  width: 100%;
+  max-width: 400px;
+  min-height: 135px;
+  height: 100%;
+  display: flex;
+  position: absolute;
+}
+
+#portada .animationFire .fire1 {
+  z-index: 1;
+  opacity: .75;
+  animation: flameMovement 3.5s ease-in-out infinite;
+}
+
+#portada .animationFire .fire2 {
+  z-index: 2;
+  opacity: .8;
+  animation: flameMovement 3s ease-in-out infinite;
+}
+
+#portada .animationFire .fire3 {
+  z-index: 3;
+  opacity: .85;
+  animation: flameMovement 2s ease-in-out infinite;
 }
 
 #enlaces .linkContainer, #categoria .categoryContainer, #categoria article, #presentacion section, #details div, #details article, aside {
@@ -1696,6 +1736,7 @@ figure figcaption cite {
 
 footer {
   color: var(--contrast-color);
+  z-index: 9;
   background-color: #000;
   padding: 20px;
 }
@@ -1718,12 +1759,25 @@ footer div a {
   line-height: 1.5rem;
 }
 
-footer .subjectContainer {
+footer .bottomFooter {
   border-top: 1px solid;
   margin-top: 15px;
+  padding-top: 15px;
 }
 
-footer .subjectContainer p:first-of-type {
+footer .bottomFooter .icon {
+  width: 50px;
+}
+
+footer .bottomFooter .icon svg {
+  fill: #fff;
+  width: 50px;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+footer .bottomFooter .subjectContainer p:first-of-type {
   margin-top: 15px;
 }
 
@@ -1806,7 +1860,7 @@ footer .subjectContainer p:first-of-type {
     font-weight: 700;
   }
 
-  #portada {
+  #portada .introContainer {
     flex-direction: row;
   }
 
@@ -1836,6 +1890,12 @@ footer .subjectContainer p:first-of-type {
   footer .subjectContainer {
     flex-direction: column;
     align-items: center;
+  }
+}
+
+@keyframes flameMovement {
+  50% {
+    transform: scale(.98, 1)translate(0, 2px)rotate(-1deg);
   }
 }
 
