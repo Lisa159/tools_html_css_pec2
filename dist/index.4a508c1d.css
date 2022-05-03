@@ -1454,6 +1454,10 @@ main {
   font-weight: 600;
 }
 
+#portada .introContainer .titleContainer h1 span {
+  background-color: #000;
+}
+
 #portada .introContainer .titleContainer span {
   color: var(--contrast-color);
 }

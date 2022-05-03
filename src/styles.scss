@@ -231,6 +231,9 @@ main {
       h1 {
         font-family: var(--secondary-font-family);
         font-weight: 600;
+        span {
+          background-color: #000000;
+        }
       }
       span {
         color: var(--contrast-color);
