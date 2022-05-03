@@ -130,6 +130,17 @@ function setCarousel() {
         _setDisabledBtnCarousel();
     }
 }
+const observer = new IntersectionObserver((entries)=>{
+    entries.forEach((entry)=>{
+        if (entry.isIntersecting) {
+            if (window.innerWidth < 768) entry.target.classList.add("mobile-animation");
+        }
+    });
+});
+try {
+    observer.observe(document.querySelector("#details"));
+    observer.observe(document.querySelector("#about"));
+} catch (error) {}
 //Animation for the carousel
 setCarousel();
 nextBook();
