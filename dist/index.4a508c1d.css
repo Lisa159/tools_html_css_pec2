@@ -1221,12 +1221,25 @@ h1, h2, h3 {
   margin: 0;
 }
 
+h1, h2 {
+  font-family: var(--secondary-font-family);
+  font-weight: 600;
+}
+
 html {
   height: 100%;
 }
 
 body {
   min-height: 100%;
+  background-color: #0000;
+  background-image: linear-gradient(#ffffff73, #fff6), url("map.1537fe39.jpg");
+  background-position: 0 0, 0 0;
+  background-repeat: repeat, repeat;
+  background-size: cover;
+  background-attachment: scroll, scroll;
+  background-origin: padding-box, padding-box;
+  background-clip: border-box, border-box;
   flex-direction: column;
   margin: 0;
   display: flex;
@@ -1406,14 +1419,6 @@ aside h3 {
 main {
   width: inherit;
   height: 100%;
-  background-color: #0000;
-  background-image: linear-gradient(#ffffff73, #fff6), url("map.1537fe39.jpg");
-  background-position: 0 0, 0 0;
-  background-repeat: repeat, repeat;
-  background-size: cover;
-  background-attachment: scroll, scroll;
-  background-origin: padding-box, padding-box;
-  background-clip: border-box, border-box;
   flex: 1 0 auto;
   padding: 20px;
 }
@@ -1426,18 +1431,21 @@ main {
 
 #portada .introContainer .imgContainer {
   height: 300px;
-  max-width: 300px;
+  max-width: 260px;
+  width: 100%;
   border-radius: 30px;
+  margin: 0 40px;
   display: flex;
 }
 
 #portada .introContainer .imgContainer img {
   width: 100%;
   height: 100%;
+  clip-path: polygon(47% 12%, 96% 19%, 89% 76%, 51% 91%, 11% 77%, 5% 20%);
 }
 
 #portada .introContainer .titleContainer {
-  width: 100%;
+  width: 85%;
   height: 100%;
   text-align: center;
   border-radius: 30px;
@@ -1445,7 +1453,7 @@ main {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  padding: 30px;
+  padding: 30px 10px;
   display: flex;
 }
 
@@ -1695,7 +1703,7 @@ figure figcaption cite {
   width: 100%;
 }
 
-#presentacion h3, #presentacion p {
+#presentacion h2, #presentacion p {
   margin-bottom: 15px;
 }
 

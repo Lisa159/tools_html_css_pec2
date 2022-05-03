@@ -147,6 +147,7 @@ function setCarousel() {
     _setDisabledBtnCarousel();
   }
 }
+
 //Animation for the carousel
 setCarousel();
 nextBook();
