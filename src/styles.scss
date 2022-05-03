@@ -194,7 +194,6 @@ main {
 }
 
 #portada {
-  padding-bottom: 0;
   .introContainer {
     display: flex;
     align-items: center;
@@ -241,43 +240,6 @@ main {
           font-style: italic;
         }
       }
-    }
-  }
-  .animationFire {
-    background-color: transparent !important;
-    height: 135px;
-    width: 100%;
-    display: flex;
-    place-content: center;
-    animation: flameMovement 2s ease-in-out infinite;
-    img {
-      display: flex;
-      position: absolute;
-      width: 100%;
-      max-width: 400px;
-      min-height: 135px;
-      height: 100%;
-    }
-    .fire1 {
-      z-index: 1;
-      animation-duration: 2s;
-      animation-delay: 1s;
-      animation: flameMovement 3.5s ease-in-out infinite;
-      opacity: 0.75;
-    }
-    .fire2 {
-      z-index: 2;
-      animation-duration: 3s;
-      animation-delay: 3s;
-      animation: flameMovement 3s ease-in-out infinite;
-      opacity: 0.8;
-    }
-    .fire3 {
-      z-index: 3;
-      animation-duration: 5s;
-      animation-delay: 4s;
-      animation: flameMovement 2s ease-in-out infinite;
-      opacity: 0.85;
     }
   }
 }
@@ -470,6 +432,7 @@ figure {
 }
 
 #presentacion {
+  padding-bottom: 0;
   .titleContainer {
     h2 {
       text-align: center;
@@ -489,6 +452,43 @@ figure {
     height: 100%;
     min-height: 300px;
     margin-top: 20px;
+  }
+  .animationFire {
+    background-color: transparent !important;
+    height: 135px;
+    width: 100%;
+    display: flex;
+    place-content: center;
+    animation: flameMovement 2s ease-in-out infinite;
+    img {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      max-width: 400px;
+      min-height: 135px;
+      height: 100%;
+    }
+    .fire1 {
+      z-index: 1;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation: flameMovement 3.5s ease-in-out infinite;
+      opacity: 0.75;
+    }
+    .fire2 {
+      z-index: 2;
+      animation-duration: 3s;
+      animation-delay: 3s;
+      animation: flameMovement 3s ease-in-out infinite;
+      opacity: 0.8;
+    }
+    .fire3 {
+      z-index: 3;
+      animation-duration: 5s;
+      animation-delay: 4s;
+      animation: flameMovement 2s ease-in-out infinite;
+      opacity: 0.85;
+    }
   }
 }
 

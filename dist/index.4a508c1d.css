@@ -1405,10 +1405,6 @@ main {
   padding: 20px;
 }
 
-#portada {
-  padding-bottom: 0;
-}
-
 #portada .introContainer {
   flex-direction: column;
   align-items: center;
@@ -1462,42 +1458,6 @@ main {
 #portada .introContainer .titleContainer .containerQuote blockquote {
   margin: 0 0 20px;
   font-style: italic;
-}
-
-#portada .animationFire {
-  height: 135px;
-  width: 100%;
-  place-content: center;
-  animation: flameMovement 2s ease-in-out infinite;
-  display: flex;
-  background-color: #0000 !important;
-}
-
-#portada .animationFire img {
-  width: 100%;
-  max-width: 400px;
-  min-height: 135px;
-  height: 100%;
-  display: flex;
-  position: absolute;
-}
-
-#portada .animationFire .fire1 {
-  z-index: 1;
-  opacity: .75;
-  animation: flameMovement 3.5s ease-in-out infinite;
-}
-
-#portada .animationFire .fire2 {
-  z-index: 2;
-  opacity: .8;
-  animation: flameMovement 3s ease-in-out infinite;
-}
-
-#portada .animationFire .fire3 {
-  z-index: 3;
-  opacity: .85;
-  animation: flameMovement 2s ease-in-out infinite;
 }
 
 #enlaces .linkContainer, #categoria .categoryContainer, #categoria article, #presentacion section, #details div, #details article, aside {
@@ -1703,6 +1663,10 @@ figure figcaption cite {
   font-style: italic;
 }
 
+#presentacion {
+  padding-bottom: 0;
+}
+
 #presentacion .titleContainer h2 {
   text-align: center;
 }
@@ -1723,6 +1687,42 @@ figure figcaption cite {
   min-height: 300px;
   align-self: center;
   margin-top: 20px;
+}
+
+#presentacion .animationFire {
+  height: 135px;
+  width: 100%;
+  place-content: center;
+  animation: flameMovement 2s ease-in-out infinite;
+  display: flex;
+  background-color: #0000 !important;
+}
+
+#presentacion .animationFire img {
+  width: 100%;
+  max-width: 400px;
+  min-height: 135px;
+  height: 100%;
+  display: flex;
+  position: absolute;
+}
+
+#presentacion .animationFire .fire1 {
+  z-index: 1;
+  opacity: .75;
+  animation: flameMovement 3.5s ease-in-out infinite;
+}
+
+#presentacion .animationFire .fire2 {
+  z-index: 2;
+  opacity: .8;
+  animation: flameMovement 3s ease-in-out infinite;
+}
+
+#presentacion .animationFire .fire3 {
+  z-index: 3;
+  opacity: .85;
+  animation: flameMovement 2s ease-in-out infinite;
 }
 
 #enlaces .linkContainer ul {
