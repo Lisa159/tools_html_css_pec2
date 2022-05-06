@@ -1568,6 +1568,8 @@ main {
   min-width: 180px;
   text-align: center;
   --scale-carousel: 1;
+  pointer-events: none;
+  background-color: #fff;
   border-radius: 10px;
   flex-direction: column;
   align-items: center;
@@ -1580,10 +1582,8 @@ main {
 
 #categoria article .listCat .elementCat.selected {
   opacity: 1;
-}
-
-#categoria article .listCat .elementCat.selected a {
   pointer-events: all;
+  cursor: pointer;
 }
 
 #categoria article .listCat .elementCat.selected:hover {

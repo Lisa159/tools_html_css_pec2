@@ -348,11 +348,12 @@ aside {
         border-radius: 10px;
         transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
         --scale-carousel: 1;
+        pointer-events: none;
+        background-color: #ffffff;
         &.selected {
           opacity: 1;
-          a {
-            pointer-events: all;
-          }
+          pointer-events: all;
+          cursor: pointer;
         }
         &.selected:hover {
           --scale-carousel: 1.2;

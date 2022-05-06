@@ -141,6 +141,9 @@ try {
     observer.observe(document.querySelector("#details"));
     observer.observe(document.querySelector("#about"));
 } catch (error) {}
+function goToDetailBook(number) {
+    window.location.href = `./details/details-libro${number}.html`;
+}
 //Animation for the carousel
 setCarousel();
 nextBook();
