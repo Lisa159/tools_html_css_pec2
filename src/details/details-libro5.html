@@ -96,13 +96,23 @@
       </main>
       <aside id="about">
         <figure>
-          <img
-            src="../assets/img/5_danza_de_dragones.jpeg"
-            alt="Portada de Danza de Dragones"
-            title="Portada de Danza de Dragones"
-            class="lazy"
-            data-src="../assets/img/5_danza_de_dragones.jpeg"
-          />
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="../assets/img/5_danza_de_dragones-portrait.jpeg"
+            />
+            <source
+              media="(min-width: 769px)"
+              srcset="../assets/img/5_danza_de_dragones.jpeg"
+            />
+            <img
+              src="../assets/img/5_danza_de_dragones.jpeg"
+              alt="Portada de Danza de Dragones"
+              title="Portada de Danza de Dragones"
+              class="lazy"
+              data-src="../assets/img/5_danza_de_dragones.jpeg"
+            />
+          </picture>
           <figcaption>
             <cite>Foto de la portada de Danza de Dragones</cite> por Aida María
             González Fernández.

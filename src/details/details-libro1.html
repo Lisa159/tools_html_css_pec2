@@ -111,6 +111,18 @@
             se marcha. Incapaz de ver a su esposo en ese estado, Daenerys acaba
             con la vida de Drogo ahogándole con una almohada.
           </p>
+          <img
+            srcset="
+              ../assets/img/dragon-statue-320.png 320w,
+              ../assets/img/dragon-statue-480.png 480w,
+              ../assets/img/dragon-statue.png     640w
+            "
+            sizes="(max-width: 320px) 280px,
+            (max-width: 480px) 440px,
+            640px"
+            src="../assets/img/dragon-statue.png"
+            alt="Estatua de dragon"
+          />
           <p>
             Daenerys construye una pira funeraria para Drogo a la que ordena
             atar a Mirri Maz Duur y también ordena colocar en ella los huevos de
@@ -123,17 +135,41 @@
             jinetes de sangre, convirtiéndose en la primera khaleesi por derecho
             propio.
           </p>
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="../assets/img/dragonstone-portrait.jpg"
+            />
+            <source
+              media="(min-width: 769px)"
+              srcset="../assets/img/dragonstone.jpg"
+            />
+            <img
+              src="../assets/img/dragonstone.jpg"
+              alt="Fotografía del monasterio de San Juan de Gaztelugatxe"
+            />
+          </picture>
         </article>
       </main>
       <aside id="about">
         <figure>
-          <img
-            alt="Portada de Juego de Tronos"
-            title="Portada de Juego de Tronos"
-            class="lazy"
-            data-src="../assets/img/1_juego_de_tronos.jpeg"
-            src="../assets/img/1_juego_de_tronos.jpeg"
-          />
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="../assets/img/1_juego_de_tronos-portrait.jpeg"
+            />
+            <source
+              media="(min-width: 769px)"
+              srcset="../assets/img/1_juego_de_tronos.jpeg"
+            />
+            <img
+              alt="Portada de Juego de Tronos"
+              title="Portada de Juego de Tronos"
+              class="lazy"
+              data-src="../assets/img/1_juego_de_tronos.jpeg"
+              src="../assets/img/1_juego_de_tronos.jpeg"
+            />
+          </picture>
           <figcaption>
             <cite>Foto de la portada de Juego de Tronos</cite> por Aida María
             González Fernández.

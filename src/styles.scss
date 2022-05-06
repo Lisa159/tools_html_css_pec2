@@ -415,6 +415,11 @@ a:active {
       text-align: end;
     }
   }
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
 }
 
 #about {
@@ -467,7 +472,7 @@ figure {
       text-align: center;
     }
     figure img {
-      max-width: 400px;
+      max-width: 360px;
       width: 100%;
     }
   }

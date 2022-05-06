@@ -1654,6 +1654,12 @@ a:active {
   align-self: flex-end;
 }
 
+#details img {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
 #about {
   padding: 40px;
 }
@@ -1708,7 +1714,7 @@ figure figcaption cite {
 }
 
 #presentacion .titleContainer figure img {
-  max-width: 400px;
+  max-width: 360px;
   width: 100%;
 }
 

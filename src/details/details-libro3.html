@@ -126,13 +126,23 @@
       </main>
       <aside id="about">
         <figure>
-          <img
-            src="../assets/img/3_tormenta_de_espadas.jpeg"
-            alt="Portada de Tormenta de Espadas"
-            title="Portada de Tormenta de Espadas"
-            class="lazy"
-            data-src="../assets/img/3_tormenta_de_espadas.jpeg"
-          />
+          <picture>
+            <source
+              media="(max-width: 768px)"
+              srcset="../assets/img/3_tormenta_de_espadas-portrait.jpeg"
+            />
+            <source
+              media="(min-width: 769px)"
+              srcset="../assets/img/3_tormenta_de_espadas.jpeg"
+            />
+            <img
+              src="../assets/img/3_tormenta_de_espadas.jpeg"
+              alt="Portada de Tormenta de Espadas"
+              title="Portada de Tormenta de Espadas"
+              class="lazy"
+              data-src="../assets/img/3_tormenta_de_espadas.jpeg"
+            />
+          </picture>
           <figcaption>
             <cite>Foto de la portada de Tormenta de Espadas</cite> por Aida
             María González Fernández.
