@@ -358,7 +358,10 @@ aside {
         &.selected:hover {
           --scale-carousel: 1.2;
         }
-        a {
+        &.notClickable {
+          cursor: default;
+        }
+        p:last-child {
           pointer-events: none;
           background-color: var(--secondary-color);
           border-radius: 4px;

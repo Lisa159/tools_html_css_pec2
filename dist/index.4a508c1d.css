@@ -1590,7 +1590,11 @@ main {
   --scale-carousel: 1.2;
 }
 
-#categoria article .listCat .elementCat a {
+#categoria article .listCat .elementCat.notClickable {
+  cursor: default;
+}
+
+#categoria article .listCat .elementCat p:last-child {
   pointer-events: none;
   background-color: var(--secondary-color);
   border-radius: 4px;
