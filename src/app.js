@@ -106,21 +106,6 @@ function prevBook() {
   }
 }
 
-function _resetAnimationCarousel(resetType) {
-  let arr = document.querySelectorAll(".elementCat");
-  arr.forEach((el) => {
-    if (resetType === "next") {
-      if (el.classList.contains("animationNext")) {
-        el.classList.remove("animationNext");
-      }
-    } else {
-      if (el.classList.contains("animationPrev")) {
-        el.classList.remove("animationPrev");
-      }
-    }
-  });
-}
-
 function _setDisabledBtnCarousel() {
   let prev = document.getElementsByClassName("btnList")[0];
   let next = document.getElementsByClassName("btnList")[1];
