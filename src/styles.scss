@@ -484,6 +484,42 @@ figure {
   p {
     margin-bottom: 15px;
   }
+  .tabContainer {
+    .animationDragonContainer {
+      display: flex;
+      justify-content: center;
+      svg {
+        height: 140px;
+        .dragonFace {
+          path {
+            animation-name: faceMovement;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform-origin: 45% 45% 0;
+          }
+        }
+        .dragonFire1 {
+          path {
+            animation-name: flameDisappear;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform-origin: 45% 45% 0;
+          }
+        }
+        .dragonFire2 {
+          path {
+            animation-name: flameDisappear2;
+            animation-duration: 3.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            transform-origin: 45% 45% 0;
+          }
+        }
+      }
+    }
+  }
   iframe {
     align-self: center;
     width: 100%;
@@ -724,5 +760,43 @@ footer {
   100% {
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes flameDisappear {
+  0% {
+    transform: translate(3000px, -5000px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(3500px, -5000px);
+    opacity: 0;
+  }
+}
+
+@keyframes flameDisappear2 {
+  0% {
+    transform: translate(1000px, -6000px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate(1500px, -6500px);
+    opacity: 0;
+  }
+}
+
+@keyframes faceMovement {
+  0% {
+    transform: rotate(10deg);
+  }
+  50% {
+    transform: rotate(-20deg);
+  }
+  100% {
+    transform: rotate(10deg);
   }
 }

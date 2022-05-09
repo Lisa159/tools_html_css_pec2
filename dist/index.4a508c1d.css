@@ -1726,6 +1726,39 @@ figure figcaption cite {
   margin-bottom: 15px;
 }
 
+#presentacion .tabContainer .animationDragonContainer {
+  justify-content: center;
+  display: flex;
+}
+
+#presentacion .tabContainer .animationDragonContainer svg {
+  height: 140px;
+}
+
+#presentacion .tabContainer .animationDragonContainer svg .dragonFace path {
+  transform-origin: 45% 45% 0;
+  animation-name: faceMovement;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#presentacion .tabContainer .animationDragonContainer svg .dragonFire1 path {
+  transform-origin: 45% 45% 0;
+  animation-name: flameDisappear;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+#presentacion .tabContainer .animationDragonContainer svg .dragonFire2 path {
+  transform-origin: 45% 45% 0;
+  animation-name: flameDisappear2;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
 #presentacion iframe {
   -ms-grid-row-align: center;
   width: 100%;
@@ -1992,6 +2025,50 @@ footer .bottomFooter .subjectContainer p:first-of-type {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes flameDisappear {
+  0% {
+    transform: translate(3000px, -5000px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(3500px, -5000px);
+  }
+}
+
+@keyframes flameDisappear2 {
+  0% {
+    transform: translate(1000px, -6000px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(1500px, -6500px);
+  }
+}
+
+@keyframes faceMovement {
+  0% {
+    transform: rotate(10deg);
+  }
+
+  50% {
+    transform: rotate(-20deg);
+  }
+
+  100% {
+    transform: rotate(10deg);
   }
 }
 
