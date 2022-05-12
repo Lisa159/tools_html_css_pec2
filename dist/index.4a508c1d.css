@@ -1735,6 +1735,12 @@ figure figcaption cite {
   height: 140px;
 }
 
+#presentacion .tabContainer .animationDragonContainer svg .dragonFace {
+  fill: #000;
+  stroke: none;
+  transform: translate(100px, 458px)scale(.1, -.1);
+}
+
 #presentacion .tabContainer .animationDragonContainer svg .dragonFace path {
   transform-origin: 45% 45% 0;
   animation-name: faceMovement;
@@ -1743,12 +1749,24 @@ figure figcaption cite {
   animation-iteration-count: infinite;
 }
 
+#presentacion .tabContainer .animationDragonContainer svg .dragonFire1 {
+  fill: #000;
+  stroke: none;
+  transform: scale(.1, -.1);
+}
+
 #presentacion .tabContainer .animationDragonContainer svg .dragonFire1 path {
   transform-origin: 45% 45% 0;
   animation-name: flameDisappear;
   animation-duration: 2s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
+}
+
+#presentacion .tabContainer .animationDragonContainer svg .dragonFire2 {
+  fill: #000;
+  stroke: none;
+  transform: scale(.1, -.1);
 }
 
 #presentacion .tabContainer .animationDragonContainer svg .dragonFire2 path {

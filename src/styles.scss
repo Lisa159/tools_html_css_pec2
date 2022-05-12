@@ -204,8 +204,6 @@ main {
   width: inherit;
   height: 100%;
   padding: 20px;
-  // background-image: url(./assets/img/map.jpg);
-  // background-size: cover;
 }
 
 #portada {
@@ -491,6 +489,9 @@ figure {
       svg {
         height: 140px;
         .dragonFace {
+          transform: translate(100, 458) scale(0.1, -0.1);
+          fill: #000000;
+          stroke: none;
           path {
             animation-name: faceMovement;
             animation-duration: 2s;
@@ -500,6 +501,9 @@ figure {
           }
         }
         .dragonFire1 {
+          transform: scale(0.1, -0.1);
+          fill: #000000;
+          stroke: none;
           path {
             animation-name: flameDisappear;
             animation-duration: 2s;
@@ -509,6 +513,9 @@ figure {
           }
         }
         .dragonFire2 {
+          transform: scale(0.1, -0.1);
+          fill: #000000;
+          stroke: none;
           path {
             animation-name: flameDisappear2;
             animation-duration: 3.5s;
